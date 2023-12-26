@@ -1,0 +1,540 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "stake",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "vault",
+          "type": "address"
+        }
+      ],
+      "name": "VaultCreated",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "allVaults",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "vault",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "listAllVaults",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "allVaults(uint256)": "9094a91e",
+    "listAllVaults()": "66a9a1bb"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"stake\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"vault\",\"type\":\"address\"}],\"name\":\"VaultCreated\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"allVaults\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"vault\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"listAllVaults\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/factories/interfaces/IRiveraVaultFactory.sol\":\"IRiveraVaultFactory\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@chainlink/=lib/pancake-v3-contracts/node_modules/@chainlink/contracts/src/v0.8/dev/vendor/@arbitrum/nitro-contracts/src/\",\":@ensdomains/=lib/pancake-v3-contracts/node_modules/@ensdomains/\",\":@eth-optimism/=lib/pancake-v3-contracts/node_modules/@eth-optimism/contracts/\",\":@openzeppelin/=lib/openzeppelin-contracts/contracts/\",\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":@pancakeswap-v2-core/=lib/pancake-swap-core/contracts/\",\":@pancakeswap-v2-exchange-protocol/=lib/pancake-smart-contracts/projects/exchange-protocol/contracts/\",\":@pancakeswap-v3-core/=lib/pancake-v3-contracts/projects/v3-core/contracts/\",\":@pancakeswap-v3-masterchef/=lib/pancake-v3-contracts/projects/masterchef-v3/contracts/\",\":@pancakeswap-v3-periphery/=lib/pancake-v3-contracts/projects/v3-periphery/contracts/\",\":@pancakeswap-v3-router/=lib/pancake-v3-contracts/projects/router/contracts/\",\":@pancakeswap/=lib/pancake-v3-contracts/projects/\",\":@rivera/=src/\",\":@uniswap/=lib/pancake-v3-contracts/node_modules/@uniswap/\",\":@uniswap/v3-core/=lib/v3-core/\",\":@uniswap/v3-periphery/=lib/v3-periphery/\",\":base64-sol/=lib/pancake-v3-contracts/node_modules/base64-sol/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/erc4626-tests/\",\":eth-gas-reporter/=lib/pancake-v3-contracts/node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=lib/pancake-v3-contracts/node_modules/hardhat/\",\":pancake-smart-contracts/=lib/pancake-smart-contracts/\",\":pancake-swap-core/=lib/pancake-swap-core/contracts/\",\":pancake-v3-contracts/=lib/pancake-v3-contracts/\"]},\"sources\":{\"src/factories/interfaces/IRiveraVaultFactory.sol\":{\"keccak256\":\"0x0e6877d71cc747b8d97c5b22990ae18d9e258c2d0ac9df3a9ad26644ea10225b\",\"urls\":[\"bzz-raw://f38f59c0be3e4d2ad55dba6a36f5b346b752ba43e51bb34b819f5d2e4e56e7b9\",\"dweb:/ipfs/QmdNzgPVE6mL8JcimrUz7iHWoLZVqFUMpVzPe1Nr7Q3rDc\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "user",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "stake",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "vault",
+              "type": "address",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "VaultCreated",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "allVaults",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "vault",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "listAllVaults",
+          "outputs": [
+            {
+              "internalType": "address[]",
+              "name": "",
+              "type": "address[]"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@chainlink/=lib/pancake-v3-contracts/node_modules/@chainlink/contracts/src/v0.8/dev/vendor/@arbitrum/nitro-contracts/src/",
+        ":@ensdomains/=lib/pancake-v3-contracts/node_modules/@ensdomains/",
+        ":@eth-optimism/=lib/pancake-v3-contracts/node_modules/@eth-optimism/contracts/",
+        ":@openzeppelin/=lib/openzeppelin-contracts/contracts/",
+        ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+        ":@pancakeswap-v2-core/=lib/pancake-swap-core/contracts/",
+        ":@pancakeswap-v2-exchange-protocol/=lib/pancake-smart-contracts/projects/exchange-protocol/contracts/",
+        ":@pancakeswap-v3-core/=lib/pancake-v3-contracts/projects/v3-core/contracts/",
+        ":@pancakeswap-v3-masterchef/=lib/pancake-v3-contracts/projects/masterchef-v3/contracts/",
+        ":@pancakeswap-v3-periphery/=lib/pancake-v3-contracts/projects/v3-periphery/contracts/",
+        ":@pancakeswap-v3-router/=lib/pancake-v3-contracts/projects/router/contracts/",
+        ":@pancakeswap/=lib/pancake-v3-contracts/projects/",
+        ":@rivera/=src/",
+        ":@uniswap/=lib/pancake-v3-contracts/node_modules/@uniswap/",
+        ":@uniswap/v3-core/=lib/v3-core/",
+        ":@uniswap/v3-periphery/=lib/v3-periphery/",
+        ":base64-sol/=lib/pancake-v3-contracts/node_modules/base64-sol/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":erc4626-tests/=lib/erc4626-tests/",
+        ":eth-gas-reporter/=lib/pancake-v3-contracts/node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=lib/pancake-v3-contracts/node_modules/hardhat/",
+        ":pancake-smart-contracts/=lib/pancake-smart-contracts/",
+        ":pancake-swap-core/=lib/pancake-swap-core/contracts/",
+        ":pancake-v3-contracts/=lib/pancake-v3-contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/factories/interfaces/IRiveraVaultFactory.sol": "IRiveraVaultFactory"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/factories/interfaces/IRiveraVaultFactory.sol": {
+        "keccak256": "0x0e6877d71cc747b8d97c5b22990ae18d9e258c2d0ac9df3a9ad26644ea10225b",
+        "urls": [
+          "bzz-raw://f38f59c0be3e4d2ad55dba6a36f5b346b752ba43e51bb34b819f5d2e4e56e7b9",
+          "dweb:/ipfs/QmdNzgPVE6mL8JcimrUz7iHWoLZVqFUMpVzPe1Nr7Q3rDc"
+        ],
+        "license": null
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/factories/interfaces/IRiveraVaultFactory.sol",
+    "id": 34628,
+    "exportedSymbols": {
+      "IRiveraVaultFactory": [
+        34627
+      ],
+      "VaultType": [
+        34605
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "0:378:55",
+    "nodes": [
+      {
+        "id": 34601,
+        "nodeType": "PragmaDirective",
+        "src": "0:24:55",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0"
+        ]
+      },
+      {
+        "id": 34605,
+        "nodeType": "EnumDefinition",
+        "src": "28:80:55",
+        "nodes": [],
+        "canonicalName": "VaultType",
+        "members": [
+          {
+            "id": 34602,
+            "name": "PRIVATE",
+            "nameLocation": "54:7:55",
+            "nodeType": "EnumValue",
+            "src": "54:7:55"
+          },
+          {
+            "id": 34603,
+            "name": "PUBLIC",
+            "nameLocation": "73:6:55",
+            "nodeType": "EnumValue",
+            "src": "73:6:55"
+          },
+          {
+            "id": 34604,
+            "name": "WHITELISTED",
+            "nameLocation": "90:11:55",
+            "nodeType": "EnumValue",
+            "src": "90:11:55"
+          }
+        ],
+        "name": "VaultType",
+        "nameLocation": "33:9:55"
+      },
+      {
+        "id": 34627,
+        "nodeType": "ContractDefinition",
+        "src": "112:264:55",
+        "nodes": [
+          {
+            "id": 34613,
+            "nodeType": "EventDefinition",
+            "src": "149:79:55",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "897c133dfbfe1f6239e98b4ffd7e4f6c86a62350a131a7a37790419f58af02f9",
+            "name": "VaultCreated",
+            "nameLocation": "155:12:55",
+            "parameters": {
+              "id": 34612,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34607,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "user",
+                  "nameLocation": "184:4:55",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34613,
+                  "src": "168:20:55",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34606,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "168:7:55",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34609,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "stake",
+                  "nameLocation": "206:5:55",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34613,
+                  "src": "190:21:55",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34608,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "190:7:55",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34611,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "vault",
+                  "nameLocation": "221:5:55",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34613,
+                  "src": "213:13:55",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34610,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "213:7:55",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "167:60:55"
+            }
+          },
+          {
+            "id": 34620,
+            "nodeType": "FunctionDefinition",
+            "src": "236:63:55",
+            "nodes": [],
+            "functionSelector": "9094a91e",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "allVaults",
+            "nameLocation": "245:9:55",
+            "parameters": {
+              "id": 34616,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34615,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34620,
+                  "src": "255:4:55",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34614,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "255:4:55",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "254:6:55"
+            },
+            "returnParameters": {
+              "id": 34619,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34618,
+                  "mutability": "mutable",
+                  "name": "vault",
+                  "nameLocation": "292:5:55",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34620,
+                  "src": "284:13:55",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34617,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "284:7:55",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "283:15:55"
+            },
+            "scope": 34627,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 34626,
+            "nodeType": "FunctionDefinition",
+            "src": "305:66:55",
+            "nodes": [],
+            "functionSelector": "66a9a1bb",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "listAllVaults",
+            "nameLocation": "314:13:55",
+            "parameters": {
+              "id": 34621,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "327:2:55"
+            },
+            "returnParameters": {
+              "id": 34625,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34624,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34626,
+                  "src": "353:16:55",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 34622,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "353:7:55",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 34623,
+                    "nodeType": "ArrayTypeName",
+                    "src": "353:9:55",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "352:18:55"
+            },
+            "scope": 34627,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IRiveraVaultFactory",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          34627
+        ],
+        "name": "IRiveraVaultFactory",
+        "nameLocation": "122:19:55",
+        "scope": 34628,
+        "usedErrors": []
+      }
+    ]
+  },
+  "id": 55
+}

@@ -1,0 +1,20 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "src/strategies/cake/UniswapStaking.sol",
+    "id": 39143,
+    "exportedSymbols": {},
+    "nodeType": "SourceUnit",
+    "src": "22656:0:68",
+    "nodes": []
+  },
+  "id": 68
+}

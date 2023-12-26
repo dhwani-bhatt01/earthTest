@@ -1,0 +1,2099 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint160",
+          "name": "sqrtRatioAX96",
+          "type": "uint160"
+        },
+        {
+          "internalType": "uint160",
+          "name": "sqrtRatioBX96",
+          "type": "uint160"
+        },
+        {
+          "internalType": "uint128",
+          "name": "liquidity",
+          "type": "uint128"
+        },
+        {
+          "internalType": "bool",
+          "name": "roundUp",
+          "type": "bool"
+        }
+      ],
+      "name": "getAmount0Delta",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint160",
+          "name": "sqrtRatioAX96",
+          "type": "uint160"
+        },
+        {
+          "internalType": "uint160",
+          "name": "sqrtRatioBX96",
+          "type": "uint160"
+        },
+        {
+          "internalType": "int128",
+          "name": "liquidity",
+          "type": "int128"
+        }
+      ],
+      "name": "getAmount0Delta",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint160",
+          "name": "sqrtRatioAX96",
+          "type": "uint160"
+        },
+        {
+          "internalType": "uint160",
+          "name": "sqrtRatioBX96",
+          "type": "uint160"
+        },
+        {
+          "internalType": "int128",
+          "name": "liquidity",
+          "type": "int128"
+        }
+      ],
+      "name": "getAmount1Delta",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint160",
+          "name": "sqrtRatioAX96",
+          "type": "uint160"
+        },
+        {
+          "internalType": "uint160",
+          "name": "sqrtRatioBX96",
+          "type": "uint160"
+        },
+        {
+          "internalType": "uint128",
+          "name": "liquidity",
+          "type": "uint128"
+        },
+        {
+          "internalType": "bool",
+          "name": "roundUp",
+          "type": "bool"
+        }
+      ],
+      "name": "getAmount1Delta",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint160",
+          "name": "sqrtPX96",
+          "type": "uint160"
+        },
+        {
+          "internalType": "uint128",
+          "name": "liquidity",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "add",
+          "type": "bool"
+        }
+      ],
+      "name": "getNextSqrtPriceFromAmount0RoundingUp",
+      "outputs": [
+        {
+          "internalType": "uint160",
+          "name": "",
+          "type": "uint160"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint160",
+          "name": "sqrtPX96",
+          "type": "uint160"
+        },
+        {
+          "internalType": "uint128",
+          "name": "liquidity",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "add",
+          "type": "bool"
+        }
+      ],
+      "name": "getNextSqrtPriceFromAmount1RoundingDown",
+      "outputs": [
+        {
+          "internalType": "uint160",
+          "name": "",
+          "type": "uint160"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint160",
+          "name": "sqrtPX96",
+          "type": "uint160"
+        },
+        {
+          "internalType": "uint128",
+          "name": "liquidity",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amountIn",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "zeroForOne",
+          "type": "bool"
+        }
+      ],
+      "name": "getNextSqrtPriceFromInput",
+      "outputs": [
+        {
+          "internalType": "uint160",
+          "name": "",
+          "type": "uint160"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint160",
+          "name": "sqrtPX96",
+          "type": "uint160"
+        },
+        {
+          "internalType": "uint128",
+          "name": "liquidity",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amountOut",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "zeroForOne",
+          "type": "bool"
+        }
+      ],
+      "name": "getNextSqrtPriceFromOutput",
+      "outputs": [
+        {
+          "internalType": "uint160",
+          "name": "",
+          "type": "uint160"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "getAmount0Delta(uint160,uint160,int128)": "c932699b",
+    "getAmount0Delta(uint160,uint160,uint128,bool)": "2c32d4b6",
+    "getAmount1Delta(uint160,uint160,int128)": "00c11862",
+    "getAmount1Delta(uint160,uint160,uint128,bool)": "48a0c5bd",
+    "getNextSqrtPriceFromAmount0RoundingUp(uint160,uint128,uint256,bool)": "157f652f",
+    "getNextSqrtPriceFromAmount1RoundingDown(uint160,uint128,uint256,bool)": "fb4de288",
+    "getNextSqrtPriceFromInput(uint160,uint128,uint256,bool)": "aa58276a",
+    "getNextSqrtPriceFromOutput(uint160,uint128,uint256,bool)": "fedf2b5f"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint160\",\"name\":\"sqrtRatioAX96\",\"type\":\"uint160\"},{\"internalType\":\"uint160\",\"name\":\"sqrtRatioBX96\",\"type\":\"uint160\"},{\"internalType\":\"uint128\",\"name\":\"liquidity\",\"type\":\"uint128\"},{\"internalType\":\"bool\",\"name\":\"roundUp\",\"type\":\"bool\"}],\"name\":\"getAmount0Delta\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint160\",\"name\":\"sqrtRatioAX96\",\"type\":\"uint160\"},{\"internalType\":\"uint160\",\"name\":\"sqrtRatioBX96\",\"type\":\"uint160\"},{\"internalType\":\"int128\",\"name\":\"liquidity\",\"type\":\"int128\"}],\"name\":\"getAmount0Delta\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint160\",\"name\":\"sqrtRatioAX96\",\"type\":\"uint160\"},{\"internalType\":\"uint160\",\"name\":\"sqrtRatioBX96\",\"type\":\"uint160\"},{\"internalType\":\"int128\",\"name\":\"liquidity\",\"type\":\"int128\"}],\"name\":\"getAmount1Delta\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint160\",\"name\":\"sqrtRatioAX96\",\"type\":\"uint160\"},{\"internalType\":\"uint160\",\"name\":\"sqrtRatioBX96\",\"type\":\"uint160\"},{\"internalType\":\"uint128\",\"name\":\"liquidity\",\"type\":\"uint128\"},{\"internalType\":\"bool\",\"name\":\"roundUp\",\"type\":\"bool\"}],\"name\":\"getAmount1Delta\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint160\",\"name\":\"sqrtPX96\",\"type\":\"uint160\"},{\"internalType\":\"uint128\",\"name\":\"liquidity\",\"type\":\"uint128\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"add\",\"type\":\"bool\"}],\"name\":\"getNextSqrtPriceFromAmount0RoundingUp\",\"outputs\":[{\"internalType\":\"uint160\",\"name\":\"\",\"type\":\"uint160\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint160\",\"name\":\"sqrtPX96\",\"type\":\"uint160\"},{\"internalType\":\"uint128\",\"name\":\"liquidity\",\"type\":\"uint128\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"add\",\"type\":\"bool\"}],\"name\":\"getNextSqrtPriceFromAmount1RoundingDown\",\"outputs\":[{\"internalType\":\"uint160\",\"name\":\"\",\"type\":\"uint160\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint160\",\"name\":\"sqrtPX96\",\"type\":\"uint160\"},{\"internalType\":\"uint128\",\"name\":\"liquidity\",\"type\":\"uint128\"},{\"internalType\":\"uint256\",\"name\":\"amountIn\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"zeroForOne\",\"type\":\"bool\"}],\"name\":\"getNextSqrtPriceFromInput\",\"outputs\":[{\"internalType\":\"uint160\",\"name\":\"\",\"type\":\"uint160\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint160\",\"name\":\"sqrtPX96\",\"type\":\"uint160\"},{\"internalType\":\"uint128\",\"name\":\"liquidity\",\"type\":\"uint128\"},{\"internalType\":\"uint256\",\"name\":\"amountOut\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"zeroForOne\",\"type\":\"bool\"}],\"name\":\"getNextSqrtPriceFromOutput\",\"outputs\":[{\"internalType\":\"uint160\",\"name\":\"\",\"type\":\"uint160\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"getAmount0Delta(uint160,uint160,int128)\":{\"params\":{\"liquidity\":\"The change in liquidity for which to compute the amount0 delta\",\"sqrtRatioAX96\":\"A sqrt price\",\"sqrtRatioBX96\":\"Another sqrt price\"},\"returns\":{\"_0\":\"amount0 Amount of token0 corresponding to the passed liquidityDelta between the two prices\"}},\"getAmount0Delta(uint160,uint160,uint128,bool)\":{\"details\":\"Calculates liquidity / sqrt(lower) - liquidity / sqrt(upper), i.e. liquidity * (sqrt(upper) - sqrt(lower)) / (sqrt(upper) * sqrt(lower))\",\"params\":{\"liquidity\":\"The amount of usable liquidity\",\"roundUp\":\"Whether to round the amount up or down\",\"sqrtRatioAX96\":\"A sqrt price\",\"sqrtRatioBX96\":\"Another sqrt price\"},\"returns\":{\"_0\":\"amount0 Amount of token0 required to cover a position of size liquidity between the two passed prices\"}},\"getAmount1Delta(uint160,uint160,int128)\":{\"params\":{\"liquidity\":\"The change in liquidity for which to compute the amount1 delta\",\"sqrtRatioAX96\":\"A sqrt price\",\"sqrtRatioBX96\":\"Another sqrt price\"},\"returns\":{\"_0\":\"amount1 Amount of token1 corresponding to the passed liquidityDelta between the two prices\"}},\"getAmount1Delta(uint160,uint160,uint128,bool)\":{\"details\":\"Calculates liquidity * (sqrt(upper) - sqrt(lower))\",\"params\":{\"liquidity\":\"The amount of usable liquidity\",\"roundUp\":\"Whether to round the amount up, or down\",\"sqrtRatioAX96\":\"A sqrt price\",\"sqrtRatioBX96\":\"Another sqrt price\"},\"returns\":{\"_0\":\"amount1 Amount of token1 required to cover a position of size liquidity between the two passed prices\"}},\"getNextSqrtPriceFromAmount0RoundingUp(uint160,uint128,uint256,bool)\":{\"details\":\"Always rounds up, because in the exact output case (increasing price) we need to move the price at least far enough to get the desired output amount, and in the exact input case (decreasing price) we need to move the price less in order to not send too much output. The most precise formula for this is liquidity * sqrtPX96 / (liquidity +- amount * sqrtPX96), if this is impossible because of overflow, we calculate liquidity / (liquidity / sqrtPX96 +- amount).\",\"params\":{\"add\":\"Whether to add or remove the amount of token0\",\"amount\":\"How much of token0 to add or remove from virtual reserves\",\"liquidity\":\"The amount of usable liquidity\",\"sqrtPX96\":\"The starting price, i.e. before accounting for the token0 delta\"},\"returns\":{\"_0\":\"The price after adding or removing amount, depending on add\"}},\"getNextSqrtPriceFromAmount1RoundingDown(uint160,uint128,uint256,bool)\":{\"details\":\"Always rounds down, because in the exact output case (decreasing price) we need to move the price at least far enough to get the desired output amount, and in the exact input case (increasing price) we need to move the price less in order to not send too much output. The formula we compute is within <1 wei of the lossless version: sqrtPX96 +- amount / liquidity\",\"params\":{\"add\":\"Whether to add, or remove, the amount of token1\",\"amount\":\"How much of token1 to add, or remove, from virtual reserves\",\"liquidity\":\"The amount of usable liquidity\",\"sqrtPX96\":\"The starting price, i.e., before accounting for the token1 delta\"},\"returns\":{\"_0\":\"The price after adding or removing `amount`\"}},\"getNextSqrtPriceFromInput(uint160,uint128,uint256,bool)\":{\"details\":\"Throws if price or liquidity are 0, or if the next price is out of bounds\",\"params\":{\"amountIn\":\"How much of token0, or token1, is being swapped in\",\"liquidity\":\"The amount of usable liquidity\",\"sqrtPX96\":\"The starting price, i.e., before accounting for the input amount\",\"zeroForOne\":\"Whether the amount in is token0 or token1\"},\"returns\":{\"_0\":\"sqrtQX96 The price after adding the input amount to token0 or token1\"}},\"getNextSqrtPriceFromOutput(uint160,uint128,uint256,bool)\":{\"details\":\"Throws if price or liquidity are 0 or the next price is out of bounds\",\"params\":{\"amountOut\":\"How much of token0, or token1, is being swapped out\",\"liquidity\":\"The amount of usable liquidity\",\"sqrtPX96\":\"The starting price before accounting for the output amount\",\"zeroForOne\":\"Whether the amount out is token0 or token1\"},\"returns\":{\"_0\":\"sqrtQX96 The price after removing the output amount of token0 or token1\"}}},\"title\":\"Functions based on Q64.96 sqrt price and liquidity\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getAmount0Delta(uint160,uint160,int128)\":{\"notice\":\"Helper that gets signed token0 delta\"},\"getAmount0Delta(uint160,uint160,uint128,bool)\":{\"notice\":\"Gets the amount0 delta between two prices\"},\"getAmount1Delta(uint160,uint160,int128)\":{\"notice\":\"Helper that gets signed token1 delta\"},\"getAmount1Delta(uint160,uint160,uint128,bool)\":{\"notice\":\"Gets the amount1 delta between two prices\"},\"getNextSqrtPriceFromAmount0RoundingUp(uint160,uint128,uint256,bool)\":{\"notice\":\"Gets the next sqrt price given a delta of token0\"},\"getNextSqrtPriceFromAmount1RoundingDown(uint160,uint128,uint256,bool)\":{\"notice\":\"Gets the next sqrt price given a delta of token1\"},\"getNextSqrtPriceFromInput(uint160,uint128,uint256,bool)\":{\"notice\":\"Gets the next sqrt price given an input amount of token0 or token1\"},\"getNextSqrtPriceFromOutput(uint160,uint128,uint256,bool)\":{\"notice\":\"Gets the next sqrt price given an output amount of token0 or token1\"}},\"notice\":\"Contains the math that uses square root of price as a Q64.96 and liquidity to compute deltas\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/strategies/cake/interfaces/libraries/ISqrtPriceMathLib.sol\":\"ISqrtPriceMathLib\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=lib/openzeppelin-contracts/contracts/\",\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":@pancakeswap-v2-core/=lib/pancake-swap-core/contracts/\",\":@pancakeswap-v2-exchange-protocol/=lib/pancake-smart-contracts/projects/exchange-protocol/contracts/\",\":@pancakeswap-v3-core/=lib/pancake-v3-contracts/projects/v3-core/contracts/\",\":@pancakeswap-v3-masterchef/=lib/pancake-v3-contracts/projects/masterchef-v3/contracts/\",\":@pancakeswap-v3-periphery/=lib/pancake-v3-contracts/projects/v3-periphery/contracts/\",\":@pancakeswap-v3-router/=lib/pancake-v3-contracts/projects/router/contracts/\",\":@pancakeswap/=lib/pancake-v3-contracts/projects/\",\":@rivera/=src/\",\":@uniswap/v3-core/=lib/v3-core/\",\":@uniswap/v3-periphery/=lib/v3-periphery/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":pancake-smart-contracts/=lib/pancake-smart-contracts/\",\":pancake-swap-core/=lib/pancake-swap-core/contracts/\",\":pancake-v3-contracts/=lib/pancake-v3-contracts/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"src/strategies/cake/interfaces/libraries/ISqrtPriceMathLib.sol\":{\"keccak256\":\"0xd727272c9ca8c1105a3e1f8b513236e5105efe04f363925486e209ef7428b733\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://79f6d598caedc04aabba8d2a9e0acb43a76d27a3da76881a400d3f6652d57286\",\"dweb:/ipfs/QmTQRk21VPeZicoXAq5ZvCEAtosmtoLAoTtFXpEMeZUKaa\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint160",
+              "name": "sqrtRatioAX96",
+              "type": "uint160"
+            },
+            {
+              "internalType": "uint160",
+              "name": "sqrtRatioBX96",
+              "type": "uint160"
+            },
+            {
+              "internalType": "uint128",
+              "name": "liquidity",
+              "type": "uint128"
+            },
+            {
+              "internalType": "bool",
+              "name": "roundUp",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "getAmount0Delta",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint160",
+              "name": "sqrtRatioAX96",
+              "type": "uint160"
+            },
+            {
+              "internalType": "uint160",
+              "name": "sqrtRatioBX96",
+              "type": "uint160"
+            },
+            {
+              "internalType": "int128",
+              "name": "liquidity",
+              "type": "int128"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "getAmount0Delta",
+          "outputs": [
+            {
+              "internalType": "int256",
+              "name": "",
+              "type": "int256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint160",
+              "name": "sqrtRatioAX96",
+              "type": "uint160"
+            },
+            {
+              "internalType": "uint160",
+              "name": "sqrtRatioBX96",
+              "type": "uint160"
+            },
+            {
+              "internalType": "int128",
+              "name": "liquidity",
+              "type": "int128"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "getAmount1Delta",
+          "outputs": [
+            {
+              "internalType": "int256",
+              "name": "",
+              "type": "int256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint160",
+              "name": "sqrtRatioAX96",
+              "type": "uint160"
+            },
+            {
+              "internalType": "uint160",
+              "name": "sqrtRatioBX96",
+              "type": "uint160"
+            },
+            {
+              "internalType": "uint128",
+              "name": "liquidity",
+              "type": "uint128"
+            },
+            {
+              "internalType": "bool",
+              "name": "roundUp",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "getAmount1Delta",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint160",
+              "name": "sqrtPX96",
+              "type": "uint160"
+            },
+            {
+              "internalType": "uint128",
+              "name": "liquidity",
+              "type": "uint128"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "add",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "getNextSqrtPriceFromAmount0RoundingUp",
+          "outputs": [
+            {
+              "internalType": "uint160",
+              "name": "",
+              "type": "uint160"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint160",
+              "name": "sqrtPX96",
+              "type": "uint160"
+            },
+            {
+              "internalType": "uint128",
+              "name": "liquidity",
+              "type": "uint128"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "add",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "getNextSqrtPriceFromAmount1RoundingDown",
+          "outputs": [
+            {
+              "internalType": "uint160",
+              "name": "",
+              "type": "uint160"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint160",
+              "name": "sqrtPX96",
+              "type": "uint160"
+            },
+            {
+              "internalType": "uint128",
+              "name": "liquidity",
+              "type": "uint128"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amountIn",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "zeroForOne",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "getNextSqrtPriceFromInput",
+          "outputs": [
+            {
+              "internalType": "uint160",
+              "name": "",
+              "type": "uint160"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint160",
+              "name": "sqrtPX96",
+              "type": "uint160"
+            },
+            {
+              "internalType": "uint128",
+              "name": "liquidity",
+              "type": "uint128"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amountOut",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "zeroForOne",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "getNextSqrtPriceFromOutput",
+          "outputs": [
+            {
+              "internalType": "uint160",
+              "name": "",
+              "type": "uint160"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "getAmount0Delta(uint160,uint160,int128)": {
+            "params": {
+              "liquidity": "The change in liquidity for which to compute the amount0 delta",
+              "sqrtRatioAX96": "A sqrt price",
+              "sqrtRatioBX96": "Another sqrt price"
+            },
+            "returns": {
+              "_0": "amount0 Amount of token0 corresponding to the passed liquidityDelta between the two prices"
+            }
+          },
+          "getAmount0Delta(uint160,uint160,uint128,bool)": {
+            "details": "Calculates liquidity / sqrt(lower) - liquidity / sqrt(upper), i.e. liquidity * (sqrt(upper) - sqrt(lower)) / (sqrt(upper) * sqrt(lower))",
+            "params": {
+              "liquidity": "The amount of usable liquidity",
+              "roundUp": "Whether to round the amount up or down",
+              "sqrtRatioAX96": "A sqrt price",
+              "sqrtRatioBX96": "Another sqrt price"
+            },
+            "returns": {
+              "_0": "amount0 Amount of token0 required to cover a position of size liquidity between the two passed prices"
+            }
+          },
+          "getAmount1Delta(uint160,uint160,int128)": {
+            "params": {
+              "liquidity": "The change in liquidity for which to compute the amount1 delta",
+              "sqrtRatioAX96": "A sqrt price",
+              "sqrtRatioBX96": "Another sqrt price"
+            },
+            "returns": {
+              "_0": "amount1 Amount of token1 corresponding to the passed liquidityDelta between the two prices"
+            }
+          },
+          "getAmount1Delta(uint160,uint160,uint128,bool)": {
+            "details": "Calculates liquidity * (sqrt(upper) - sqrt(lower))",
+            "params": {
+              "liquidity": "The amount of usable liquidity",
+              "roundUp": "Whether to round the amount up, or down",
+              "sqrtRatioAX96": "A sqrt price",
+              "sqrtRatioBX96": "Another sqrt price"
+            },
+            "returns": {
+              "_0": "amount1 Amount of token1 required to cover a position of size liquidity between the two passed prices"
+            }
+          },
+          "getNextSqrtPriceFromAmount0RoundingUp(uint160,uint128,uint256,bool)": {
+            "details": "Always rounds up, because in the exact output case (increasing price) we need to move the price at least far enough to get the desired output amount, and in the exact input case (decreasing price) we need to move the price less in order to not send too much output. The most precise formula for this is liquidity * sqrtPX96 / (liquidity +- amount * sqrtPX96), if this is impossible because of overflow, we calculate liquidity / (liquidity / sqrtPX96 +- amount).",
+            "params": {
+              "add": "Whether to add or remove the amount of token0",
+              "amount": "How much of token0 to add or remove from virtual reserves",
+              "liquidity": "The amount of usable liquidity",
+              "sqrtPX96": "The starting price, i.e. before accounting for the token0 delta"
+            },
+            "returns": {
+              "_0": "The price after adding or removing amount, depending on add"
+            }
+          },
+          "getNextSqrtPriceFromAmount1RoundingDown(uint160,uint128,uint256,bool)": {
+            "details": "Always rounds down, because in the exact output case (decreasing price) we need to move the price at least far enough to get the desired output amount, and in the exact input case (increasing price) we need to move the price less in order to not send too much output. The formula we compute is within <1 wei of the lossless version: sqrtPX96 +- amount / liquidity",
+            "params": {
+              "add": "Whether to add, or remove, the amount of token1",
+              "amount": "How much of token1 to add, or remove, from virtual reserves",
+              "liquidity": "The amount of usable liquidity",
+              "sqrtPX96": "The starting price, i.e., before accounting for the token1 delta"
+            },
+            "returns": {
+              "_0": "The price after adding or removing `amount`"
+            }
+          },
+          "getNextSqrtPriceFromInput(uint160,uint128,uint256,bool)": {
+            "details": "Throws if price or liquidity are 0, or if the next price is out of bounds",
+            "params": {
+              "amountIn": "How much of token0, or token1, is being swapped in",
+              "liquidity": "The amount of usable liquidity",
+              "sqrtPX96": "The starting price, i.e., before accounting for the input amount",
+              "zeroForOne": "Whether the amount in is token0 or token1"
+            },
+            "returns": {
+              "_0": "sqrtQX96 The price after adding the input amount to token0 or token1"
+            }
+          },
+          "getNextSqrtPriceFromOutput(uint160,uint128,uint256,bool)": {
+            "details": "Throws if price or liquidity are 0 or the next price is out of bounds",
+            "params": {
+              "amountOut": "How much of token0, or token1, is being swapped out",
+              "liquidity": "The amount of usable liquidity",
+              "sqrtPX96": "The starting price before accounting for the output amount",
+              "zeroForOne": "Whether the amount out is token0 or token1"
+            },
+            "returns": {
+              "_0": "sqrtQX96 The price after removing the output amount of token0 or token1"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "getAmount0Delta(uint160,uint160,int128)": {
+            "notice": "Helper that gets signed token0 delta"
+          },
+          "getAmount0Delta(uint160,uint160,uint128,bool)": {
+            "notice": "Gets the amount0 delta between two prices"
+          },
+          "getAmount1Delta(uint160,uint160,int128)": {
+            "notice": "Helper that gets signed token1 delta"
+          },
+          "getAmount1Delta(uint160,uint160,uint128,bool)": {
+            "notice": "Gets the amount1 delta between two prices"
+          },
+          "getNextSqrtPriceFromAmount0RoundingUp(uint160,uint128,uint256,bool)": {
+            "notice": "Gets the next sqrt price given a delta of token0"
+          },
+          "getNextSqrtPriceFromAmount1RoundingDown(uint160,uint128,uint256,bool)": {
+            "notice": "Gets the next sqrt price given a delta of token1"
+          },
+          "getNextSqrtPriceFromInput(uint160,uint128,uint256,bool)": {
+            "notice": "Gets the next sqrt price given an input amount of token0 or token1"
+          },
+          "getNextSqrtPriceFromOutput(uint160,uint128,uint256,bool)": {
+            "notice": "Gets the next sqrt price given an output amount of token0 or token1"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=lib/openzeppelin-contracts/contracts/",
+        ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+        ":@pancakeswap-v2-core/=lib/pancake-swap-core/contracts/",
+        ":@pancakeswap-v2-exchange-protocol/=lib/pancake-smart-contracts/projects/exchange-protocol/contracts/",
+        ":@pancakeswap-v3-core/=lib/pancake-v3-contracts/projects/v3-core/contracts/",
+        ":@pancakeswap-v3-masterchef/=lib/pancake-v3-contracts/projects/masterchef-v3/contracts/",
+        ":@pancakeswap-v3-periphery/=lib/pancake-v3-contracts/projects/v3-periphery/contracts/",
+        ":@pancakeswap-v3-router/=lib/pancake-v3-contracts/projects/router/contracts/",
+        ":@pancakeswap/=lib/pancake-v3-contracts/projects/",
+        ":@rivera/=src/",
+        ":@uniswap/v3-core/=lib/v3-core/",
+        ":@uniswap/v3-periphery/=lib/v3-periphery/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":erc4626-tests/=lib/erc4626-tests/",
+        ":forge-std/=lib/forge-std/src/",
+        ":pancake-smart-contracts/=lib/pancake-smart-contracts/",
+        ":pancake-swap-core/=lib/pancake-swap-core/contracts/",
+        ":pancake-v3-contracts/=lib/pancake-v3-contracts/",
+        ":solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/strategies/cake/interfaces/libraries/ISqrtPriceMathLib.sol": "ISqrtPriceMathLib"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/strategies/cake/interfaces/libraries/ISqrtPriceMathLib.sol": {
+        "keccak256": "0xd727272c9ca8c1105a3e1f8b513236e5105efe04f363925486e209ef7428b733",
+        "urls": [
+          "bzz-raw://79f6d598caedc04aabba8d2a9e0acb43a76d27a3da76881a400d3f6652d57286",
+          "dweb:/ipfs/QmTQRk21VPeZicoXAq5ZvCEAtosmtoLAoTtFXpEMeZUKaa"
+        ],
+        "license": "GPL-2.0-or-later"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/strategies/cake/interfaces/libraries/ISqrtPriceMathLib.sol",
+    "id": 32402,
+    "exportedSymbols": {
+      "ISqrtPriceMathLib": [
+        32401
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "46:6265:52",
+    "nodes": [
+      {
+        "id": 32291,
+        "nodeType": "PragmaDirective",
+        "src": "46:23:52",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 32401,
+        "nodeType": "ContractDefinition",
+        "src": "242:6067:52",
+        "nodes": [
+          {
+            "id": 32306,
+            "nodeType": "FunctionDefinition",
+            "src": "1227:185:52",
+            "nodes": [],
+            "documentation": {
+              "id": 32293,
+              "nodeType": "StructuredDocumentation",
+              "src": "279:942:52",
+              "text": "@notice Gets the next sqrt price given a delta of token0\n @dev Always rounds up, because in the exact output case (increasing price) we need to move the price at least\n far enough to get the desired output amount, and in the exact input case (decreasing price) we need to move the\n price less in order to not send too much output.\n The most precise formula for this is liquidity * sqrtPX96 / (liquidity +- amount * sqrtPX96),\n if this is impossible because of overflow, we calculate liquidity / (liquidity / sqrtPX96 +- amount).\n @param sqrtPX96 The starting price, i.e. before accounting for the token0 delta\n @param liquidity The amount of usable liquidity\n @param amount How much of token0 to add or remove from virtual reserves\n @param add Whether to add or remove the amount of token0\n @return The price after adding or removing amount, depending on add"
+            },
+            "functionSelector": "157f652f",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getNextSqrtPriceFromAmount0RoundingUp",
+            "nameLocation": "1236:37:52",
+            "parameters": {
+              "id": 32302,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32295,
+                  "mutability": "mutable",
+                  "name": "sqrtPX96",
+                  "nameLocation": "1292:8:52",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32306,
+                  "src": "1284:16:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint160",
+                    "typeString": "uint160"
+                  },
+                  "typeName": {
+                    "id": 32294,
+                    "name": "uint160",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1284:7:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 32297,
+                  "mutability": "mutable",
+                  "name": "liquidity",
+                  "nameLocation": "1319:9:52",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32306,
+                  "src": "1311:17:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 32296,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1311:7:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 32299,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "1347:6:52",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32306,
+                  "src": "1339:14:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 32298,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1339:7:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 32301,
+                  "mutability": "mutable",
+                  "name": "add",
+                  "nameLocation": "1369:3:52",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32306,
+                  "src": "1364:8:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 32300,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1364:4:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1273:106:52"
+            },
+            "returnParameters": {
+              "id": 32305,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32304,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32306,
+                  "src": "1403:7:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint160",
+                    "typeString": "uint160"
+                  },
+                  "typeName": {
+                    "id": 32303,
+                    "name": "uint160",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1403:7:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1402:9:52"
+            },
+            "scope": 32401,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 32320,
+            "nodeType": "FunctionDefinition",
+            "src": "2250:187:52",
+            "nodes": [],
+            "documentation": {
+              "id": 32307,
+              "nodeType": "StructuredDocumentation",
+              "src": "1420:824:52",
+              "text": "@notice Gets the next sqrt price given a delta of token1\n @dev Always rounds down, because in the exact output case (decreasing price) we need to move the price at least\n far enough to get the desired output amount, and in the exact input case (increasing price) we need to move the\n price less in order to not send too much output.\n The formula we compute is within <1 wei of the lossless version: sqrtPX96 +- amount / liquidity\n @param sqrtPX96 The starting price, i.e., before accounting for the token1 delta\n @param liquidity The amount of usable liquidity\n @param amount How much of token1 to add, or remove, from virtual reserves\n @param add Whether to add, or remove, the amount of token1\n @return The price after adding or removing `amount`"
+            },
+            "functionSelector": "fb4de288",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getNextSqrtPriceFromAmount1RoundingDown",
+            "nameLocation": "2259:39:52",
+            "parameters": {
+              "id": 32316,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32309,
+                  "mutability": "mutable",
+                  "name": "sqrtPX96",
+                  "nameLocation": "2317:8:52",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32320,
+                  "src": "2309:16:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint160",
+                    "typeString": "uint160"
+                  },
+                  "typeName": {
+                    "id": 32308,
+                    "name": "uint160",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2309:7:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 32311,
+                  "mutability": "mutable",
+                  "name": "liquidity",
+                  "nameLocation": "2344:9:52",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32320,
+                  "src": "2336:17:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 32310,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2336:7:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 32313,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "2372:6:52",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32320,
+                  "src": "2364:14:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 32312,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2364:7:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 32315,
+                  "mutability": "mutable",
+                  "name": "add",
+                  "nameLocation": "2394:3:52",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32320,
+                  "src": "2389:8:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 32314,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2389:4:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2298:106:52"
+            },
+            "returnParameters": {
+              "id": 32319,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32318,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32320,
+                  "src": "2428:7:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint160",
+                    "typeString": "uint160"
+                  },
+                  "typeName": {
+                    "id": 32317,
+                    "name": "uint160",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2428:7:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2427:9:52"
+            },
+            "scope": 32401,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 32334,
+            "nodeType": "FunctionDefinition",
+            "src": "2995:182:52",
+            "nodes": [],
+            "documentation": {
+              "id": 32321,
+              "nodeType": "StructuredDocumentation",
+              "src": "2445:544:52",
+              "text": "@notice Gets the next sqrt price given an input amount of token0 or token1\n @dev Throws if price or liquidity are 0, or if the next price is out of bounds\n @param sqrtPX96 The starting price, i.e., before accounting for the input amount\n @param liquidity The amount of usable liquidity\n @param amountIn How much of token0, or token1, is being swapped in\n @param zeroForOne Whether the amount in is token0 or token1\n @return sqrtQX96 The price after adding the input amount to token0 or token1"
+            },
+            "functionSelector": "aa58276a",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getNextSqrtPriceFromInput",
+            "nameLocation": "3004:25:52",
+            "parameters": {
+              "id": 32330,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32323,
+                  "mutability": "mutable",
+                  "name": "sqrtPX96",
+                  "nameLocation": "3048:8:52",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32334,
+                  "src": "3040:16:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint160",
+                    "typeString": "uint160"
+                  },
+                  "typeName": {
+                    "id": 32322,
+                    "name": "uint160",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3040:7:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 32325,
+                  "mutability": "mutable",
+                  "name": "liquidity",
+                  "nameLocation": "3075:9:52",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32334,
+                  "src": "3067:17:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 32324,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3067:7:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 32327,
+                  "mutability": "mutable",
+                  "name": "amountIn",
+                  "nameLocation": "3103:8:52",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32334,
+                  "src": "3095:16:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 32326,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3095:7:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 32329,
+                  "mutability": "mutable",
+                  "name": "zeroForOne",
+                  "nameLocation": "3127:10:52",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32334,
+                  "src": "3122:15:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 32328,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3122:4:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3029:115:52"
+            },
+            "returnParameters": {
+              "id": 32333,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32332,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32334,
+                  "src": "3168:7:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint160",
+                    "typeString": "uint160"
+                  },
+                  "typeName": {
+                    "id": 32331,
+                    "name": "uint160",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3168:7:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3167:9:52"
+            },
+            "scope": 32401,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 32348,
+            "nodeType": "FunctionDefinition",
+            "src": "3732:184:52",
+            "nodes": [],
+            "documentation": {
+              "id": 32335,
+              "nodeType": "StructuredDocumentation",
+              "src": "3185:541:52",
+              "text": "@notice Gets the next sqrt price given an output amount of token0 or token1\n @dev Throws if price or liquidity are 0 or the next price is out of bounds\n @param sqrtPX96 The starting price before accounting for the output amount\n @param liquidity The amount of usable liquidity\n @param amountOut How much of token0, or token1, is being swapped out\n @param zeroForOne Whether the amount out is token0 or token1\n @return sqrtQX96 The price after removing the output amount of token0 or token1"
+            },
+            "functionSelector": "fedf2b5f",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getNextSqrtPriceFromOutput",
+            "nameLocation": "3741:26:52",
+            "parameters": {
+              "id": 32344,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32337,
+                  "mutability": "mutable",
+                  "name": "sqrtPX96",
+                  "nameLocation": "3786:8:52",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32348,
+                  "src": "3778:16:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint160",
+                    "typeString": "uint160"
+                  },
+                  "typeName": {
+                    "id": 32336,
+                    "name": "uint160",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3778:7:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 32339,
+                  "mutability": "mutable",
+                  "name": "liquidity",
+                  "nameLocation": "3813:9:52",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32348,
+                  "src": "3805:17:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 32338,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3805:7:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 32341,
+                  "mutability": "mutable",
+                  "name": "amountOut",
+                  "nameLocation": "3841:9:52",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32348,
+                  "src": "3833:17:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 32340,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3833:7:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 32343,
+                  "mutability": "mutable",
+                  "name": "zeroForOne",
+                  "nameLocation": "3866:10:52",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32348,
+                  "src": "3861:15:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 32342,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3861:4:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3767:116:52"
+            },
+            "returnParameters": {
+              "id": 32347,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32346,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32348,
+                  "src": "3907:7:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint160",
+                    "typeString": "uint160"
+                  },
+                  "typeName": {
+                    "id": 32345,
+                    "name": "uint160",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3907:7:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3906:9:52"
+            },
+            "scope": 32401,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 32362,
+            "nodeType": "FunctionDefinition",
+            "src": "4474:179:52",
+            "nodes": [],
+            "documentation": {
+              "id": 32349,
+              "nodeType": "StructuredDocumentation",
+              "src": "3924:544:52",
+              "text": "@notice Gets the amount0 delta between two prices\n @dev Calculates liquidity / sqrt(lower) - liquidity / sqrt(upper),\n i.e. liquidity * (sqrt(upper) - sqrt(lower)) / (sqrt(upper) * sqrt(lower))\n @param sqrtRatioAX96 A sqrt price\n @param sqrtRatioBX96 Another sqrt price\n @param liquidity The amount of usable liquidity\n @param roundUp Whether to round the amount up or down\n @return amount0 Amount of token0 required to cover a position of size liquidity between the two passed prices"
+            },
+            "functionSelector": "2c32d4b6",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAmount0Delta",
+            "nameLocation": "4483:15:52",
+            "parameters": {
+              "id": 32358,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32351,
+                  "mutability": "mutable",
+                  "name": "sqrtRatioAX96",
+                  "nameLocation": "4517:13:52",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32362,
+                  "src": "4509:21:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint160",
+                    "typeString": "uint160"
+                  },
+                  "typeName": {
+                    "id": 32350,
+                    "name": "uint160",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4509:7:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 32353,
+                  "mutability": "mutable",
+                  "name": "sqrtRatioBX96",
+                  "nameLocation": "4549:13:52",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32362,
+                  "src": "4541:21:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint160",
+                    "typeString": "uint160"
+                  },
+                  "typeName": {
+                    "id": 32352,
+                    "name": "uint160",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4541:7:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 32355,
+                  "mutability": "mutable",
+                  "name": "liquidity",
+                  "nameLocation": "4581:9:52",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32362,
+                  "src": "4573:17:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 32354,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4573:7:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 32357,
+                  "mutability": "mutable",
+                  "name": "roundUp",
+                  "nameLocation": "4606:7:52",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32362,
+                  "src": "4601:12:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 32356,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4601:4:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4498:122:52"
+            },
+            "returnParameters": {
+              "id": 32361,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32360,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32362,
+                  "src": "4644:7:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 32359,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4644:7:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4643:9:52"
+            },
+            "scope": 32401,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 32376,
+            "nodeType": "FunctionDefinition",
+            "src": "5117:179:52",
+            "nodes": [],
+            "documentation": {
+              "id": 32363,
+              "nodeType": "StructuredDocumentation",
+              "src": "4661:450:52",
+              "text": "@notice Gets the amount1 delta between two prices\n @dev Calculates liquidity * (sqrt(upper) - sqrt(lower))\n @param sqrtRatioAX96 A sqrt price\n @param sqrtRatioBX96 Another sqrt price\n @param liquidity The amount of usable liquidity\n @param roundUp Whether to round the amount up, or down\n @return amount1 Amount of token1 required to cover a position of size liquidity between the two passed prices"
+            },
+            "functionSelector": "48a0c5bd",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAmount1Delta",
+            "nameLocation": "5126:15:52",
+            "parameters": {
+              "id": 32372,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32365,
+                  "mutability": "mutable",
+                  "name": "sqrtRatioAX96",
+                  "nameLocation": "5160:13:52",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32376,
+                  "src": "5152:21:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint160",
+                    "typeString": "uint160"
+                  },
+                  "typeName": {
+                    "id": 32364,
+                    "name": "uint160",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5152:7:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 32367,
+                  "mutability": "mutable",
+                  "name": "sqrtRatioBX96",
+                  "nameLocation": "5192:13:52",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32376,
+                  "src": "5184:21:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint160",
+                    "typeString": "uint160"
+                  },
+                  "typeName": {
+                    "id": 32366,
+                    "name": "uint160",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5184:7:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 32369,
+                  "mutability": "mutable",
+                  "name": "liquidity",
+                  "nameLocation": "5224:9:52",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32376,
+                  "src": "5216:17:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 32368,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5216:7:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 32371,
+                  "mutability": "mutable",
+                  "name": "roundUp",
+                  "nameLocation": "5249:7:52",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32376,
+                  "src": "5244:12:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 32370,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5244:4:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5141:122:52"
+            },
+            "returnParameters": {
+              "id": 32375,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32374,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32376,
+                  "src": "5287:7:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 32373,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5287:7:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5286:9:52"
+            },
+            "scope": 32401,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 32388,
+            "nodeType": "FunctionDefinition",
+            "src": "5647:154:52",
+            "nodes": [],
+            "documentation": {
+              "id": 32377,
+              "nodeType": "StructuredDocumentation",
+              "src": "5304:337:52",
+              "text": "@notice Helper that gets signed token0 delta\n @param sqrtRatioAX96 A sqrt price\n @param sqrtRatioBX96 Another sqrt price\n @param liquidity The change in liquidity for which to compute the amount0 delta\n @return amount0 Amount of token0 corresponding to the passed liquidityDelta between the two prices"
+            },
+            "functionSelector": "c932699b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAmount0Delta",
+            "nameLocation": "5656:15:52",
+            "parameters": {
+              "id": 32384,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32379,
+                  "mutability": "mutable",
+                  "name": "sqrtRatioAX96",
+                  "nameLocation": "5690:13:52",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32388,
+                  "src": "5682:21:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint160",
+                    "typeString": "uint160"
+                  },
+                  "typeName": {
+                    "id": 32378,
+                    "name": "uint160",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5682:7:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 32381,
+                  "mutability": "mutable",
+                  "name": "sqrtRatioBX96",
+                  "nameLocation": "5722:13:52",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32388,
+                  "src": "5714:21:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint160",
+                    "typeString": "uint160"
+                  },
+                  "typeName": {
+                    "id": 32380,
+                    "name": "uint160",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5714:7:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 32383,
+                  "mutability": "mutable",
+                  "name": "liquidity",
+                  "nameLocation": "5753:9:52",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32388,
+                  "src": "5746:16:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int128",
+                    "typeString": "int128"
+                  },
+                  "typeName": {
+                    "id": 32382,
+                    "name": "int128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5746:6:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5671:98:52"
+            },
+            "returnParameters": {
+              "id": 32387,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32386,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32388,
+                  "src": "5793:6:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 32385,
+                    "name": "int256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5793:6:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5792:8:52"
+            },
+            "scope": 32401,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 32400,
+            "nodeType": "FunctionDefinition",
+            "src": "6152:154:52",
+            "nodes": [],
+            "documentation": {
+              "id": 32389,
+              "nodeType": "StructuredDocumentation",
+              "src": "5809:337:52",
+              "text": "@notice Helper that gets signed token1 delta\n @param sqrtRatioAX96 A sqrt price\n @param sqrtRatioBX96 Another sqrt price\n @param liquidity The change in liquidity for which to compute the amount1 delta\n @return amount1 Amount of token1 corresponding to the passed liquidityDelta between the two prices"
+            },
+            "functionSelector": "00c11862",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAmount1Delta",
+            "nameLocation": "6161:15:52",
+            "parameters": {
+              "id": 32396,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32391,
+                  "mutability": "mutable",
+                  "name": "sqrtRatioAX96",
+                  "nameLocation": "6195:13:52",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32400,
+                  "src": "6187:21:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint160",
+                    "typeString": "uint160"
+                  },
+                  "typeName": {
+                    "id": 32390,
+                    "name": "uint160",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6187:7:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 32393,
+                  "mutability": "mutable",
+                  "name": "sqrtRatioBX96",
+                  "nameLocation": "6227:13:52",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32400,
+                  "src": "6219:21:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint160",
+                    "typeString": "uint160"
+                  },
+                  "typeName": {
+                    "id": 32392,
+                    "name": "uint160",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6219:7:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 32395,
+                  "mutability": "mutable",
+                  "name": "liquidity",
+                  "nameLocation": "6258:9:52",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32400,
+                  "src": "6251:16:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int128",
+                    "typeString": "int128"
+                  },
+                  "typeName": {
+                    "id": 32394,
+                    "name": "int128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6251:6:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6176:98:52"
+            },
+            "returnParameters": {
+              "id": 32399,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32398,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32400,
+                  "src": "6298:6:52",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 32397,
+                    "name": "int256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6298:6:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6297:8:52"
+            },
+            "scope": 32401,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ISqrtPriceMathLib",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 32292,
+          "nodeType": "StructuredDocumentation",
+          "src": "73:169:52",
+          "text": "@title Functions based on Q64.96 sqrt price and liquidity\n @notice Contains the math that uses square root of price as a Q64.96 and liquidity to compute deltas"
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          32401
+        ],
+        "name": "ISqrtPriceMathLib",
+        "nameLocation": "252:17:52",
+        "scope": 32402,
+        "usedErrors": []
+      }
+    ],
+    "license": "GPL-2.0-or-later"
+  },
+  "id": 52
+}

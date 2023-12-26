@@ -1,0 +1,787 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "MAX_SQRT_RATIO",
+      "outputs": [
+        {
+          "internalType": "uint160",
+          "name": "",
+          "type": "uint160"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "MAX_TICK",
+      "outputs": [
+        {
+          "internalType": "int24",
+          "name": "",
+          "type": "int24"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "MIN_SQRT_RATIO",
+      "outputs": [
+        {
+          "internalType": "uint160",
+          "name": "",
+          "type": "uint160"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "MIN_TICK",
+      "outputs": [
+        {
+          "internalType": "int24",
+          "name": "",
+          "type": "int24"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "int24",
+          "name": "tick",
+          "type": "int24"
+        }
+      ],
+      "name": "getSqrtRatioAtTick",
+      "outputs": [
+        {
+          "internalType": "uint160",
+          "name": "",
+          "type": "uint160"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint160",
+          "name": "sqrtPriceX96",
+          "type": "uint160"
+        }
+      ],
+      "name": "getTickAtSqrtRatio",
+      "outputs": [
+        {
+          "internalType": "int24",
+          "name": "tick",
+          "type": "int24"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "MAX_SQRT_RATIO()": "6d2cc304",
+    "MAX_TICK()": "6882a888",
+    "MIN_SQRT_RATIO()": "ee8847ff",
+    "MIN_TICK()": "a1634b14",
+    "getSqrtRatioAtTick(int24)": "986cfba3",
+    "getTickAtSqrtRatio(uint160)": "4f76c058"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"MAX_SQRT_RATIO\",\"outputs\":[{\"internalType\":\"uint160\",\"name\":\"\",\"type\":\"uint160\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"MAX_TICK\",\"outputs\":[{\"internalType\":\"int24\",\"name\":\"\",\"type\":\"int24\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"MIN_SQRT_RATIO\",\"outputs\":[{\"internalType\":\"uint160\",\"name\":\"\",\"type\":\"uint160\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"MIN_TICK\",\"outputs\":[{\"internalType\":\"int24\",\"name\":\"\",\"type\":\"int24\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"int24\",\"name\":\"tick\",\"type\":\"int24\"}],\"name\":\"getSqrtRatioAtTick\",\"outputs\":[{\"internalType\":\"uint160\",\"name\":\"\",\"type\":\"uint160\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint160\",\"name\":\"sqrtPriceX96\",\"type\":\"uint160\"}],\"name\":\"getTickAtSqrtRatio\",\"outputs\":[{\"internalType\":\"int24\",\"name\":\"tick\",\"type\":\"int24\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"MAX_SQRT_RATIO()\":{\"details\":\"The maximum value that can be returned from #getSqrtRatioAtTick. Equivalent to getSqrtRatioAtTick(MAX_TICK)\"},\"MAX_TICK()\":{\"details\":\"The maximum tick that may be passed to #getSqrtRatioAtTick computed from log base 1.0001 of 2**128\"},\"MIN_SQRT_RATIO()\":{\"details\":\"The minimum value that can be returned from #getSqrtRatioAtTick. Equivalent to getSqrtRatioAtTick(MIN_TICK)\"},\"MIN_TICK()\":{\"details\":\"The minimum tick that may be passed to #getSqrtRatioAtTick computed from log base 1.0001 of 2**-128\"},\"getSqrtRatioAtTick(int24)\":{\"details\":\"Throws if |tick| > max tick\",\"params\":{\"tick\":\"The input tick for the above formula\"},\"returns\":{\"_0\":\"sqrtPriceX96 A Fixed point Q64.96 number representing the sqrt of the ratio of the two assets (token1/token0) at the given tick\"}},\"getTickAtSqrtRatio(uint160)\":{\"details\":\"Throws in case sqrtPriceX96 < MIN_SQRT_RATIO, as MIN_SQRT_RATIO is the lowest value getRatioAtTick may ever return.\",\"params\":{\"sqrtPriceX96\":\"The sqrt ratio for which to compute the tick as a Q64.96\"},\"returns\":{\"tick\":\"The greatest tick for which the ratio is less than or equal to the input ratio\"}}},\"title\":\"Math library for computing sqrt prices from ticks and vice versa\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getSqrtRatioAtTick(int24)\":{\"notice\":\"Calculates sqrt(1.0001^tick) * 2^96\"},\"getTickAtSqrtRatio(uint160)\":{\"notice\":\"Calculates the greatest tick value such that getRatioAtTick(tick) <= ratio\"}},\"notice\":\"Computes sqrt price for ticks of size 1.0001, i.e. sqrt(1.0001^tick) as fixed point Q64.96 numbers. Supports prices between 2**-128 and 2**128\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/strategies/cake/interfaces/libraries/ITickMathLib.sol\":\"ITickMathLib\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=lib/openzeppelin-contracts/contracts/\",\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":@pancakeswap-v2-core/=lib/pancake-swap-core/contracts/\",\":@pancakeswap-v2-exchange-protocol/=lib/pancake-smart-contracts/projects/exchange-protocol/contracts/\",\":@pancakeswap-v3-core/=lib/pancake-v3-contracts/projects/v3-core/contracts/\",\":@pancakeswap-v3-masterchef/=lib/pancake-v3-contracts/projects/masterchef-v3/contracts/\",\":@pancakeswap-v3-periphery/=lib/pancake-v3-contracts/projects/v3-periphery/contracts/\",\":@pancakeswap-v3-router/=lib/pancake-v3-contracts/projects/router/contracts/\",\":@pancakeswap/=lib/pancake-v3-contracts/projects/\",\":@rivera/=src/\",\":@uniswap/v3-core/=lib/v3-core/\",\":@uniswap/v3-periphery/=lib/v3-periphery/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":pancake-smart-contracts/=lib/pancake-smart-contracts/\",\":pancake-swap-core/=lib/pancake-swap-core/contracts/\",\":pancake-v3-contracts/=lib/pancake-v3-contracts/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"src/strategies/cake/interfaces/libraries/ITickMathLib.sol\":{\"keccak256\":\"0xc784712f70ae6bcc60517fc7ba736a18c570dc2f6aedcef106f08318e5e85c18\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://d5762d3ed5a935b0f1bb97940cd2abaacb9293e08237ea31b0139c53372ba609\",\"dweb:/ipfs/QmaGHemX1B8BVrXtbhqB99Bga4DmQUjSzXLzFKskLenMZm\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "MAX_SQRT_RATIO",
+          "outputs": [
+            {
+              "internalType": "uint160",
+              "name": "",
+              "type": "uint160"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "MAX_TICK",
+          "outputs": [
+            {
+              "internalType": "int24",
+              "name": "",
+              "type": "int24"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "MIN_SQRT_RATIO",
+          "outputs": [
+            {
+              "internalType": "uint160",
+              "name": "",
+              "type": "uint160"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "MIN_TICK",
+          "outputs": [
+            {
+              "internalType": "int24",
+              "name": "",
+              "type": "int24"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "int24",
+              "name": "tick",
+              "type": "int24"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getSqrtRatioAtTick",
+          "outputs": [
+            {
+              "internalType": "uint160",
+              "name": "",
+              "type": "uint160"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint160",
+              "name": "sqrtPriceX96",
+              "type": "uint160"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getTickAtSqrtRatio",
+          "outputs": [
+            {
+              "internalType": "int24",
+              "name": "tick",
+              "type": "int24"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "MAX_SQRT_RATIO()": {
+            "details": "The maximum value that can be returned from #getSqrtRatioAtTick. Equivalent to getSqrtRatioAtTick(MAX_TICK)"
+          },
+          "MAX_TICK()": {
+            "details": "The maximum tick that may be passed to #getSqrtRatioAtTick computed from log base 1.0001 of 2**128"
+          },
+          "MIN_SQRT_RATIO()": {
+            "details": "The minimum value that can be returned from #getSqrtRatioAtTick. Equivalent to getSqrtRatioAtTick(MIN_TICK)"
+          },
+          "MIN_TICK()": {
+            "details": "The minimum tick that may be passed to #getSqrtRatioAtTick computed from log base 1.0001 of 2**-128"
+          },
+          "getSqrtRatioAtTick(int24)": {
+            "details": "Throws if |tick| > max tick",
+            "params": {
+              "tick": "The input tick for the above formula"
+            },
+            "returns": {
+              "_0": "sqrtPriceX96 A Fixed point Q64.96 number representing the sqrt of the ratio of the two assets (token1/token0) at the given tick"
+            }
+          },
+          "getTickAtSqrtRatio(uint160)": {
+            "details": "Throws in case sqrtPriceX96 < MIN_SQRT_RATIO, as MIN_SQRT_RATIO is the lowest value getRatioAtTick may ever return.",
+            "params": {
+              "sqrtPriceX96": "The sqrt ratio for which to compute the tick as a Q64.96"
+            },
+            "returns": {
+              "tick": "The greatest tick for which the ratio is less than or equal to the input ratio"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "getSqrtRatioAtTick(int24)": {
+            "notice": "Calculates sqrt(1.0001^tick) * 2^96"
+          },
+          "getTickAtSqrtRatio(uint160)": {
+            "notice": "Calculates the greatest tick value such that getRatioAtTick(tick) <= ratio"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=lib/openzeppelin-contracts/contracts/",
+        ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+        ":@pancakeswap-v2-core/=lib/pancake-swap-core/contracts/",
+        ":@pancakeswap-v2-exchange-protocol/=lib/pancake-smart-contracts/projects/exchange-protocol/contracts/",
+        ":@pancakeswap-v3-core/=lib/pancake-v3-contracts/projects/v3-core/contracts/",
+        ":@pancakeswap-v3-masterchef/=lib/pancake-v3-contracts/projects/masterchef-v3/contracts/",
+        ":@pancakeswap-v3-periphery/=lib/pancake-v3-contracts/projects/v3-periphery/contracts/",
+        ":@pancakeswap-v3-router/=lib/pancake-v3-contracts/projects/router/contracts/",
+        ":@pancakeswap/=lib/pancake-v3-contracts/projects/",
+        ":@rivera/=src/",
+        ":@uniswap/v3-core/=lib/v3-core/",
+        ":@uniswap/v3-periphery/=lib/v3-periphery/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":erc4626-tests/=lib/erc4626-tests/",
+        ":forge-std/=lib/forge-std/src/",
+        ":pancake-smart-contracts/=lib/pancake-smart-contracts/",
+        ":pancake-swap-core/=lib/pancake-swap-core/contracts/",
+        ":pancake-v3-contracts/=lib/pancake-v3-contracts/",
+        ":solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/strategies/cake/interfaces/libraries/ITickMathLib.sol": "ITickMathLib"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/strategies/cake/interfaces/libraries/ITickMathLib.sol": {
+        "keccak256": "0xc784712f70ae6bcc60517fc7ba736a18c570dc2f6aedcef106f08318e5e85c18",
+        "urls": [
+          "bzz-raw://d5762d3ed5a935b0f1bb97940cd2abaacb9293e08237ea31b0139c53372ba609",
+          "dweb:/ipfs/QmaGHemX1B8BVrXtbhqB99Bga4DmQUjSzXLzFKskLenMZm"
+        ],
+        "license": "GPL-2.0-or-later"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/strategies/cake/interfaces/libraries/ITickMathLib.sol",
+    "id": 32446,
+    "exportedSymbols": {
+      "ITickMathLib": [
+        32445
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "46:1905:53",
+    "nodes": [
+      {
+        "id": 32403,
+        "nodeType": "PragmaDirective",
+        "src": "46:23:53",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 32445,
+        "nodeType": "ContractDefinition",
+        "src": "311:1638:53",
+        "nodes": [
+          {
+            "id": 32410,
+            "nodeType": "FunctionDefinition",
+            "src": "455:50:53",
+            "nodes": [],
+            "documentation": {
+              "id": 32405,
+              "nodeType": "StructuredDocumentation",
+              "src": "341:108:53",
+              "text": "@dev The minimum tick that may be passed to #getSqrtRatioAtTick computed from log base 1.0001 of 2**-128"
+            },
+            "functionSelector": "a1634b14",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "MIN_TICK",
+            "nameLocation": "464:8:53",
+            "parameters": {
+              "id": 32406,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "472:2:53"
+            },
+            "returnParameters": {
+              "id": 32409,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32408,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32410,
+                  "src": "498:5:53",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int24",
+                    "typeString": "int24"
+                  },
+                  "typeName": {
+                    "id": 32407,
+                    "name": "int24",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "498:5:53",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int24",
+                      "typeString": "int24"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "497:7:53"
+            },
+            "scope": 32445,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 32416,
+            "nodeType": "FunctionDefinition",
+            "src": "624:50:53",
+            "nodes": [],
+            "documentation": {
+              "id": 32411,
+              "nodeType": "StructuredDocumentation",
+              "src": "511:107:53",
+              "text": "@dev The maximum tick that may be passed to #getSqrtRatioAtTick computed from log base 1.0001 of 2**128"
+            },
+            "functionSelector": "6882a888",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "MAX_TICK",
+            "nameLocation": "633:8:53",
+            "parameters": {
+              "id": 32412,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "641:2:53"
+            },
+            "returnParameters": {
+              "id": 32415,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32414,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32416,
+                  "src": "667:5:53",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int24",
+                    "typeString": "int24"
+                  },
+                  "typeName": {
+                    "id": 32413,
+                    "name": "int24",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "667:5:53",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int24",
+                      "typeString": "int24"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "666:7:53"
+            },
+            "scope": 32445,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 32422,
+            "nodeType": "FunctionDefinition",
+            "src": "804:58:53",
+            "nodes": [],
+            "documentation": {
+              "id": 32417,
+              "nodeType": "StructuredDocumentation",
+              "src": "682:116:53",
+              "text": "@dev The minimum value that can be returned from #getSqrtRatioAtTick. Equivalent to getSqrtRatioAtTick(MIN_TICK)"
+            },
+            "functionSelector": "ee8847ff",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "MIN_SQRT_RATIO",
+            "nameLocation": "813:14:53",
+            "parameters": {
+              "id": 32418,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "827:2:53"
+            },
+            "returnParameters": {
+              "id": 32421,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32420,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32422,
+                  "src": "853:7:53",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint160",
+                    "typeString": "uint160"
+                  },
+                  "typeName": {
+                    "id": 32419,
+                    "name": "uint160",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "853:7:53",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "852:9:53"
+            },
+            "scope": 32445,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 32428,
+            "nodeType": "FunctionDefinition",
+            "src": "990:58:53",
+            "nodes": [],
+            "documentation": {
+              "id": 32423,
+              "nodeType": "StructuredDocumentation",
+              "src": "868:116:53",
+              "text": "@dev The maximum value that can be returned from #getSqrtRatioAtTick. Equivalent to getSqrtRatioAtTick(MAX_TICK)"
+            },
+            "functionSelector": "6d2cc304",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "MAX_SQRT_RATIO",
+            "nameLocation": "999:14:53",
+            "parameters": {
+              "id": 32424,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1013:2:53"
+            },
+            "returnParameters": {
+              "id": 32427,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32426,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32428,
+                  "src": "1039:7:53",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint160",
+                    "typeString": "uint160"
+                  },
+                  "typeName": {
+                    "id": 32425,
+                    "name": "uint160",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1039:7:53",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1038:9:53"
+            },
+            "scope": 32445,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 32436,
+            "nodeType": "FunctionDefinition",
+            "src": "1363:72:53",
+            "nodes": [],
+            "documentation": {
+              "id": 32429,
+              "nodeType": "StructuredDocumentation",
+              "src": "1056:301:53",
+              "text": "@notice Calculates sqrt(1.0001^tick) * 2^96\n @dev Throws if |tick| > max tick\n @param tick The input tick for the above formula\n @return sqrtPriceX96 A Fixed point Q64.96 number representing the sqrt of the ratio of the two assets (token1/token0)\n at the given tick"
+            },
+            "functionSelector": "986cfba3",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSqrtRatioAtTick",
+            "nameLocation": "1372:18:53",
+            "parameters": {
+              "id": 32432,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32431,
+                  "mutability": "mutable",
+                  "name": "tick",
+                  "nameLocation": "1397:4:53",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32436,
+                  "src": "1391:10:53",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int24",
+                    "typeString": "int24"
+                  },
+                  "typeName": {
+                    "id": 32430,
+                    "name": "int24",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1391:5:53",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int24",
+                      "typeString": "int24"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1390:12:53"
+            },
+            "returnParameters": {
+              "id": 32435,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32434,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32436,
+                  "src": "1426:7:53",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint160",
+                    "typeString": "uint160"
+                  },
+                  "typeName": {
+                    "id": 32433,
+                    "name": "uint160",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1426:7:53",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1425:9:53"
+            },
+            "scope": 32445,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 32444,
+            "nodeType": "FunctionDefinition",
+            "src": "1861:85:53",
+            "nodes": [],
+            "documentation": {
+              "id": 32437,
+              "nodeType": "StructuredDocumentation",
+              "src": "1443:412:53",
+              "text": "@notice Calculates the greatest tick value such that getRatioAtTick(tick) <= ratio\n @dev Throws in case sqrtPriceX96 < MIN_SQRT_RATIO, as MIN_SQRT_RATIO is the lowest value getRatioAtTick may\n ever return.\n @param sqrtPriceX96 The sqrt ratio for which to compute the tick as a Q64.96\n @return tick The greatest tick for which the ratio is less than or equal to the input ratio"
+            },
+            "functionSelector": "4f76c058",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTickAtSqrtRatio",
+            "nameLocation": "1870:18:53",
+            "parameters": {
+              "id": 32440,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32439,
+                  "mutability": "mutable",
+                  "name": "sqrtPriceX96",
+                  "nameLocation": "1897:12:53",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32444,
+                  "src": "1889:20:53",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint160",
+                    "typeString": "uint160"
+                  },
+                  "typeName": {
+                    "id": 32438,
+                    "name": "uint160",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1889:7:53",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1888:22:53"
+            },
+            "returnParameters": {
+              "id": 32443,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32442,
+                  "mutability": "mutable",
+                  "name": "tick",
+                  "nameLocation": "1940:4:53",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32444,
+                  "src": "1934:10:53",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int24",
+                    "typeString": "int24"
+                  },
+                  "typeName": {
+                    "id": 32441,
+                    "name": "int24",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1934:5:53",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int24",
+                      "typeString": "int24"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1933:12:53"
+            },
+            "scope": 32445,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ITickMathLib",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 32404,
+          "nodeType": "StructuredDocumentation",
+          "src": "73:238:53",
+          "text": "@title Math library for computing sqrt prices from ticks and vice versa\n @notice Computes sqrt price for ticks of size 1.0001, i.e. sqrt(1.0001^tick) as fixed point Q64.96 numbers. Supports\n prices between 2**-128 and 2**128"
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          32445
+        ],
+        "name": "ITickMathLib",
+        "nameLocation": "321:12:53",
+        "scope": 32446,
+        "usedErrors": []
+      }
+    ],
+    "license": "GPL-2.0-or-later"
+  },
+  "id": 53
+}

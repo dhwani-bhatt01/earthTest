@@ -1,0 +1,575 @@
+{
+  "0x74C5E75798b33D38abeE64f7EC63698B7e0a10f1": {
+    "contractExplorer": "https://goerli.basescan.org/address/0x74c5e75798b33d38abee64f7ec63698b7e0a10f1",
+    "show": true,
+    "vaultApr": "5%",
+    "valutType":"public",
+    "assetAbi": "./abi/EarthAutoCompoundingVaultPublic.json",
+    "assetImg":"../img/wETHVault.svg",
+    "chainImg":"../img/mantleLogo.png",
+    "denominationAsset": "ETH",
+    "denominationAssetLogo": "png",
+    "displayName": "ETH Vault",
+    "buyToken": "https://fusionx.finance/swap/",  
+    "id": "84531",
+    "isStablePair": false,
+    "isLSDFarming": false,
+    "isVolatilePair": true,
+    "isLiquidityMining": true,
+    "isDynamicStrategy": true,
+    "chainname": "Mantle Testnet",
+    "poweredBy": "/img/fusionX.svg",
+    "fundManager": {
+      "name": "FSX_Farmer",
+      "yearFounded": "2016",
+      "logo": "cdn",
+      "location": "Decentralised",
+      "details": "Lorem ipsum dolor sit amet consectetur. Quam consectetur a odio eget mi libero arcu pharetra. Sit eu nisl semper justo. Lorem ipsum dolor sit amet consectetur. Quam consectetur a odio eget mi libero arcu pharetra. Sit eu nisl semper justo.",
+      "vaultOwner": "0x6db5ed9557fds5645fds266f4ffsd220dfsdsff0",
+      "fundManagerAddress": "0x6db5ed9557fds5645fds266f4ffsd220dfsdsff0",
+      "complianceManger": "0x6db5ed9557fds5645fds266f4ffsd220dfsdsff0"
+    },
+    "risk": {
+      "safetyScore": "6.8",
+      "safetyScorePoint": [
+        {
+          "details": "Low-complexity strategy",
+          "type": "Rivera",
+          "side": "up"
+        },
+        { "details": "Testnet assets", "type": "Asset", "side": "down" },
+        { "details": "High expected IL", "type": "Asset", "side": "down" }
+      ],
+      "riskType": [
+        {
+          "details": "Principal Risk",
+          "type": "Impermanent loss associated with AMM liquidity farming can lead to a loss of principal amount."
+        },
+        {
+          "details": "Smart Contract Risk",
+          "type": "There is a risk of smart contract failure in the underlying vault or the protocols we work with."
+        }
+      ]
+    },
+    "protocols": [
+      {
+        "name": "FusionX",
+        "logo": "/img/fusionX.svg",
+        "details": "FusionX Finance is a leading DEX on the Mantle Network. It is building a community-driven & capital-efficient AMM.",
+        "contract": "https://explorer.testnet.mantle.xyz/address/0x30F63e60Ab33B05f3baFf97E5A35010De6F4Ea9D",
+        "website": "https://fusionx.finance/"
+      }
+    ],
+    "strategy": {
+      "val": [
+        "Our actively managed liquidity mining strategy vault aims to maximize profitability and minimize impermanent loss. Liquidity ranges are managed for you and the fees are automatically compounded, allowing for a passive liquidity-providing experience."
+      ],
+      "pool": "v3 FSX-MNT (0.25%)"
+    },
+    "fees": [
+      {
+        "feeType": "Performance Fee",
+        "settings": {
+          "name": "Rate",
+          "value": "15.00%"
+        },
+        "recipent": {
+          "name": "Protocol & Fund manager",
+          "value": ""
+        }
+      },
+      {
+        "feeType": "Exit Fee",
+        "settings": {
+          "name": "Rate",
+          "value": "1.00%"
+        },
+        "recipent": {
+          "name": "Vault Holders",
+          "value": ""
+        }
+      }
+    ],
+    "transactions": [
+      {
+        "type": "Deposit",
+        "date": "June-05-2023 11:19:33Am",
+        "value": "100 WMNT",
+        "tnxFee": "2 MNT",
+        "address": "0x6db5.........sff0"
+      },
+      {
+        "type": "Deposit",
+        "date": "June-05-2023 11:19:33Am",
+        "value": "100 WMNT",
+        "tnxFee": "2 MNT",
+        "address": "0x6db5.........sff0"
+      },
+      {
+        "type": "Deposit",
+        "date": "June-05-2023 11:19:33Am",
+        "value": "100 WMNT",
+        "tnxFee": "2 MNT",
+        "address": "0x6db5.........sff0"
+      },
+      {
+        "type": "Deposit",
+        "date": "June-05-2023 11:19:33Am",
+        "value": "100 WMNT",
+        "tnxFee": "2 MNT",
+        "address": "0x6db5.........sff0"
+      }
+    ],
+    "depositors": [
+      {
+        "depositor": "0X920........8383",
+        "assets": "Riv-FSX-WBIT-YT-X",
+        "numbersOfShares": "100",
+        "percentage": "25.00%"
+      },
+      {
+        "depositor": "0X920........8383",
+        "assets": "Riv-FSX-WBIT-YT-X",
+        "numbersOfShares": "100",
+        "percentage": "25.00%"
+      },
+      {
+        "depositor": "0X920........8383",
+        "assets": "Riv-FSX-WBIT-YT-X",
+        "numbersOfShares": "100",
+        "percentage": "25.00%"
+      },
+      {
+        "depositor": "0X920........8383",
+        "assets": "Riv-FSX-WBIT-YT-X",
+        "numbersOfShares": "100",
+        "percentage": "25.00%"
+      }
+    ],
+    "faq": [
+      {
+        "name": "Is there any lock-up period for funds?",
+        "description": "No, there is no lock-up period in this vault. You can withdraw your funds at any time without any restriction or penalty."
+      },
+      {
+        "name": "What assets are the yields paid in?",
+        "description": "The yields are paid in the denomination asset of the strategy and are compounded automatically. Unharvested rewards can be temporarily held in the form of farmed assets."
+      },
+      {
+        "name": "What are the fees associated with using the vault?",
+        "description": "During the testing period, there are no fees for using Rivera vaults. A management & performance fee will be applied after the protocol's mainnet launch."
+      },
+      {
+        "name": "I'm having trouble using the app. What should I do?",
+        "description": "Join our Discord community and help us improve our app by reporting your issue. Win exclusive rewards, bounty & more for your contribution."
+      },
+      {
+        "name": "I love Rivera! How can I get involved?",
+        "description": "We are recruiting DeFi pros who can help us redefine the future of DeFi liquidity management. Join us in testing the Rivera protocol and contributing to its development. We are awarding exclusive OG NFTs to the top 100 testers. Get started by joining our Discord."
+      }
+    ]
+  },
+  "0xe8d223328543Cc10Edaa3292CE12C320CE43A099": {
+    "contractExplorer": "https://goerli.basescan.org/address/0xe8d223328543Cc10Edaa3292CE12C320CE43A099",
+    "show": true,
+    "vaultApr": "10%",
+    "valutType":"public",
+    "assetAbi": "./abi/EarthAutoCompoundingVaultPublic.json",
+    "assetImg":"../img/cloud.svg",
+    "chainImg":"../img/mantleLogo.png",
+    "denominationAsset": "CLOUD",
+    "denominationAssetLogo": "png",
+    "displayName": "CLOUD Vault",
+    "buyToken": "https://fusionx.finance/swap/",  
+    "id": "84531",
+    "isStablePair": true,
+    "isLSDFarming": false,
+    "isVolatilePair": false,
+    "isLiquidityMining": true,
+    "isDynamicStrategy": true,
+    "chainname": "Mantle Testnet",
+    "poweredBy": "/img/fusionX.svg",
+    "fundManager": {
+      "name": "FSX_Farmer",
+      "yearFounded": "2016",
+      "logo": "cdn",
+      "location": "Decentralised",
+      "details": "Lorem ipsum dolor sit amet consectetur. Quam consectetur a odio eget mi libero arcu pharetra. Sit eu nisl semper justo. Lorem ipsum dolor sit amet consectetur. Quam consectetur a odio eget mi libero arcu pharetra. Sit eu nisl semper justo.",
+      "vaultOwner": "0x6db5ed9557fds5645fds266f4ffsd220dfsdsff0",
+      "fundManagerAddress": "0x6db5ed9557fds5645fds266f4ffsd220dfsdsff0",
+      "complianceManger": "0x6db5ed9557fds5645fds266f4ffsd220dfsdsff0"
+    },
+    "risk": {
+      "safetyScore": "9.1",
+      "safetyScorePoint": [
+        {
+          "details": "Low-complexity strategy",
+          "type": "Rivera",
+          "side": "up"
+        },
+        { "details": "Testnet assets", "type": "Asset", "side": "down" },
+        { "details": "Low expected IL", "type": "Asset", "side": "up" }
+      ],
+      "riskType": [
+        {
+          "details": "Principal Risk",
+          "type": "Impermanent loss associated with AMM liquidity farming can lead to a loss of principal amount."
+        },
+        {
+          "details": "Smart Contract Risk",
+          "type": "There is a risk of smart contract failure in the underlying vault or the protocols we work with."
+        }
+      ]
+    },
+    "protocols": [
+      {
+        "name": "FusionX",
+        "logo": "/img/fusionX.svg",
+        "details": "FusionX Finance is a leading DEX on the Mantle Network. It is building a community-driven & capital-efficient AMM.",
+        "contract": "https://explorer.testnet.mantle.xyz/address/0xD5E4DBEca6055535B6FBf4c4Bc51bDc104dE9EA6",
+        "website": "https://fusionx.finance/"
+      }
+    ],
+    "strategy": {
+      "val": [
+        "Our actively managed liquidity mining strategy vault aims to maximize profitability and minimize impermanent loss. Liquidity ranges are managed for you and the fees are automatically compounded, allowing for a passive liquidity-providing experience."
+      ],
+      "pool": "v3 DAI-MUSDC (0.01%)"
+    },
+    "fees": [
+      {
+        "feeType": "Performance Fee",
+        "settings": {
+          "name": "Rate",
+          "value": "15.00%"
+        },
+        "recipent": {
+          "name": "Protocol & Fund manager",
+          "value": ""
+        }
+      },
+      {
+        "feeType": "Exit Fee",
+        "settings": {
+          "name": "Rate",
+          "value": "1.00%"
+        },
+        "recipent": {
+          "name": "Vault Holders",
+          "value": ""
+        }
+      }
+    ],
+    "transactions": [
+      {
+        "type": "Deposit",
+        "date": "June-05-2023 11:19:33Am",
+        "value": "100 DAI",
+        "tnxFee": "2 MNT",
+        "address": "0x6db5.........sff0"
+      },
+      {
+        "type": "Deposit",
+        "date": "June-05-2023 11:19:33Am",
+        "value": "100 DAI",
+        "tnxFee": "2 MNT",
+        "address": "0x6db5.........sff0"
+      },
+      {
+        "type": "Deposit",
+        "date": "June-05-2023 11:19:33Am",
+        "value": "100 DAI",
+        "tnxFee": "2 MNT",
+        "address": "0x6db5.........sff0"
+      },
+      {
+        "type": "Deposit",
+        "date": "June-05-2023 11:19:33Am",
+        "value": "100 DAI",
+        "tnxFee": "2 MNT",
+        "address": "0x6db5.........sff0"
+      }
+    ],
+    "depositors": [
+      {
+        "depositor": "0X920........8383",
+        "assets": "Riv-DAI-MUSDC-YT-Z",
+        "numbersOfShares": "100",
+        "percentage": "25.00%"
+      },
+      {
+        "depositor": "0X920........8383",
+        "assets": "Riv-DAI-MUSDC-YT-Z",
+        "numbersOfShares": "100",
+        "percentage": "25.00%"
+      },
+      {
+        "depositor": "0X920........8383",
+        "assets": "Riv-DAI-MUSDC-YT-Z",
+        "numbersOfShares": "100",
+        "percentage": "25.00%"
+      },
+      {
+        "depositor": "0X920........8383",
+        "assets": "Riv-DAI-MUSDC-YT-Z",
+        "numbersOfShares": "100",
+        "percentage": "25.00%"
+      }
+    ],
+    "faq": [
+      {
+        "name": "Is there any lock-up period for funds?",
+        "description": "No, there is no lock-up period in this vault. You can withdraw your funds at any time without any restriction or penalty."
+      },
+      {
+        "name": "What assets are the yields paid in?",
+        "description": "The yields are paid in the denomination asset of the strategy and are compounded automatically. Unharvested rewards can be temporarily held in the form of farmed assets."
+      },
+      {
+        "name": "What are the fees associated with using the vault?",
+        "description": "During the testing period, there are no fees for using Rivera vaults. A management & performance fee will be applied after the protocol's mainnet launch."
+      },
+      {
+        "name": "I'm having trouble using the app. What should I do?",
+        "description": "Join our Discord community and help us improve our app by reporting your issue. Win exclusive rewards, bounty & more for your contribution."
+      },
+      {
+        "name": "I love Rivera! How can I get involved?",
+        "description": "We are recruiting DeFi pros who can help us redefine the future of DeFi liquidity management. Join us in testing the Rivera protocol and contributing to its development. We are awarding exclusive OG NFTs to the top 100 testers. Get started by joining our Discord."
+      }
+    ]
+  },
+  "0x6AB8c9590bD89cBF9DCC90d5efEC4F45D5d219be": {
+    "contractExplorer": "https://goerli.basescan.org/address/0x6AB8c9590bD89cBF9DCC90d5efEC4F45D5d219be",
+    "show": true,
+    "vaultApr": "19.23%",
+    "valutType":"whitelisted",
+    "assetAbi": "./abi/wmntAbi.json",
+    "assetImg":"../img/mantle.svg",
+    "chainImg":"../img/mantleLogo.png",
+    "denominationAsset": "ETH-CLOUD LP",
+    "denominationAssetLogo": "png",
+    "displayName": "ETH-CLOUD Boosted Vault",
+    "buyToken": "https://fusionx.finance/swap/",  
+    "id": "5001",
+    "isStablePair": false,
+    "isLSDFarming": false,
+    "isVolatilePair": true,
+    "isLiquidityMining": true,
+    "isDynamicStrategy": true,
+    "chainname": "Mantle",
+    "poweredBy": "/img/fusionX.svg",
+    "fundManager": {
+      "name": "FSX_Farmer",
+      "yearFounded": "2016",
+      "logo": "cdn",
+      "location": "Decentralised",
+      "details": "Lorem ipsum dolor sit amet consectetur. Quam consectetur a odio eget mi libero arcu pharetra. Sit eu nisl semper justo. Lorem ipsum dolor sit amet consectetur. Quam consectetur a odio eget mi libero arcu pharetra. Sit eu nisl semper justo.",
+      "vaultOwner": "0x6db5ed9557fds5645fds266f4ffsd220dfsdsff0",
+      "fundManagerAddress": "0x6db5ed9557fds5645fds266f4ffsd220dfsdsff0",
+      "complianceManger": "0x6db5ed9557fds5645fds266f4ffsd220dfsdsff0"
+    },
+    "risk": {
+      "safetyScore": "7.0",
+      "safetyScorePoint": [
+        {
+          "details": "Low-complexity strategy",
+          "type": "Rivera",
+          "side": "up"
+        },
+        { "details": "Testnet assets", "type": "Asset", "side": "down" },
+        { "details": "High expected IL", "type": "Asset", "side": "down" }
+      ],
+      "riskType": [
+        {
+          "details": "Principal Risk",
+          "type": "Impermanent loss associated with AMM liquidity farming can lead to a loss of principal amount."
+        },
+        {
+          "details": "Smart Contract Risk",
+          "type": "There is a risk of smart contract failure in the underlying vault or the protocols we work with."
+        }
+      ]
+    },
+    "protocols": [
+      {
+        "name": "FusionX",
+        "logo": "/img/fusionX.svg",
+        "details": "FusionX Finance is a leading DEX on the Mantle Network. It is building a community-driven & capital-efficient AMM.",
+        "contract": "https://explorer.testnet.mantle.xyz/address/0x30F63e60Ab33B05f3baFf97E5A35010De6F4Ea9D",
+        "website": "https://fusionx.finance/"
+      }
+    ],
+    "strategy": {
+      "val": [
+        "Our actively managed liquidity mining strategy vault aims to maximize profitability and minimize impermanent loss. Liquidity ranges are managed for you and the fees are automatically compounded, allowing for a passive liquidity-providing experience."
+      ],
+      "pool": "v3 FSX-MNT (0.25%)"
+    },
+    "fees": [
+      {
+        "feeType": "Performance Fee",
+        "settings": {
+          "name": "Rate",
+          "value": "15.00%"
+        },
+        "recipent": {
+          "name": "Protocol & Fund manager",
+          "value": ""
+        }
+      },
+      {
+        "feeType": "Exit Fee",
+        "settings": {
+          "name": "Rate",
+          "value": "1.00%"
+        },
+        "recipent": {
+          "name": "Vault Holders",
+          "value": ""
+        }
+      }
+    ],
+    "transactions": [
+      {
+        "type": "Deposit",
+        "date": "June-05-2023 11:19:33Am",
+        "value": "100 WMNT",
+        "tnxFee": "2 MNT",
+        "address": "0x6db5.........sff0"
+      },
+      {
+        "type": "Deposit",
+        "date": "June-05-2023 11:19:33Am",
+        "value": "100 WMNT",
+        "tnxFee": "2 MNT",
+        "address": "0x6db5.........sff0"
+      },
+      {
+        "type": "Deposit",
+        "date": "June-05-2023 11:19:33Am",
+        "value": "100 WMNT",
+        "tnxFee": "2 MNT",
+        "address": "0x6db5.........sff0"
+      },
+      {
+        "type": "Deposit",
+        "date": "June-05-2023 11:19:33Am",
+        "value": "100 WMNT",
+        "tnxFee": "2 MNT",
+        "address": "0x6db5.........sff0"
+      }
+    ],
+    "depositors": [
+      {
+        "depositor": "0X920........8383",
+        "assets": "Riv-FSX-WBIT-Vault",
+        "numbersOfShares": "100",
+        "percentage": "25.00%"
+      },
+      {
+        "depositor": "0X920........8383",
+        "assets": "Riv-FSX-WBIT-Vault",
+        "numbersOfShares": "100",
+        "percentage": "25.00%"
+      },
+      {
+        "depositor": "0X920........8383",
+        "assets": "Riv-FSX-WBIT-Vault",
+        "numbersOfShares": "100",
+        "percentage": "25.00%"
+      },
+      {
+        "depositor": "0X920........8383",
+        "assets": "Riv-FSX-WBIT-Vault",
+        "numbersOfShares": "100",
+        "percentage": "25.00%"
+      }
+    ],
+    "faq": [
+      {
+        "name": "Is there any lock-up period for funds?",
+        "description": "No, there is no lock-up period in this vault. You can withdraw your funds at any time without any restriction or penalty."
+      },
+      {
+        "name": "What assets are the yields paid in?",
+        "description": "The yields are paid in the denomination asset of the strategy and are compounded automatically. Unharvested rewards can be temporarily held in the form of farmed assets."
+      },
+      {
+        "name": "What are the fees associated with using the vault?",
+        "description": "During the testing period, there are no fees for using Rivera vaults. A management & performance fee will be applied after the protocol's mainnet launch."
+      },
+      {
+        "name": "I'm having trouble using the app. What should I do?",
+        "description": "Join our Discord community and help us improve our app by reporting your issue. Win exclusive rewards, bounty & more for your contribution."
+      },
+      {
+        "name": "I love Rivera! How can I get involved?",
+        "description": "We are recruiting DeFi pros who can help us redefine the future of DeFi liquidity management. Join us in testing the Rivera protocol and contributing to its development. We are awarding exclusive OG NFTs to the top 100 testers. Get started by joining our Discord."
+      }
+    ]
+  },
+  "0xAbaf80156857E05b1EB162552Bea517b25F29aD9": {
+    "contractExplorer": "https://mainnet.opbnbscan.com/address/0xAbaf80156857E05b1EB162552Bea517b25F29aD9",
+    "show": true,
+    "vaultApr": "52%",
+    "valutType":"public",
+    "assetAbi": "./abi/EarthAutoCompoundingVaultPublic.json",
+    "assetImg":"../img/wbnb.png",
+    "chainImg":"../img/mantleLogo.png",
+    "denominationAsset": "WBNB",
+    "denominationAssetLogo": "png",
+    "displayName": "WBNB Vault",
+    "buyToken": "https://www.binaryswap.io/#/swap",  
+    "id": "84531",
+    "isStablePair": false,
+    "isLSDFarming": false,
+    "isVolatilePair": true,
+    "isLiquidityMining": true,
+    "isDynamicStrategy": true,
+    "chainname": "Mantle Testnet",
+    "poweredBy": "/img/fusionX.svg"
+  },
+  "0xA7B88e482d3C9d17A1b83bc3FbeB4DF72cB20478": {
+    "contractExplorer": "https://mainnet.opbnbscan.com/address/0xA7B88e482d3C9d17A1b83bc3FbeB4DF72cB20478",
+    "show": true,
+    "vaultApr": "104%",
+    "valutType":"public",
+    "assetAbi": "./abi/EarthAutoCompoundingVaultPublic.json",
+    "assetImg":"../img/0101v2.png",
+    "chainImg":"../img/mantleLogo.png",
+    "denominationAsset": "0101",
+    "denominationAssetLogo": "png",
+    "displayName": "0101 Vault",
+    "buyToken": "https://www.binaryswap.io/#/swap",  
+    "id": "84531",
+    "isStablePair": true,
+    "isLSDFarming": false,
+    "isVolatilePair": false,
+    "isLiquidityMining": true,
+    "isDynamicStrategy": true,
+    "chainname": "Mantle Testnet",
+    "poweredBy": "/img/fusionX.svg"
+  },
+  "0x3dbfDf42AEbb9aDfFDe4D8592D61b1de7bd7c26a": {
+    "contractExplorer": "https://mainnet.opbnbscan.com/address/0x3dbfDf42AEbb9aDfFDe4D8592D61b1de7bd7c26a",
+    "show": true,
+    "vaultApr": "2500%",
+    "valutType":"whitelisted",
+    "assetAbi": "./abi/wmntAbi.json",
+    "assetImg":"../img/mantle.svg",
+    "chainImg":"../img/mantleLogo.png",
+    "denominationAsset": "WBNB-0101 LP",
+    "denominationAssetLogo": "png",
+    "displayName": "WBNB-0101 Boosted Vault",
+    "buyToken": "https://www.binaryswap.io/#/swap",  
+    "id": "5001",
+    "isStablePair": false,
+    "isLSDFarming": false,
+    "isVolatilePair": true,
+    "isLiquidityMining": true,
+    "isDynamicStrategy": true,
+    "chainname": "Mantle",
+    "poweredBy": "/img/fusionX.svg"
+  }
+}

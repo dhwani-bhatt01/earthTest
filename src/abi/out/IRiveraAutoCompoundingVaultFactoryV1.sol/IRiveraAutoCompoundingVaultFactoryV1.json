@@ -1,0 +1,885 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "lpPool",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "poolId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "vault",
+          "type": "address"
+        }
+      ],
+      "name": "VaultCreated",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "allVaults",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "vault",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "poolId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "approvalDelay",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address[]",
+              "name": "rewardToLp0Route",
+              "type": "address[]"
+            },
+            {
+              "internalType": "address[]",
+              "name": "rewardToLp1Route",
+              "type": "address[]"
+            },
+            {
+              "internalType": "string",
+              "name": "tokenName",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "tokenSymbol",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "pendingRewardsFunctionName",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct CreateVaultParams",
+          "name": "createVaultParams",
+          "type": "tuple"
+        }
+      ],
+      "name": "createVault",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "vault",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "allVaults(uint256)": "9094a91e",
+    "createVault((uint256,uint256,address[],address[],string,string,string))": "36493348"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"lpPool\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"poolId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"vault\",\"type\":\"address\"}],\"name\":\"VaultCreated\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"allVaults\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"vault\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"poolId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"approvalDelay\",\"type\":\"uint256\"},{\"internalType\":\"address[]\",\"name\":\"rewardToLp0Route\",\"type\":\"address[]\"},{\"internalType\":\"address[]\",\"name\":\"rewardToLp1Route\",\"type\":\"address[]\"},{\"internalType\":\"string\",\"name\":\"tokenName\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"tokenSymbol\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"pendingRewardsFunctionName\",\"type\":\"string\"}],\"internalType\":\"struct CreateVaultParams\",\"name\":\"createVaultParams\",\"type\":\"tuple\"}],\"name\":\"createVault\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"vault\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/factories/interfaces/IRiveraAutoCompoundingVaultFactoryV1.sol\":\"IRiveraAutoCompoundingVaultFactoryV1\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@chainlink/=lib/pancake-v3-contracts/node_modules/@chainlink/contracts/src/v0.8/dev/vendor/@arbitrum/nitro-contracts/src/\",\":@ensdomains/=lib/pancake-v3-contracts/node_modules/@ensdomains/\",\":@eth-optimism/=lib/pancake-v3-contracts/node_modules/@eth-optimism/contracts/\",\":@openzeppelin/=lib/openzeppelin-contracts/contracts/\",\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":@pancakeswap-v2-core/=lib/pancake-swap-core/contracts/\",\":@pancakeswap-v2-exchange-protocol/=lib/pancake-smart-contracts/projects/exchange-protocol/contracts/\",\":@pancakeswap-v3-core/=lib/pancake-v3-contracts/projects/v3-core/contracts/\",\":@pancakeswap-v3-masterchef/=lib/pancake-v3-contracts/projects/masterchef-v3/contracts/\",\":@pancakeswap-v3-periphery/=lib/pancake-v3-contracts/projects/v3-periphery/contracts/\",\":@pancakeswap-v3-router/=lib/pancake-v3-contracts/projects/router/contracts/\",\":@pancakeswap/=lib/pancake-v3-contracts/projects/\",\":@rivera/=src/\",\":@uniswap/=lib/pancake-v3-contracts/node_modules/@uniswap/\",\":@uniswap/v3-core/=lib/v3-core/\",\":@uniswap/v3-periphery/=lib/v3-periphery/\",\":base64-sol/=lib/pancake-v3-contracts/node_modules/base64-sol/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/erc4626-tests/\",\":eth-gas-reporter/=lib/pancake-v3-contracts/node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=lib/pancake-v3-contracts/node_modules/hardhat/\",\":pancake-smart-contracts/=lib/pancake-smart-contracts/\",\":pancake-swap-core/=lib/pancake-swap-core/contracts/\",\":pancake-v3-contracts/=lib/pancake-v3-contracts/\"]},\"sources\":{\"src/factories/interfaces/IRiveraAutoCompoundingVaultFactoryV1.sol\":{\"keccak256\":\"0xdffeaf88e7caa6d17382c42c29f86a85c0b13efa9523749d0abe9ef08763a6d9\",\"urls\":[\"bzz-raw://54f84eb7ad76c83178d3866a78e214c68dde62c2a4db929ffada416a4e29fcb4\",\"dweb:/ipfs/QmTdrwT8zkiwd74uD3kFuuzrF875X4t6DqGvSQTvqpzRBz\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "user",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "lpPool",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "poolId",
+              "type": "uint256",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "vault",
+              "type": "address",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "VaultCreated",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "allVaults",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "vault",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "struct CreateVaultParams",
+              "name": "createVaultParams",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "poolId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "approvalDelay",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "address[]",
+                  "name": "rewardToLp0Route",
+                  "type": "address[]"
+                },
+                {
+                  "internalType": "address[]",
+                  "name": "rewardToLp1Route",
+                  "type": "address[]"
+                },
+                {
+                  "internalType": "string",
+                  "name": "tokenName",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "tokenSymbol",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "pendingRewardsFunctionName",
+                  "type": "string"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "createVault",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "vault",
+              "type": "address"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@chainlink/=lib/pancake-v3-contracts/node_modules/@chainlink/contracts/src/v0.8/dev/vendor/@arbitrum/nitro-contracts/src/",
+        ":@ensdomains/=lib/pancake-v3-contracts/node_modules/@ensdomains/",
+        ":@eth-optimism/=lib/pancake-v3-contracts/node_modules/@eth-optimism/contracts/",
+        ":@openzeppelin/=lib/openzeppelin-contracts/contracts/",
+        ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+        ":@pancakeswap-v2-core/=lib/pancake-swap-core/contracts/",
+        ":@pancakeswap-v2-exchange-protocol/=lib/pancake-smart-contracts/projects/exchange-protocol/contracts/",
+        ":@pancakeswap-v3-core/=lib/pancake-v3-contracts/projects/v3-core/contracts/",
+        ":@pancakeswap-v3-masterchef/=lib/pancake-v3-contracts/projects/masterchef-v3/contracts/",
+        ":@pancakeswap-v3-periphery/=lib/pancake-v3-contracts/projects/v3-periphery/contracts/",
+        ":@pancakeswap-v3-router/=lib/pancake-v3-contracts/projects/router/contracts/",
+        ":@pancakeswap/=lib/pancake-v3-contracts/projects/",
+        ":@rivera/=src/",
+        ":@uniswap/=lib/pancake-v3-contracts/node_modules/@uniswap/",
+        ":@uniswap/v3-core/=lib/v3-core/",
+        ":@uniswap/v3-periphery/=lib/v3-periphery/",
+        ":base64-sol/=lib/pancake-v3-contracts/node_modules/base64-sol/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":erc4626-tests/=lib/erc4626-tests/",
+        ":eth-gas-reporter/=lib/pancake-v3-contracts/node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=lib/pancake-v3-contracts/node_modules/hardhat/",
+        ":pancake-smart-contracts/=lib/pancake-smart-contracts/",
+        ":pancake-swap-core/=lib/pancake-swap-core/contracts/",
+        ":pancake-v3-contracts/=lib/pancake-v3-contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/factories/interfaces/IRiveraAutoCompoundingVaultFactoryV1.sol": "IRiveraAutoCompoundingVaultFactoryV1"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/factories/interfaces/IRiveraAutoCompoundingVaultFactoryV1.sol": {
+        "keccak256": "0xdffeaf88e7caa6d17382c42c29f86a85c0b13efa9523749d0abe9ef08763a6d9",
+        "urls": [
+          "bzz-raw://54f84eb7ad76c83178d3866a78e214c68dde62c2a4db929ffada416a4e29fcb4",
+          "dweb:/ipfs/QmTdrwT8zkiwd74uD3kFuuzrF875X4t6DqGvSQTvqpzRBz"
+        ],
+        "license": null
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/factories/interfaces/IRiveraAutoCompoundingVaultFactoryV1.sol",
+    "id": 34600,
+    "exportedSymbols": {
+      "CreateVaultParams": [
+        34573
+      ],
+      "IRiveraAutoCompoundingVaultFactoryV1": [
+        34599
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "0:604:54",
+    "nodes": [
+      {
+        "id": 34556,
+        "nodeType": "PragmaDirective",
+        "src": "0:24:54",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0"
+        ]
+      },
+      {
+        "id": 34573,
+        "nodeType": "StructDefinition",
+        "src": "28:232:54",
+        "nodes": [],
+        "canonicalName": "CreateVaultParams",
+        "members": [
+          {
+            "constant": false,
+            "id": 34558,
+            "mutability": "mutable",
+            "name": "poolId",
+            "nameLocation": "68:6:54",
+            "nodeType": "VariableDeclaration",
+            "scope": 34573,
+            "src": "60:14:54",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 34557,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "60:7:54",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 34560,
+            "mutability": "mutable",
+            "name": "approvalDelay",
+            "nameLocation": "89:13:54",
+            "nodeType": "VariableDeclaration",
+            "scope": 34573,
+            "src": "81:21:54",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 34559,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "81:7:54",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 34563,
+            "mutability": "mutable",
+            "name": "rewardToLp0Route",
+            "nameLocation": "119:16:54",
+            "nodeType": "VariableDeclaration",
+            "scope": 34573,
+            "src": "109:26:54",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+              "typeString": "address[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 34561,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "109:7:54",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 34562,
+              "nodeType": "ArrayTypeName",
+              "src": "109:9:54",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 34566,
+            "mutability": "mutable",
+            "name": "rewardToLp1Route",
+            "nameLocation": "152:16:54",
+            "nodeType": "VariableDeclaration",
+            "scope": 34573,
+            "src": "142:26:54",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+              "typeString": "address[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 34564,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "142:7:54",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 34565,
+              "nodeType": "ArrayTypeName",
+              "src": "142:9:54",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 34568,
+            "mutability": "mutable",
+            "name": "tokenName",
+            "nameLocation": "182:9:54",
+            "nodeType": "VariableDeclaration",
+            "scope": 34573,
+            "src": "175:16:54",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage_ptr",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 34567,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "175:6:54",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 34570,
+            "mutability": "mutable",
+            "name": "tokenSymbol",
+            "nameLocation": "205:11:54",
+            "nodeType": "VariableDeclaration",
+            "scope": 34573,
+            "src": "198:18:54",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage_ptr",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 34569,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "198:6:54",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 34572,
+            "mutability": "mutable",
+            "name": "pendingRewardsFunctionName",
+            "nameLocation": "230:26:54",
+            "nodeType": "VariableDeclaration",
+            "scope": 34573,
+            "src": "223:33:54",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage_ptr",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 34571,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "223:6:54",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "CreateVaultParams",
+        "nameLocation": "35:17:54",
+        "scope": 34600,
+        "visibility": "public"
+      },
+      {
+        "id": 34599,
+        "nodeType": "ContractDefinition",
+        "src": "264:338:54",
+        "nodes": [
+          {
+            "id": 34583,
+            "nodeType": "EventDefinition",
+            "src": "318:104:54",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "2ee88224508044af2e7272f772a4a850565fddd70e3a06387cf477f0899df4ca",
+            "name": "VaultCreated",
+            "nameLocation": "324:12:54",
+            "parameters": {
+              "id": 34582,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34575,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "user",
+                  "nameLocation": "353:4:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34583,
+                  "src": "337:20:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34574,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "337:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34577,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "lpPool",
+                  "nameLocation": "375:6:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34583,
+                  "src": "359:22:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34576,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "359:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34579,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "poolId",
+                  "nameLocation": "399:6:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34583,
+                  "src": "383:22:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34578,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "383:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34581,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "vault",
+                  "nameLocation": "415:5:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34583,
+                  "src": "407:13:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34580,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "407:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "336:85:54"
+            }
+          },
+          {
+            "id": 34590,
+            "nodeType": "FunctionDefinition",
+            "src": "430:63:54",
+            "nodes": [],
+            "functionSelector": "9094a91e",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "allVaults",
+            "nameLocation": "439:9:54",
+            "parameters": {
+              "id": 34586,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34585,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34590,
+                  "src": "449:4:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34584,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "449:4:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "448:6:54"
+            },
+            "returnParameters": {
+              "id": 34589,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34588,
+                  "mutability": "mutable",
+                  "name": "vault",
+                  "nameLocation": "486:5:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34590,
+                  "src": "478:13:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34587,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "478:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "477:15:54"
+            },
+            "scope": 34599,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 34598,
+            "nodeType": "FunctionDefinition",
+            "src": "499:98:54",
+            "nodes": [],
+            "functionSelector": "36493348",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createVault",
+            "nameLocation": "508:11:54",
+            "parameters": {
+              "id": 34594,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34593,
+                  "mutability": "mutable",
+                  "name": "createVaultParams",
+                  "nameLocation": "545:17:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34598,
+                  "src": "520:42:54",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_CreateVaultParams_$34573_memory_ptr",
+                    "typeString": "struct CreateVaultParams"
+                  },
+                  "typeName": {
+                    "id": 34592,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 34591,
+                      "name": "CreateVaultParams",
+                      "nameLocations": [
+                        "520:17:54"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 34573,
+                      "src": "520:17:54"
+                    },
+                    "referencedDeclaration": 34573,
+                    "src": "520:17:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_CreateVaultParams_$34573_storage_ptr",
+                      "typeString": "struct CreateVaultParams"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "519:44:54"
+            },
+            "returnParameters": {
+              "id": 34597,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34596,
+                  "mutability": "mutable",
+                  "name": "vault",
+                  "nameLocation": "590:5:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34598,
+                  "src": "582:13:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34595,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "582:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "581:15:54"
+            },
+            "scope": 34599,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IRiveraAutoCompoundingVaultFactoryV1",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          34599
+        ],
+        "name": "IRiveraAutoCompoundingVaultFactoryV1",
+        "nameLocation": "274:36:54",
+        "scope": 34600,
+        "usedErrors": []
+      }
+    ]
+  },
+  "id": 54
+}

@@ -1,0 +1,315 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint128",
+          "name": "x",
+          "type": "uint128"
+        },
+        {
+          "internalType": "int128",
+          "name": "y",
+          "type": "int128"
+        }
+      ],
+      "name": "addDelta",
+      "outputs": [
+        {
+          "internalType": "uint128",
+          "name": "",
+          "type": "uint128"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "addDelta(uint128,int128)": "402d44fb"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint128\",\"name\":\"x\",\"type\":\"uint128\"},{\"internalType\":\"int128\",\"name\":\"y\",\"type\":\"int128\"}],\"name\":\"addDelta\",\"outputs\":[{\"internalType\":\"uint128\",\"name\":\"\",\"type\":\"uint128\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"addDelta(uint128,int128)\":{\"params\":{\"x\":\"The liquidity before change\",\"y\":\"The delta by which liquidity should be changed\"},\"returns\":{\"_0\":\"z The liquidity delta\"}}},\"title\":\"Math library for liquidity\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"addDelta(uint128,int128)\":{\"notice\":\"Add a signed liquidity delta to liquidity and revert if it overflows or underflows\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/strategies/cake/interfaces/libraries/ILiquidityMathLib.sol\":\"ILiquidityMathLib\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=lib/openzeppelin-contracts/contracts/\",\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":@pancakeswap-v2-core/=lib/pancake-swap-core/contracts/\",\":@pancakeswap-v2-exchange-protocol/=lib/pancake-smart-contracts/projects/exchange-protocol/contracts/\",\":@pancakeswap-v3-core/=lib/pancake-v3-contracts/projects/v3-core/contracts/\",\":@pancakeswap-v3-masterchef/=lib/pancake-v3-contracts/projects/masterchef-v3/contracts/\",\":@pancakeswap-v3-periphery/=lib/pancake-v3-contracts/projects/v3-periphery/contracts/\",\":@pancakeswap-v3-router/=lib/pancake-v3-contracts/projects/router/contracts/\",\":@pancakeswap/=lib/pancake-v3-contracts/projects/\",\":@rivera/=src/\",\":@uniswap/v3-core/=lib/v3-core/\",\":@uniswap/v3-periphery/=lib/v3-periphery/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":pancake-smart-contracts/=lib/pancake-smart-contracts/\",\":pancake-swap-core/=lib/pancake-swap-core/contracts/\",\":pancake-v3-contracts/=lib/pancake-v3-contracts/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"src/strategies/cake/interfaces/libraries/ILiquidityMathLib.sol\":{\"keccak256\":\"0x8fd178519dca2e6be4df316d48c633b99d649f8563f7d5e4f24f49cc305bd68d\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://3d2c1b547ab9217139444f6d791f2b21ceb96fefe2b76581000f3dcd972524e5\",\"dweb:/ipfs/QmasuZZwwSRy87znCpMfMFC91gjd1wv75cq5PEwawiyjEd\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint128",
+              "name": "x",
+              "type": "uint128"
+            },
+            {
+              "internalType": "int128",
+              "name": "y",
+              "type": "int128"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "addDelta",
+          "outputs": [
+            {
+              "internalType": "uint128",
+              "name": "",
+              "type": "uint128"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "addDelta(uint128,int128)": {
+            "params": {
+              "x": "The liquidity before change",
+              "y": "The delta by which liquidity should be changed"
+            },
+            "returns": {
+              "_0": "z The liquidity delta"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "addDelta(uint128,int128)": {
+            "notice": "Add a signed liquidity delta to liquidity and revert if it overflows or underflows"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=lib/openzeppelin-contracts/contracts/",
+        ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+        ":@pancakeswap-v2-core/=lib/pancake-swap-core/contracts/",
+        ":@pancakeswap-v2-exchange-protocol/=lib/pancake-smart-contracts/projects/exchange-protocol/contracts/",
+        ":@pancakeswap-v3-core/=lib/pancake-v3-contracts/projects/v3-core/contracts/",
+        ":@pancakeswap-v3-masterchef/=lib/pancake-v3-contracts/projects/masterchef-v3/contracts/",
+        ":@pancakeswap-v3-periphery/=lib/pancake-v3-contracts/projects/v3-periphery/contracts/",
+        ":@pancakeswap-v3-router/=lib/pancake-v3-contracts/projects/router/contracts/",
+        ":@pancakeswap/=lib/pancake-v3-contracts/projects/",
+        ":@rivera/=src/",
+        ":@uniswap/v3-core/=lib/v3-core/",
+        ":@uniswap/v3-periphery/=lib/v3-periphery/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":erc4626-tests/=lib/erc4626-tests/",
+        ":forge-std/=lib/forge-std/src/",
+        ":pancake-smart-contracts/=lib/pancake-smart-contracts/",
+        ":pancake-swap-core/=lib/pancake-swap-core/contracts/",
+        ":pancake-v3-contracts/=lib/pancake-v3-contracts/",
+        ":solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/strategies/cake/interfaces/libraries/ILiquidityMathLib.sol": "ILiquidityMathLib"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/strategies/cake/interfaces/libraries/ILiquidityMathLib.sol": {
+        "keccak256": "0x8fd178519dca2e6be4df316d48c633b99d649f8563f7d5e4f24f49cc305bd68d",
+        "urls": [
+          "bzz-raw://3d2c1b547ab9217139444f6d791f2b21ceb96fefe2b76581000f3dcd972524e5",
+          "dweb:/ipfs/QmasuZZwwSRy87znCpMfMFC91gjd1wv75cq5PEwawiyjEd"
+        ],
+        "license": "GPL-2.0-or-later"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/strategies/cake/interfaces/libraries/ILiquidityMathLib.sol",
+    "id": 32262,
+    "exportedSymbols": {
+      "ILiquidityMathLib": [
+        32261
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "46:427:50",
+    "nodes": [
+      {
+        "id": 32249,
+        "nodeType": "PragmaDirective",
+        "src": "46:23:50",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 32261,
+        "nodeType": "ContractDefinition",
+        "src": "112:359:50",
+        "nodes": [
+          {
+            "id": 32260,
+            "nodeType": "FunctionDefinition",
+            "src": "397:71:50",
+            "nodes": [],
+            "documentation": {
+              "id": 32251,
+              "nodeType": "StructuredDocumentation",
+              "src": "147:244:50",
+              "text": "@notice Add a signed liquidity delta to liquidity and revert if it overflows or underflows\n @param x The liquidity before change\n @param y The delta by which liquidity should be changed\n @return z The liquidity delta"
+            },
+            "functionSelector": "402d44fb",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addDelta",
+            "nameLocation": "406:8:50",
+            "parameters": {
+              "id": 32256,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32253,
+                  "mutability": "mutable",
+                  "name": "x",
+                  "nameLocation": "423:1:50",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32260,
+                  "src": "415:9:50",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 32252,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "415:7:50",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 32255,
+                  "mutability": "mutable",
+                  "name": "y",
+                  "nameLocation": "433:1:50",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32260,
+                  "src": "426:8:50",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int128",
+                    "typeString": "int128"
+                  },
+                  "typeName": {
+                    "id": 32254,
+                    "name": "int128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "426:6:50",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "414:21:50"
+            },
+            "returnParameters": {
+              "id": 32259,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32258,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32260,
+                  "src": "459:7:50",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 32257,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "459:7:50",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "458:9:50"
+            },
+            "scope": 32261,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ILiquidityMathLib",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 32250,
+          "nodeType": "StructuredDocumentation",
+          "src": "73:39:50",
+          "text": "@title Math library for liquidity"
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          32261
+        ],
+        "name": "ILiquidityMathLib",
+        "nameLocation": "122:17:50",
+        "scope": 32262,
+        "usedErrors": []
+      }
+    ],
+    "license": "GPL-2.0-or-later"
+  },
+  "id": 50
+}

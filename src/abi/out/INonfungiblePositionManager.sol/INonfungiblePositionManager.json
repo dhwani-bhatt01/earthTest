@@ -1,0 +1,3586 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount0",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount1",
+          "type": "uint256"
+        }
+      ],
+      "name": "Collect",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint128",
+          "name": "liquidity",
+          "type": "uint128"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount0",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount1",
+          "type": "uint256"
+        }
+      ],
+      "name": "DecreaseLiquidity",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint128",
+          "name": "liquidity",
+          "type": "uint128"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount0",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount1",
+          "type": "uint256"
+        }
+      ],
+      "name": "IncreaseLiquidity",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "burn",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "internalType": "uint128",
+              "name": "amount0Max",
+              "type": "uint128"
+            },
+            {
+              "internalType": "uint128",
+              "name": "amount1Max",
+              "type": "uint128"
+            }
+          ],
+          "internalType": "struct INonfungiblePositionManager.CollectParams",
+          "name": "params",
+          "type": "tuple"
+        }
+      ],
+      "name": "collect",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount1",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint128",
+              "name": "liquidity",
+              "type": "uint128"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount0Min",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount1Min",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "deadline",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct INonfungiblePositionManager.DecreaseLiquidityParams",
+          "name": "params",
+          "type": "tuple"
+        }
+      ],
+      "name": "decreaseLiquidity",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount1",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount0Desired",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount1Desired",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount0Min",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount1Min",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "deadline",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct INonfungiblePositionManager.IncreaseLiquidityParams",
+          "name": "params",
+          "type": "tuple"
+        }
+      ],
+      "name": "increaseLiquidity",
+      "outputs": [
+        {
+          "internalType": "uint128",
+          "name": "liquidity",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount1",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "token0",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "token1",
+              "type": "address"
+            },
+            {
+              "internalType": "uint24",
+              "name": "fee",
+              "type": "uint24"
+            },
+            {
+              "internalType": "int24",
+              "name": "tickLower",
+              "type": "int24"
+            },
+            {
+              "internalType": "int24",
+              "name": "tickUpper",
+              "type": "int24"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount0Desired",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount1Desired",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount0Min",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount1Min",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "deadline",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct INonfungiblePositionManager.MintParams",
+          "name": "params",
+          "type": "tuple"
+        }
+      ],
+      "name": "mint",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint128",
+          "name": "liquidity",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount1",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "ownerOf",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "positions",
+      "outputs": [
+        {
+          "internalType": "uint96",
+          "name": "nonce",
+          "type": "uint96"
+        },
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "token0",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "token1",
+          "type": "address"
+        },
+        {
+          "internalType": "uint24",
+          "name": "fee",
+          "type": "uint24"
+        },
+        {
+          "internalType": "int24",
+          "name": "tickLower",
+          "type": "int24"
+        },
+        {
+          "internalType": "int24",
+          "name": "tickUpper",
+          "type": "int24"
+        },
+        {
+          "internalType": "uint128",
+          "name": "liquidity",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint256",
+          "name": "feeGrowthInside0LastX128",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "feeGrowthInside1LastX128",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint128",
+          "name": "tokensOwed0",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint128",
+          "name": "tokensOwed1",
+          "type": "uint128"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "safeTransferFrom",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "burn(uint256)": "42966c68",
+    "collect((uint256,address,uint128,uint128))": "fc6f7865",
+    "decreaseLiquidity((uint256,uint128,uint256,uint256,uint256))": "0c49ccbe",
+    "increaseLiquidity((uint256,uint256,uint256,uint256,uint256,uint256))": "219f5d17",
+    "mint((address,address,uint24,int24,int24,uint256,uint256,uint256,uint256,address,uint256))": "88316456",
+    "ownerOf(uint256)": "6352211e",
+    "positions(uint256)": "99fbab88",
+    "safeTransferFrom(address,address,uint256)": "42842e0e"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount0\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount1\",\"type\":\"uint256\"}],\"name\":\"Collect\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint128\",\"name\":\"liquidity\",\"type\":\"uint128\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount0\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount1\",\"type\":\"uint256\"}],\"name\":\"DecreaseLiquidity\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint128\",\"name\":\"liquidity\",\"type\":\"uint128\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount0\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount1\",\"type\":\"uint256\"}],\"name\":\"IncreaseLiquidity\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"burn\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint128\",\"name\":\"amount0Max\",\"type\":\"uint128\"},{\"internalType\":\"uint128\",\"name\":\"amount1Max\",\"type\":\"uint128\"}],\"internalType\":\"struct INonfungiblePositionManager.CollectParams\",\"name\":\"params\",\"type\":\"tuple\"}],\"name\":\"collect\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"amount0\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1\",\"type\":\"uint256\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint128\",\"name\":\"liquidity\",\"type\":\"uint128\"},{\"internalType\":\"uint256\",\"name\":\"amount0Min\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1Min\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"}],\"internalType\":\"struct INonfungiblePositionManager.DecreaseLiquidityParams\",\"name\":\"params\",\"type\":\"tuple\"}],\"name\":\"decreaseLiquidity\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"amount0\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1\",\"type\":\"uint256\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount0Desired\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1Desired\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount0Min\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1Min\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"}],\"internalType\":\"struct INonfungiblePositionManager.IncreaseLiquidityParams\",\"name\":\"params\",\"type\":\"tuple\"}],\"name\":\"increaseLiquidity\",\"outputs\":[{\"internalType\":\"uint128\",\"name\":\"liquidity\",\"type\":\"uint128\"},{\"internalType\":\"uint256\",\"name\":\"amount0\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1\",\"type\":\"uint256\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"token0\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token1\",\"type\":\"address\"},{\"internalType\":\"uint24\",\"name\":\"fee\",\"type\":\"uint24\"},{\"internalType\":\"int24\",\"name\":\"tickLower\",\"type\":\"int24\"},{\"internalType\":\"int24\",\"name\":\"tickUpper\",\"type\":\"int24\"},{\"internalType\":\"uint256\",\"name\":\"amount0Desired\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1Desired\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount0Min\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1Min\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"}],\"internalType\":\"struct INonfungiblePositionManager.MintParams\",\"name\":\"params\",\"type\":\"tuple\"}],\"name\":\"mint\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint128\",\"name\":\"liquidity\",\"type\":\"uint128\"},{\"internalType\":\"uint256\",\"name\":\"amount0\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1\",\"type\":\"uint256\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"ownerOf\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"positions\",\"outputs\":[{\"internalType\":\"uint96\",\"name\":\"nonce\",\"type\":\"uint96\"},{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token0\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token1\",\"type\":\"address\"},{\"internalType\":\"uint24\",\"name\":\"fee\",\"type\":\"uint24\"},{\"internalType\":\"int24\",\"name\":\"tickLower\",\"type\":\"int24\"},{\"internalType\":\"int24\",\"name\":\"tickUpper\",\"type\":\"int24\"},{\"internalType\":\"uint128\",\"name\":\"liquidity\",\"type\":\"uint128\"},{\"internalType\":\"uint256\",\"name\":\"feeGrowthInside0LastX128\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"feeGrowthInside1LastX128\",\"type\":\"uint256\"},{\"internalType\":\"uint128\",\"name\":\"tokensOwed0\",\"type\":\"uint128\"},{\"internalType\":\"uint128\",\"name\":\"tokensOwed1\",\"type\":\"uint128\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"events\":{\"Collect(uint256,address,uint256,uint256)\":{\"details\":\"The amounts reported may not be exactly equivalent to the amounts transferred, due to rounding behavior\",\"params\":{\"amount0\":\"The amount of token0 owed to the position that was collected\",\"amount1\":\"The amount of token1 owed to the position that was collected\",\"recipient\":\"The address of the account that received the collected tokens\",\"tokenId\":\"The ID of the token for which underlying tokens were collected\"}},\"DecreaseLiquidity(uint256,uint128,uint256,uint256)\":{\"params\":{\"amount0\":\"The amount of token0 that was accounted for the decrease in liquidity\",\"amount1\":\"The amount of token1 that was accounted for the decrease in liquidity\",\"liquidity\":\"The amount by which liquidity for the NFT position was decreased\",\"tokenId\":\"The ID of the token for which liquidity was decreased\"}},\"IncreaseLiquidity(uint256,uint128,uint256,uint256)\":{\"details\":\"Also emitted when a token is minted\",\"params\":{\"amount0\":\"The amount of token0 that was paid for the increase in liquidity\",\"amount1\":\"The amount of token1 that was paid for the increase in liquidity\",\"liquidity\":\"The amount by which liquidity for the NFT position was increased\",\"tokenId\":\"The ID of the token for which liquidity was increased\"}}},\"kind\":\"dev\",\"methods\":{\"burn(uint256)\":{\"params\":{\"tokenId\":\"The ID of the token that is being burned\"}},\"collect((uint256,address,uint128,uint128))\":{\"params\":{\"params\":\"tokenId The ID of the NFT for which tokens are being collected, recipient The account that should receive the tokens, amount0Max The maximum amount of token0 to collect, amount1Max The maximum amount of token1 to collect\"},\"returns\":{\"amount0\":\"The amount of fees collected in token0\",\"amount1\":\"The amount of fees collected in token1\"}},\"decreaseLiquidity((uint256,uint128,uint256,uint256,uint256))\":{\"params\":{\"params\":\"tokenId The ID of the token for which liquidity is being decreased, amount The amount by which liquidity will be decreased, amount0Min The minimum amount of token0 that should be accounted for the burned liquidity, amount1Min The minimum amount of token1 that should be accounted for the burned liquidity, deadline The time by which the transaction must be included to effect the change\"},\"returns\":{\"amount0\":\"The amount of token0 accounted to the position's tokens owed\",\"amount1\":\"The amount of token1 accounted to the position's tokens owed\"}},\"increaseLiquidity((uint256,uint256,uint256,uint256,uint256,uint256))\":{\"params\":{\"params\":\"tokenId The ID of the token for which liquidity is being increased, amount0Desired The desired amount of token0 to be spent, amount1Desired The desired amount of token1 to be spent, amount0Min The minimum amount of token0 to spend, which serves as a slippage check, amount1Min The minimum amount of token1 to spend, which serves as a slippage check, deadline The time by which the transaction must be included to effect the change\"},\"returns\":{\"amount0\":\"The amount of token0 to acheive resulting liquidity\",\"amount1\":\"The amount of token1 to acheive resulting liquidity\",\"liquidity\":\"The new liquidity amount as a result of the increase\"}},\"mint((address,address,uint24,int24,int24,uint256,uint256,uint256,uint256,address,uint256))\":{\"details\":\"Call this when the pool does exist and is initialized. Note that if the pool is created but not initialized a method does not exist, i.e. the pool is assumed to be initialized.\",\"params\":{\"params\":\"The params necessary to mint a position, encoded as `MintParams` in calldata\"},\"returns\":{\"amount0\":\"The amount of token0\",\"amount1\":\"The amount of token1\",\"liquidity\":\"The amount of liquidity for this position\",\"tokenId\":\"The ID of the token that represents the minted position\"}},\"positions(uint256)\":{\"details\":\"Throws if the token ID is not valid.\",\"params\":{\"tokenId\":\"The ID of the token that represents the position\"},\"returns\":{\"fee\":\"The fee associated with the pool\",\"feeGrowthInside0LastX128\":\"The fee growth of token0 as of the last action on the individual position\",\"feeGrowthInside1LastX128\":\"The fee growth of token1 as of the last action on the individual position\",\"liquidity\":\"The liquidity of the position\",\"nonce\":\"The nonce for permits\",\"operator\":\"The address that is approved for spending\",\"tickLower\":\"The lower end of the tick range for the position\",\"tickUpper\":\"The higher end of the tick range for the position\",\"token0\":\"The address of the token0 for a specific pool\",\"token1\":\"The address of the token1 for a specific pool\",\"tokensOwed0\":\"The uncollected amount of token0 owed to the position as of the last computation\",\"tokensOwed1\":\"The uncollected amount of token1 owed to the position as of the last computation\"}}},\"title\":\"Non-fungible token for positions\",\"version\":1},\"userdoc\":{\"events\":{\"Collect(uint256,address,uint256,uint256)\":{\"notice\":\"Emitted when tokens are collected for a position NFT\"},\"DecreaseLiquidity(uint256,uint128,uint256,uint256)\":{\"notice\":\"Emitted when liquidity is decreased for a position NFT\"},\"IncreaseLiquidity(uint256,uint128,uint256,uint256)\":{\"notice\":\"Emitted when liquidity is increased for a position NFT\"}},\"kind\":\"user\",\"methods\":{\"burn(uint256)\":{\"notice\":\"Burns a token ID, which deletes it from the NFT contract. The token must have 0 liquidity and all tokens must be collected first.\"},\"collect((uint256,address,uint128,uint128))\":{\"notice\":\"Collects up to a maximum amount of fees owed to a specific position to the recipient\"},\"decreaseLiquidity((uint256,uint128,uint256,uint256,uint256))\":{\"notice\":\"Decreases the amount of liquidity in a position and accounts it to the position\"},\"increaseLiquidity((uint256,uint256,uint256,uint256,uint256,uint256))\":{\"notice\":\"Increases the amount of liquidity in a position, with tokens paid by the `msg.sender`\"},\"mint((address,address,uint24,int24,int24,uint256,uint256,uint256,uint256,address,uint256))\":{\"notice\":\"Creates a new position wrapped in a NFT\"},\"positions(uint256)\":{\"notice\":\"Returns the position information associated with a given token ID.\"}},\"notice\":\"Wraps PancakeSwap V3 positions in a non-fungible token interface which allows for them to be transferred and authorized.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/strategies/cake/interfaces/INonfungiblePositionManager.sol\":\"INonfungiblePositionManager\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@chainlink/=lib/pancake-v3-contracts/node_modules/@chainlink/contracts/src/v0.8/dev/vendor/@arbitrum/nitro-contracts/src/\",\":@ensdomains/=lib/pancake-v3-contracts/node_modules/@ensdomains/\",\":@eth-optimism/=lib/pancake-v3-contracts/node_modules/@eth-optimism/contracts/\",\":@openzeppelin/=lib/openzeppelin-contracts/contracts/\",\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":@pancakeswap-v2-core/=lib/pancake-swap-core/contracts/\",\":@pancakeswap-v2-exchange-protocol/=lib/pancake-smart-contracts/projects/exchange-protocol/contracts/\",\":@pancakeswap-v3-core/=lib/pancake-v3-contracts/projects/v3-core/contracts/\",\":@pancakeswap-v3-masterchef/=lib/pancake-v3-contracts/projects/masterchef-v3/contracts/\",\":@pancakeswap-v3-periphery/=lib/pancake-v3-contracts/projects/v3-periphery/contracts/\",\":@pancakeswap-v3-router/=lib/pancake-v3-contracts/projects/router/contracts/\",\":@pancakeswap/=lib/pancake-v3-contracts/projects/\",\":@rivera/=src/\",\":@uniswap/=lib/pancake-v3-contracts/node_modules/@uniswap/\",\":@uniswap/v3-core/=lib/v3-core/\",\":@uniswap/v3-periphery/=lib/v3-periphery/\",\":base64-sol/=lib/pancake-v3-contracts/node_modules/base64-sol/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/erc4626-tests/\",\":eth-gas-reporter/=lib/pancake-v3-contracts/node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=lib/pancake-v3-contracts/node_modules/hardhat/\",\":pancake-smart-contracts/=lib/pancake-smart-contracts/\",\":pancake-swap-core/=lib/pancake-swap-core/contracts/\",\":pancake-v3-contracts/=lib/pancake-v3-contracts/\"]},\"sources\":{\"src/strategies/cake/interfaces/INonfungiblePositionManager.sol\":{\"keccak256\":\"0xd841f41f63deea6d90ae97dd0ffa71e78a09035606323e4e8c432a96966caab6\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://29265ab8985d122b153fa5e07568357ef531dd435833a58fc71c4547d62ba780\",\"dweb:/ipfs/QmemVFv36AB4ewxKHuJVeQrh4iLhf3gt7AbshEmKtD97hu\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "recipient",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount0",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount1",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Collect",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256",
+              "indexed": true
+            },
+            {
+              "internalType": "uint128",
+              "name": "liquidity",
+              "type": "uint128",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount0",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount1",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "DecreaseLiquidity",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256",
+              "indexed": true
+            },
+            {
+              "internalType": "uint128",
+              "name": "liquidity",
+              "type": "uint128",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount0",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount1",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "IncreaseLiquidity",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "burn"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "struct INonfungiblePositionManager.CollectParams",
+              "name": "params",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "tokenId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "address",
+                  "name": "recipient",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint128",
+                  "name": "amount0Max",
+                  "type": "uint128"
+                },
+                {
+                  "internalType": "uint128",
+                  "name": "amount1Max",
+                  "type": "uint128"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "collect",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "amount0",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount1",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "struct INonfungiblePositionManager.DecreaseLiquidityParams",
+              "name": "params",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "tokenId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint128",
+                  "name": "liquidity",
+                  "type": "uint128"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount0Min",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount1Min",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "deadline",
+                  "type": "uint256"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "decreaseLiquidity",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "amount0",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount1",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "struct INonfungiblePositionManager.IncreaseLiquidityParams",
+              "name": "params",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "tokenId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount0Desired",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount1Desired",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount0Min",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount1Min",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "deadline",
+                  "type": "uint256"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "increaseLiquidity",
+          "outputs": [
+            {
+              "internalType": "uint128",
+              "name": "liquidity",
+              "type": "uint128"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount0",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount1",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "struct INonfungiblePositionManager.MintParams",
+              "name": "params",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "token0",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "token1",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint24",
+                  "name": "fee",
+                  "type": "uint24"
+                },
+                {
+                  "internalType": "int24",
+                  "name": "tickLower",
+                  "type": "int24"
+                },
+                {
+                  "internalType": "int24",
+                  "name": "tickUpper",
+                  "type": "int24"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount0Desired",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount1Desired",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount0Min",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount1Min",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "address",
+                  "name": "recipient",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "deadline",
+                  "type": "uint256"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "mint",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint128",
+              "name": "liquidity",
+              "type": "uint128"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount0",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount1",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "ownerOf",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "positions",
+          "outputs": [
+            {
+              "internalType": "uint96",
+              "name": "nonce",
+              "type": "uint96"
+            },
+            {
+              "internalType": "address",
+              "name": "operator",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "token0",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "token1",
+              "type": "address"
+            },
+            {
+              "internalType": "uint24",
+              "name": "fee",
+              "type": "uint24"
+            },
+            {
+              "internalType": "int24",
+              "name": "tickLower",
+              "type": "int24"
+            },
+            {
+              "internalType": "int24",
+              "name": "tickUpper",
+              "type": "int24"
+            },
+            {
+              "internalType": "uint128",
+              "name": "liquidity",
+              "type": "uint128"
+            },
+            {
+              "internalType": "uint256",
+              "name": "feeGrowthInside0LastX128",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "feeGrowthInside1LastX128",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint128",
+              "name": "tokensOwed0",
+              "type": "uint128"
+            },
+            {
+              "internalType": "uint128",
+              "name": "tokensOwed1",
+              "type": "uint128"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "safeTransferFrom"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "burn(uint256)": {
+            "params": {
+              "tokenId": "The ID of the token that is being burned"
+            }
+          },
+          "collect((uint256,address,uint128,uint128))": {
+            "params": {
+              "params": "tokenId The ID of the NFT for which tokens are being collected, recipient The account that should receive the tokens, amount0Max The maximum amount of token0 to collect, amount1Max The maximum amount of token1 to collect"
+            },
+            "returns": {
+              "amount0": "The amount of fees collected in token0",
+              "amount1": "The amount of fees collected in token1"
+            }
+          },
+          "decreaseLiquidity((uint256,uint128,uint256,uint256,uint256))": {
+            "params": {
+              "params": "tokenId The ID of the token for which liquidity is being decreased, amount The amount by which liquidity will be decreased, amount0Min The minimum amount of token0 that should be accounted for the burned liquidity, amount1Min The minimum amount of token1 that should be accounted for the burned liquidity, deadline The time by which the transaction must be included to effect the change"
+            },
+            "returns": {
+              "amount0": "The amount of token0 accounted to the position's tokens owed",
+              "amount1": "The amount of token1 accounted to the position's tokens owed"
+            }
+          },
+          "increaseLiquidity((uint256,uint256,uint256,uint256,uint256,uint256))": {
+            "params": {
+              "params": "tokenId The ID of the token for which liquidity is being increased, amount0Desired The desired amount of token0 to be spent, amount1Desired The desired amount of token1 to be spent, amount0Min The minimum amount of token0 to spend, which serves as a slippage check, amount1Min The minimum amount of token1 to spend, which serves as a slippage check, deadline The time by which the transaction must be included to effect the change"
+            },
+            "returns": {
+              "amount0": "The amount of token0 to acheive resulting liquidity",
+              "amount1": "The amount of token1 to acheive resulting liquidity",
+              "liquidity": "The new liquidity amount as a result of the increase"
+            }
+          },
+          "mint((address,address,uint24,int24,int24,uint256,uint256,uint256,uint256,address,uint256))": {
+            "details": "Call this when the pool does exist and is initialized. Note that if the pool is created but not initialized a method does not exist, i.e. the pool is assumed to be initialized.",
+            "params": {
+              "params": "The params necessary to mint a position, encoded as `MintParams` in calldata"
+            },
+            "returns": {
+              "amount0": "The amount of token0",
+              "amount1": "The amount of token1",
+              "liquidity": "The amount of liquidity for this position",
+              "tokenId": "The ID of the token that represents the minted position"
+            }
+          },
+          "positions(uint256)": {
+            "details": "Throws if the token ID is not valid.",
+            "params": {
+              "tokenId": "The ID of the token that represents the position"
+            },
+            "returns": {
+              "fee": "The fee associated with the pool",
+              "feeGrowthInside0LastX128": "The fee growth of token0 as of the last action on the individual position",
+              "feeGrowthInside1LastX128": "The fee growth of token1 as of the last action on the individual position",
+              "liquidity": "The liquidity of the position",
+              "nonce": "The nonce for permits",
+              "operator": "The address that is approved for spending",
+              "tickLower": "The lower end of the tick range for the position",
+              "tickUpper": "The higher end of the tick range for the position",
+              "token0": "The address of the token0 for a specific pool",
+              "token1": "The address of the token1 for a specific pool",
+              "tokensOwed0": "The uncollected amount of token0 owed to the position as of the last computation",
+              "tokensOwed1": "The uncollected amount of token1 owed to the position as of the last computation"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "burn(uint256)": {
+            "notice": "Burns a token ID, which deletes it from the NFT contract. The token must have 0 liquidity and all tokens must be collected first."
+          },
+          "collect((uint256,address,uint128,uint128))": {
+            "notice": "Collects up to a maximum amount of fees owed to a specific position to the recipient"
+          },
+          "decreaseLiquidity((uint256,uint128,uint256,uint256,uint256))": {
+            "notice": "Decreases the amount of liquidity in a position and accounts it to the position"
+          },
+          "increaseLiquidity((uint256,uint256,uint256,uint256,uint256,uint256))": {
+            "notice": "Increases the amount of liquidity in a position, with tokens paid by the `msg.sender`"
+          },
+          "mint((address,address,uint24,int24,int24,uint256,uint256,uint256,uint256,address,uint256))": {
+            "notice": "Creates a new position wrapped in a NFT"
+          },
+          "positions(uint256)": {
+            "notice": "Returns the position information associated with a given token ID."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@chainlink/=lib/pancake-v3-contracts/node_modules/@chainlink/contracts/src/v0.8/dev/vendor/@arbitrum/nitro-contracts/src/",
+        ":@ensdomains/=lib/pancake-v3-contracts/node_modules/@ensdomains/",
+        ":@eth-optimism/=lib/pancake-v3-contracts/node_modules/@eth-optimism/contracts/",
+        ":@openzeppelin/=lib/openzeppelin-contracts/contracts/",
+        ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+        ":@pancakeswap-v2-core/=lib/pancake-swap-core/contracts/",
+        ":@pancakeswap-v2-exchange-protocol/=lib/pancake-smart-contracts/projects/exchange-protocol/contracts/",
+        ":@pancakeswap-v3-core/=lib/pancake-v3-contracts/projects/v3-core/contracts/",
+        ":@pancakeswap-v3-masterchef/=lib/pancake-v3-contracts/projects/masterchef-v3/contracts/",
+        ":@pancakeswap-v3-periphery/=lib/pancake-v3-contracts/projects/v3-periphery/contracts/",
+        ":@pancakeswap-v3-router/=lib/pancake-v3-contracts/projects/router/contracts/",
+        ":@pancakeswap/=lib/pancake-v3-contracts/projects/",
+        ":@rivera/=src/",
+        ":@uniswap/=lib/pancake-v3-contracts/node_modules/@uniswap/",
+        ":@uniswap/v3-core/=lib/v3-core/",
+        ":@uniswap/v3-periphery/=lib/v3-periphery/",
+        ":base64-sol/=lib/pancake-v3-contracts/node_modules/base64-sol/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":erc4626-tests/=lib/erc4626-tests/",
+        ":eth-gas-reporter/=lib/pancake-v3-contracts/node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=lib/pancake-v3-contracts/node_modules/hardhat/",
+        ":pancake-smart-contracts/=lib/pancake-smart-contracts/",
+        ":pancake-swap-core/=lib/pancake-swap-core/contracts/",
+        ":pancake-v3-contracts/=lib/pancake-v3-contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/strategies/cake/interfaces/INonfungiblePositionManager.sol": "INonfungiblePositionManager"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/strategies/cake/interfaces/INonfungiblePositionManager.sol": {
+        "keccak256": "0xd841f41f63deea6d90ae97dd0ffa71e78a09035606323e4e8c432a96966caab6",
+        "urls": [
+          "bzz-raw://29265ab8985d122b153fa5e07568357ef531dd435833a58fc71c4547d62ba780",
+          "dweb:/ipfs/QmemVFv36AB4ewxKHuJVeQrh4iLhf3gt7AbshEmKtD97hu"
+        ],
+        "license": "GPL-2.0-or-later"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/strategies/cake/interfaces/INonfungiblePositionManager.sol",
+    "id": 33409,
+    "exportedSymbols": {
+      "INonfungiblePositionManager": [
+        33408
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "46:8590:51",
+    "nodes": [
+      {
+        "id": 33214,
+        "nodeType": "PragmaDirective",
+        "src": "46:24:51",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.7",
+          ".5"
+        ]
+      },
+      {
+        "id": 33215,
+        "nodeType": "PragmaDirective",
+        "src": "72:19:51",
+        "nodes": [],
+        "literals": [
+          "abicoder",
+          "v2"
+        ]
+      },
+      {
+        "id": 33408,
+        "nodeType": "ContractDefinition",
+        "src": "279:8355:51",
+        "nodes": [
+          {
+            "id": 33227,
+            "nodeType": "EventDefinition",
+            "src": "793:145:51",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 33217,
+              "nodeType": "StructuredDocumentation",
+              "src": "324:463:51",
+              "text": "@notice Emitted when liquidity is increased for a position NFT\n @dev Also emitted when a token is minted\n @param tokenId The ID of the token for which liquidity was increased\n @param liquidity The amount by which liquidity for the NFT position was increased\n @param amount0 The amount of token0 that was paid for the increase in liquidity\n @param amount1 The amount of token1 that was paid for the increase in liquidity"
+            },
+            "eventSelector": "3067048beee31b25b2f1681f88dac838c8bba36af25bfb2b7cf7473a5847e35f",
+            "name": "IncreaseLiquidity",
+            "nameLocation": "799:17:51",
+            "parameters": {
+              "id": 33226,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33219,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "843:7:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33227,
+                  "src": "827:23:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33218,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "827:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33221,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "liquidity",
+                  "nameLocation": "869:9:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33227,
+                  "src": "861:17:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 33220,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "861:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33223,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "amount0",
+                  "nameLocation": "897:7:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33227,
+                  "src": "889:15:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33222,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "889:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33225,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "amount1",
+                  "nameLocation": "923:7:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33227,
+                  "src": "915:15:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33224,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "915:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "816:121:51"
+            }
+          },
+          {
+            "id": 33238,
+            "nodeType": "EventDefinition",
+            "src": "1373:145:51",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 33228,
+              "nodeType": "StructuredDocumentation",
+              "src": "944:423:51",
+              "text": "@notice Emitted when liquidity is decreased for a position NFT\n @param tokenId The ID of the token for which liquidity was decreased\n @param liquidity The amount by which liquidity for the NFT position was decreased\n @param amount0 The amount of token0 that was accounted for the decrease in liquidity\n @param amount1 The amount of token1 that was accounted for the decrease in liquidity"
+            },
+            "eventSelector": "26f6a048ee9138f2c0ce266f322cb99228e8d619ae2bff30c67f8dcf9d2377b4",
+            "name": "DecreaseLiquidity",
+            "nameLocation": "1379:17:51",
+            "parameters": {
+              "id": 33237,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33230,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "1423:7:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33238,
+                  "src": "1407:23:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33229,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1407:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33232,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "liquidity",
+                  "nameLocation": "1449:9:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33238,
+                  "src": "1441:17:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 33231,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1441:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33234,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "amount0",
+                  "nameLocation": "1477:7:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33238,
+                  "src": "1469:15:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33233,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1469:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33236,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "amount1",
+                  "nameLocation": "1503:7:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33238,
+                  "src": "1495:15:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33235,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1495:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1396:121:51"
+            }
+          },
+          {
+            "id": 33249,
+            "nodeType": "EventDefinition",
+            "src": "2057:135:51",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 33239,
+              "nodeType": "StructuredDocumentation",
+              "src": "1524:527:51",
+              "text": "@notice Emitted when tokens are collected for a position NFT\n @dev The amounts reported may not be exactly equivalent to the amounts transferred, due to rounding behavior\n @param tokenId The ID of the token for which underlying tokens were collected\n @param recipient The address of the account that received the collected tokens\n @param amount0 The amount of token0 owed to the position that was collected\n @param amount1 The amount of token1 owed to the position that was collected"
+            },
+            "eventSelector": "40d0efd1a53d60ecbf40971b9daf7dc90178c3aadc7aab1765632738fa8b8f01",
+            "name": "Collect",
+            "nameLocation": "2063:7:51",
+            "parameters": {
+              "id": 33248,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33241,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "2097:7:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33249,
+                  "src": "2081:23:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33240,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2081:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33243,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "recipient",
+                  "nameLocation": "2123:9:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33249,
+                  "src": "2115:17:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 33242,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2115:7:51",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33245,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "amount0",
+                  "nameLocation": "2151:7:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33249,
+                  "src": "2143:15:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33244,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2143:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33247,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "amount1",
+                  "nameLocation": "2177:7:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33249,
+                  "src": "2169:15:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33246,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2169:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2070:121:51"
+            }
+          },
+          {
+            "id": 33279,
+            "nodeType": "FunctionDefinition",
+            "src": "3377:508:51",
+            "nodes": [],
+            "documentation": {
+              "id": 33250,
+              "nodeType": "StructuredDocumentation",
+              "src": "2200:1171:51",
+              "text": "@notice Returns the position information associated with a given token ID.\n @dev Throws if the token ID is not valid.\n @param tokenId The ID of the token that represents the position\n @return nonce The nonce for permits\n @return operator The address that is approved for spending\n @return token0 The address of the token0 for a specific pool\n @return token1 The address of the token1 for a specific pool\n @return fee The fee associated with the pool\n @return tickLower The lower end of the tick range for the position\n @return tickUpper The higher end of the tick range for the position\n @return liquidity The liquidity of the position\n @return feeGrowthInside0LastX128 The fee growth of token0 as of the last action on the individual position\n @return feeGrowthInside1LastX128 The fee growth of token1 as of the last action on the individual position\n @return tokensOwed0 The uncollected amount of token0 owed to the position as of the last computation\n @return tokensOwed1 The uncollected amount of token1 owed to the position as of the last computation"
+            },
+            "functionSelector": "99fbab88",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "positions",
+            "nameLocation": "3386:9:51",
+            "parameters": {
+              "id": 33253,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33252,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "3414:7:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33279,
+                  "src": "3406:15:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33251,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3406:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3395:33:51"
+            },
+            "returnParameters": {
+              "id": 33278,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33255,
+                  "mutability": "mutable",
+                  "name": "nonce",
+                  "nameLocation": "3500:5:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33279,
+                  "src": "3493:12:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint96",
+                    "typeString": "uint96"
+                  },
+                  "typeName": {
+                    "id": 33254,
+                    "name": "uint96",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3493:6:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint96",
+                      "typeString": "uint96"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33257,
+                  "mutability": "mutable",
+                  "name": "operator",
+                  "nameLocation": "3528:8:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33279,
+                  "src": "3520:16:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 33256,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3520:7:51",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33259,
+                  "mutability": "mutable",
+                  "name": "token0",
+                  "nameLocation": "3559:6:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33279,
+                  "src": "3551:14:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 33258,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3551:7:51",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33261,
+                  "mutability": "mutable",
+                  "name": "token1",
+                  "nameLocation": "3588:6:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33279,
+                  "src": "3580:14:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 33260,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3580:7:51",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33263,
+                  "mutability": "mutable",
+                  "name": "fee",
+                  "nameLocation": "3616:3:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33279,
+                  "src": "3609:10:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint24",
+                    "typeString": "uint24"
+                  },
+                  "typeName": {
+                    "id": 33262,
+                    "name": "uint24",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3609:6:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint24",
+                      "typeString": "uint24"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33265,
+                  "mutability": "mutable",
+                  "name": "tickLower",
+                  "nameLocation": "3640:9:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33279,
+                  "src": "3634:15:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int24",
+                    "typeString": "int24"
+                  },
+                  "typeName": {
+                    "id": 33264,
+                    "name": "int24",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3634:5:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int24",
+                      "typeString": "int24"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33267,
+                  "mutability": "mutable",
+                  "name": "tickUpper",
+                  "nameLocation": "3670:9:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33279,
+                  "src": "3664:15:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int24",
+                    "typeString": "int24"
+                  },
+                  "typeName": {
+                    "id": 33266,
+                    "name": "int24",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3664:5:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int24",
+                      "typeString": "int24"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33269,
+                  "mutability": "mutable",
+                  "name": "liquidity",
+                  "nameLocation": "3702:9:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33279,
+                  "src": "3694:17:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 33268,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3694:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33271,
+                  "mutability": "mutable",
+                  "name": "feeGrowthInside0LastX128",
+                  "nameLocation": "3734:24:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33279,
+                  "src": "3726:32:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33270,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3726:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33273,
+                  "mutability": "mutable",
+                  "name": "feeGrowthInside1LastX128",
+                  "nameLocation": "3781:24:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33279,
+                  "src": "3773:32:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33272,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3773:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33275,
+                  "mutability": "mutable",
+                  "name": "tokensOwed0",
+                  "nameLocation": "3828:11:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33279,
+                  "src": "3820:19:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 33274,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3820:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33277,
+                  "mutability": "mutable",
+                  "name": "tokensOwed1",
+                  "nameLocation": "3862:11:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33279,
+                  "src": "3854:19:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 33276,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3854:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3478:406:51"
+            },
+            "scope": 33408,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 33302,
+            "nodeType": "StructDefinition",
+            "src": "3893:328:51",
+            "nodes": [],
+            "canonicalName": "INonfungiblePositionManager.MintParams",
+            "members": [
+              {
+                "constant": false,
+                "id": 33281,
+                "mutability": "mutable",
+                "name": "token0",
+                "nameLocation": "3930:6:51",
+                "nodeType": "VariableDeclaration",
+                "scope": 33302,
+                "src": "3922:14:51",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 33280,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "3922:7:51",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 33283,
+                "mutability": "mutable",
+                "name": "token1",
+                "nameLocation": "3955:6:51",
+                "nodeType": "VariableDeclaration",
+                "scope": 33302,
+                "src": "3947:14:51",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 33282,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "3947:7:51",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 33285,
+                "mutability": "mutable",
+                "name": "fee",
+                "nameLocation": "3979:3:51",
+                "nodeType": "VariableDeclaration",
+                "scope": 33302,
+                "src": "3972:10:51",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint24",
+                  "typeString": "uint24"
+                },
+                "typeName": {
+                  "id": 33284,
+                  "name": "uint24",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "3972:6:51",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint24",
+                    "typeString": "uint24"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 33287,
+                "mutability": "mutable",
+                "name": "tickLower",
+                "nameLocation": "3999:9:51",
+                "nodeType": "VariableDeclaration",
+                "scope": 33302,
+                "src": "3993:15:51",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_int24",
+                  "typeString": "int24"
+                },
+                "typeName": {
+                  "id": 33286,
+                  "name": "int24",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "3993:5:51",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int24",
+                    "typeString": "int24"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 33289,
+                "mutability": "mutable",
+                "name": "tickUpper",
+                "nameLocation": "4025:9:51",
+                "nodeType": "VariableDeclaration",
+                "scope": 33302,
+                "src": "4019:15:51",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_int24",
+                  "typeString": "int24"
+                },
+                "typeName": {
+                  "id": 33288,
+                  "name": "int24",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "4019:5:51",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int24",
+                    "typeString": "int24"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 33291,
+                "mutability": "mutable",
+                "name": "amount0Desired",
+                "nameLocation": "4053:14:51",
+                "nodeType": "VariableDeclaration",
+                "scope": 33302,
+                "src": "4045:22:51",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 33290,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "4045:7:51",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 33293,
+                "mutability": "mutable",
+                "name": "amount1Desired",
+                "nameLocation": "4086:14:51",
+                "nodeType": "VariableDeclaration",
+                "scope": 33302,
+                "src": "4078:22:51",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 33292,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "4078:7:51",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 33295,
+                "mutability": "mutable",
+                "name": "amount0Min",
+                "nameLocation": "4119:10:51",
+                "nodeType": "VariableDeclaration",
+                "scope": 33302,
+                "src": "4111:18:51",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 33294,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "4111:7:51",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 33297,
+                "mutability": "mutable",
+                "name": "amount1Min",
+                "nameLocation": "4148:10:51",
+                "nodeType": "VariableDeclaration",
+                "scope": 33302,
+                "src": "4140:18:51",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 33296,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "4140:7:51",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 33299,
+                "mutability": "mutable",
+                "name": "recipient",
+                "nameLocation": "4177:9:51",
+                "nodeType": "VariableDeclaration",
+                "scope": 33302,
+                "src": "4169:17:51",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 33298,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "4169:7:51",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 33301,
+                "mutability": "mutable",
+                "name": "deadline",
+                "nameLocation": "4205:8:51",
+                "nodeType": "VariableDeclaration",
+                "scope": 33302,
+                "src": "4197:16:51",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 33300,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "4197:7:51",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "MintParams",
+            "nameLocation": "3900:10:51",
+            "scope": 33408,
+            "visibility": "public"
+          },
+          {
+            "id": 33317,
+            "nodeType": "FunctionDefinition",
+            "src": "4828:244:51",
+            "nodes": [],
+            "documentation": {
+              "id": 33303,
+              "nodeType": "StructuredDocumentation",
+              "src": "4229:593:51",
+              "text": "@notice Creates a new position wrapped in a NFT\n @dev Call this when the pool does exist and is initialized. Note that if the pool is created but not initialized\n a method does not exist, i.e. the pool is assumed to be initialized.\n @param params The params necessary to mint a position, encoded as `MintParams` in calldata\n @return tokenId The ID of the token that represents the minted position\n @return liquidity The amount of liquidity for this position\n @return amount0 The amount of token0\n @return amount1 The amount of token1"
+            },
+            "functionSelector": "88316456",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mint",
+            "nameLocation": "4837:4:51",
+            "parameters": {
+              "id": 33307,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33306,
+                  "mutability": "mutable",
+                  "name": "params",
+                  "nameLocation": "4872:6:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33317,
+                  "src": "4852:26:51",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_MintParams_$33302_calldata_ptr",
+                    "typeString": "struct INonfungiblePositionManager.MintParams"
+                  },
+                  "typeName": {
+                    "id": 33305,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 33304,
+                      "name": "MintParams",
+                      "nameLocations": [
+                        "4852:10:51"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 33302,
+                      "src": "4852:10:51"
+                    },
+                    "referencedDeclaration": 33302,
+                    "src": "4852:10:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_MintParams_$33302_storage_ptr",
+                      "typeString": "struct INonfungiblePositionManager.MintParams"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4841:44:51"
+            },
+            "returnParameters": {
+              "id": 33316,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33309,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "4961:7:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33317,
+                  "src": "4953:15:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33308,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4953:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33311,
+                  "mutability": "mutable",
+                  "name": "liquidity",
+                  "nameLocation": "4991:9:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33317,
+                  "src": "4983:17:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 33310,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4983:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33313,
+                  "mutability": "mutable",
+                  "name": "amount0",
+                  "nameLocation": "5023:7:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33317,
+                  "src": "5015:15:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33312,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5015:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33315,
+                  "mutability": "mutable",
+                  "name": "amount1",
+                  "nameLocation": "5053:7:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33317,
+                  "src": "5045:15:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33314,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5045:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4938:133:51"
+            },
+            "scope": 33408,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 33330,
+            "nodeType": "StructDefinition",
+            "src": "5080:216:51",
+            "nodes": [],
+            "canonicalName": "INonfungiblePositionManager.IncreaseLiquidityParams",
+            "members": [
+              {
+                "constant": false,
+                "id": 33319,
+                "mutability": "mutable",
+                "name": "tokenId",
+                "nameLocation": "5130:7:51",
+                "nodeType": "VariableDeclaration",
+                "scope": 33330,
+                "src": "5122:15:51",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 33318,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "5122:7:51",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 33321,
+                "mutability": "mutable",
+                "name": "amount0Desired",
+                "nameLocation": "5156:14:51",
+                "nodeType": "VariableDeclaration",
+                "scope": 33330,
+                "src": "5148:22:51",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 33320,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "5148:7:51",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 33323,
+                "mutability": "mutable",
+                "name": "amount1Desired",
+                "nameLocation": "5189:14:51",
+                "nodeType": "VariableDeclaration",
+                "scope": 33330,
+                "src": "5181:22:51",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 33322,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "5181:7:51",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 33325,
+                "mutability": "mutable",
+                "name": "amount0Min",
+                "nameLocation": "5222:10:51",
+                "nodeType": "VariableDeclaration",
+                "scope": 33330,
+                "src": "5214:18:51",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 33324,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "5214:7:51",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 33327,
+                "mutability": "mutable",
+                "name": "amount1Min",
+                "nameLocation": "5251:10:51",
+                "nodeType": "VariableDeclaration",
+                "scope": 33330,
+                "src": "5243:18:51",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 33326,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "5243:7:51",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 33329,
+                "mutability": "mutable",
+                "name": "deadline",
+                "nameLocation": "5280:8:51",
+                "nodeType": "VariableDeclaration",
+                "scope": 33330,
+                "src": "5272:16:51",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 33328,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "5272:7:51",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "IncreaseLiquidityParams",
+            "nameLocation": "5087:23:51",
+            "scope": 33408,
+            "visibility": "public"
+          },
+          {
+            "id": 33343,
+            "nodeType": "FunctionDefinition",
+            "src": "6140:190:51",
+            "nodes": [],
+            "documentation": {
+              "id": 33331,
+              "nodeType": "StructuredDocumentation",
+              "src": "5304:830:51",
+              "text": "@notice Increases the amount of liquidity in a position, with tokens paid by the `msg.sender`\n @param params tokenId The ID of the token for which liquidity is being increased,\n amount0Desired The desired amount of token0 to be spent,\n amount1Desired The desired amount of token1 to be spent,\n amount0Min The minimum amount of token0 to spend, which serves as a slippage check,\n amount1Min The minimum amount of token1 to spend, which serves as a slippage check,\n deadline The time by which the transaction must be included to effect the change\n @return liquidity The new liquidity amount as a result of the increase\n @return amount0 The amount of token0 to acheive resulting liquidity\n @return amount1 The amount of token1 to acheive resulting liquidity"
+            },
+            "functionSelector": "219f5d17",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "increaseLiquidity",
+            "nameLocation": "6149:17:51",
+            "parameters": {
+              "id": 33335,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33334,
+                  "mutability": "mutable",
+                  "name": "params",
+                  "nameLocation": "6210:6:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33343,
+                  "src": "6177:39:51",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_IncreaseLiquidityParams_$33330_calldata_ptr",
+                    "typeString": "struct INonfungiblePositionManager.IncreaseLiquidityParams"
+                  },
+                  "typeName": {
+                    "id": 33333,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 33332,
+                      "name": "IncreaseLiquidityParams",
+                      "nameLocations": [
+                        "6177:23:51"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 33330,
+                      "src": "6177:23:51"
+                    },
+                    "referencedDeclaration": 33330,
+                    "src": "6177:23:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_IncreaseLiquidityParams_$33330_storage_ptr",
+                      "typeString": "struct INonfungiblePositionManager.IncreaseLiquidityParams"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6166:57:51"
+            },
+            "returnParameters": {
+              "id": 33342,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33337,
+                  "mutability": "mutable",
+                  "name": "liquidity",
+                  "nameLocation": "6285:9:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33343,
+                  "src": "6277:17:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 33336,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6277:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33339,
+                  "mutability": "mutable",
+                  "name": "amount0",
+                  "nameLocation": "6304:7:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33343,
+                  "src": "6296:15:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33338,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6296:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33341,
+                  "mutability": "mutable",
+                  "name": "amount1",
+                  "nameLocation": "6321:7:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33343,
+                  "src": "6313:15:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33340,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6313:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6276:53:51"
+            },
+            "scope": 33408,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 33354,
+            "nodeType": "StructDefinition",
+            "src": "6338:178:51",
+            "nodes": [],
+            "canonicalName": "INonfungiblePositionManager.DecreaseLiquidityParams",
+            "members": [
+              {
+                "constant": false,
+                "id": 33345,
+                "mutability": "mutable",
+                "name": "tokenId",
+                "nameLocation": "6388:7:51",
+                "nodeType": "VariableDeclaration",
+                "scope": 33354,
+                "src": "6380:15:51",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 33344,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "6380:7:51",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 33347,
+                "mutability": "mutable",
+                "name": "liquidity",
+                "nameLocation": "6414:9:51",
+                "nodeType": "VariableDeclaration",
+                "scope": 33354,
+                "src": "6406:17:51",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint128",
+                  "typeString": "uint128"
+                },
+                "typeName": {
+                  "id": 33346,
+                  "name": "uint128",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "6406:7:51",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 33349,
+                "mutability": "mutable",
+                "name": "amount0Min",
+                "nameLocation": "6442:10:51",
+                "nodeType": "VariableDeclaration",
+                "scope": 33354,
+                "src": "6434:18:51",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 33348,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "6434:7:51",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 33351,
+                "mutability": "mutable",
+                "name": "amount1Min",
+                "nameLocation": "6471:10:51",
+                "nodeType": "VariableDeclaration",
+                "scope": 33354,
+                "src": "6463:18:51",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 33350,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "6463:7:51",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 33353,
+                "mutability": "mutable",
+                "name": "deadline",
+                "nameLocation": "6500:8:51",
+                "nodeType": "VariableDeclaration",
+                "scope": 33354,
+                "src": "6492:16:51",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 33352,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "6492:7:51",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "DecreaseLiquidityParams",
+            "nameLocation": "6345:23:51",
+            "scope": 33408,
+            "visibility": "public"
+          },
+          {
+            "id": 33365,
+            "nodeType": "FunctionDefinition",
+            "src": "7239:144:51",
+            "nodes": [],
+            "documentation": {
+              "id": 33355,
+              "nodeType": "StructuredDocumentation",
+              "src": "6524:709:51",
+              "text": "@notice Decreases the amount of liquidity in a position and accounts it to the position\n @param params tokenId The ID of the token for which liquidity is being decreased,\n amount The amount by which liquidity will be decreased,\n amount0Min The minimum amount of token0 that should be accounted for the burned liquidity,\n amount1Min The minimum amount of token1 that should be accounted for the burned liquidity,\n deadline The time by which the transaction must be included to effect the change\n @return amount0 The amount of token0 accounted to the position's tokens owed\n @return amount1 The amount of token1 accounted to the position's tokens owed"
+            },
+            "functionSelector": "0c49ccbe",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "decreaseLiquidity",
+            "nameLocation": "7248:17:51",
+            "parameters": {
+              "id": 33359,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33358,
+                  "mutability": "mutable",
+                  "name": "params",
+                  "nameLocation": "7309:6:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33365,
+                  "src": "7276:39:51",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_DecreaseLiquidityParams_$33354_calldata_ptr",
+                    "typeString": "struct INonfungiblePositionManager.DecreaseLiquidityParams"
+                  },
+                  "typeName": {
+                    "id": 33357,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 33356,
+                      "name": "DecreaseLiquidityParams",
+                      "nameLocations": [
+                        "7276:23:51"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 33354,
+                      "src": "7276:23:51"
+                    },
+                    "referencedDeclaration": 33354,
+                    "src": "7276:23:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_DecreaseLiquidityParams_$33354_storage_ptr",
+                      "typeString": "struct INonfungiblePositionManager.DecreaseLiquidityParams"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7265:57:51"
+            },
+            "returnParameters": {
+              "id": 33364,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33361,
+                  "mutability": "mutable",
+                  "name": "amount0",
+                  "nameLocation": "7357:7:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33365,
+                  "src": "7349:15:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33360,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7349:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33363,
+                  "mutability": "mutable",
+                  "name": "amount1",
+                  "nameLocation": "7374:7:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33365,
+                  "src": "7366:15:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33362,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7366:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7348:34:51"
+            },
+            "scope": 33408,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 33374,
+            "nodeType": "StructDefinition",
+            "src": "7391:141:51",
+            "nodes": [],
+            "canonicalName": "INonfungiblePositionManager.CollectParams",
+            "members": [
+              {
+                "constant": false,
+                "id": 33367,
+                "mutability": "mutable",
+                "name": "tokenId",
+                "nameLocation": "7431:7:51",
+                "nodeType": "VariableDeclaration",
+                "scope": 33374,
+                "src": "7423:15:51",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 33366,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "7423:7:51",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 33369,
+                "mutability": "mutable",
+                "name": "recipient",
+                "nameLocation": "7457:9:51",
+                "nodeType": "VariableDeclaration",
+                "scope": 33374,
+                "src": "7449:17:51",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 33368,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "7449:7:51",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 33371,
+                "mutability": "mutable",
+                "name": "amount0Max",
+                "nameLocation": "7485:10:51",
+                "nodeType": "VariableDeclaration",
+                "scope": 33374,
+                "src": "7477:18:51",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint128",
+                  "typeString": "uint128"
+                },
+                "typeName": {
+                  "id": 33370,
+                  "name": "uint128",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "7477:7:51",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 33373,
+                "mutability": "mutable",
+                "name": "amount1Max",
+                "nameLocation": "7514:10:51",
+                "nodeType": "VariableDeclaration",
+                "scope": 33374,
+                "src": "7506:18:51",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint128",
+                  "typeString": "uint128"
+                },
+                "typeName": {
+                  "id": 33372,
+                  "name": "uint128",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "7506:7:51",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "CollectParams",
+            "nameLocation": "7398:13:51",
+            "scope": 33408,
+            "visibility": "public"
+          },
+          {
+            "id": 33385,
+            "nodeType": "FunctionDefinition",
+            "src": "8041:124:51",
+            "nodes": [],
+            "documentation": {
+              "id": 33375,
+              "nodeType": "StructuredDocumentation",
+              "src": "7540:495:51",
+              "text": "@notice Collects up to a maximum amount of fees owed to a specific position to the recipient\n @param params tokenId The ID of the NFT for which tokens are being collected,\n recipient The account that should receive the tokens,\n amount0Max The maximum amount of token0 to collect,\n amount1Max The maximum amount of token1 to collect\n @return amount0 The amount of fees collected in token0\n @return amount1 The amount of fees collected in token1"
+            },
+            "functionSelector": "fc6f7865",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "collect",
+            "nameLocation": "8050:7:51",
+            "parameters": {
+              "id": 33379,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33378,
+                  "mutability": "mutable",
+                  "name": "params",
+                  "nameLocation": "8091:6:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33385,
+                  "src": "8068:29:51",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_CollectParams_$33374_calldata_ptr",
+                    "typeString": "struct INonfungiblePositionManager.CollectParams"
+                  },
+                  "typeName": {
+                    "id": 33377,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 33376,
+                      "name": "CollectParams",
+                      "nameLocations": [
+                        "8068:13:51"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 33374,
+                      "src": "8068:13:51"
+                    },
+                    "referencedDeclaration": 33374,
+                    "src": "8068:13:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_CollectParams_$33374_storage_ptr",
+                      "typeString": "struct INonfungiblePositionManager.CollectParams"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8057:47:51"
+            },
+            "returnParameters": {
+              "id": 33384,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33381,
+                  "mutability": "mutable",
+                  "name": "amount0",
+                  "nameLocation": "8139:7:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33385,
+                  "src": "8131:15:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33380,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8131:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33383,
+                  "mutability": "mutable",
+                  "name": "amount1",
+                  "nameLocation": "8156:7:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33385,
+                  "src": "8148:15:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33382,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8148:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8130:34:51"
+            },
+            "scope": 33408,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 33391,
+            "nodeType": "FunctionDefinition",
+            "src": "8394:48:51",
+            "nodes": [],
+            "documentation": {
+              "id": 33386,
+              "nodeType": "StructuredDocumentation",
+              "src": "8173:215:51",
+              "text": "@notice Burns a token ID, which deletes it from the NFT contract. The token must have 0 liquidity and all tokens\n must be collected first.\n @param tokenId The ID of the token that is being burned"
+            },
+            "functionSelector": "42966c68",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "burn",
+            "nameLocation": "8403:4:51",
+            "parameters": {
+              "id": 33389,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33388,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "8416:7:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33391,
+                  "src": "8408:15:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33387,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8408:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8407:17:51"
+            },
+            "returnParameters": {
+              "id": 33390,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "8441:0:51"
+            },
+            "scope": 33408,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 33400,
+            "nodeType": "FunctionDefinition",
+            "src": "8450:112:51",
+            "nodes": [],
+            "functionSelector": "42842e0e",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "safeTransferFrom",
+            "nameLocation": "8459:16:51",
+            "parameters": {
+              "id": 33398,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33393,
+                  "mutability": "mutable",
+                  "name": "from",
+                  "nameLocation": "8494:4:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33400,
+                  "src": "8486:12:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 33392,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8486:7:51",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33395,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "8517:2:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33400,
+                  "src": "8509:10:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 33394,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8509:7:51",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33397,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "8538:7:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33400,
+                  "src": "8530:15:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33396,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8530:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8475:77:51"
+            },
+            "returnParameters": {
+              "id": 33399,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "8561:0:51"
+            },
+            "scope": 33408,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 33407,
+            "nodeType": "FunctionDefinition",
+            "src": "8570:61:51",
+            "nodes": [],
+            "functionSelector": "6352211e",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "ownerOf",
+            "nameLocation": "8579:7:51",
+            "parameters": {
+              "id": 33403,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33402,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "8595:7:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33407,
+                  "src": "8587:15:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33401,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8587:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8586:17:51"
+            },
+            "returnParameters": {
+              "id": 33406,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33405,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33407,
+                  "src": "8622:7:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 33404,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8622:7:51",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8621:9:51"
+            },
+            "scope": 33408,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "INonfungiblePositionManager",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 33216,
+          "nodeType": "StructuredDocumentation",
+          "src": "95:184:51",
+          "text": "@title Non-fungible token for positions\n @notice Wraps PancakeSwap V3 positions in a non-fungible token interface which allows for them to be transferred\n and authorized."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          33408
+        ],
+        "name": "INonfungiblePositionManager",
+        "nameLocation": "289:27:51",
+        "scope": 33409,
+        "usedErrors": []
+      }
+    ],
+    "license": "GPL-2.0-or-later"
+  },
+  "id": 51
+}

@@ -1,0 +1,2542 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "stake",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "vault",
+          "type": "address"
+        }
+      ],
+      "name": "VaultCreated",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "allVaults",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "vault",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "listAllVaults",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "vaultType",
+      "outputs": [
+        {
+          "internalType": "enum VaultType",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "allVaults(uint256)": "9094a91e",
+    "listAllVaults()": "66a9a1bb",
+    "vaultType()": "4ac032be"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"stake\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"vault\",\"type\":\"address\"}],\"name\":\"VaultCreated\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"allVaults\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"vault\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"listAllVaults\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"vaultType\",\"outputs\":[{\"internalType\":\"enum VaultType\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"scripts/mantle/CheckMantle.s.sol\":\"IRiveraVaultFactoryV2\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@chainlink/=lib/pancake-v3-contracts/node_modules/@chainlink/\",\":@ensdomains/=lib/pancake-v3-contracts/node_modules/@ensdomains/\",\":@eth-optimism/=lib/pancake-v3-contracts/node_modules/@eth-optimism/contracts/\",\":@openzeppelin/=lib/openzeppelin-contracts/contracts/\",\":@openzeppelin/contracts/=lib/openzeppelin-contracts//contracts/\",\":@pancakeswap-v2-core/=lib/pancake-swap-core/contracts/\",\":@pancakeswap-v2-exchange-protocol/=lib/pancake-smart-contracts/projects/exchange-protocol/contracts/\",\":@pancakeswap-v3-core/=lib/pancake-v3-contracts/projects/v3-core/contracts/\",\":@pancakeswap-v3-masterchef/=lib/pancake-v3-contracts/projects/masterchef-v3/contracts/\",\":@pancakeswap-v3-periphery/=lib/pancake-v3-contracts/projects/v3-periphery/contracts/\",\":@pancakeswap-v3-router/=lib/pancake-v3-contracts/projects/router/contracts/\",\":@pancakeswap/=lib/pancake-v3-contracts/projects/\",\":@rivera/=src/\",\":@uniswap/=lib/pancake-v3-contracts/node_modules/@uniswap/\",\":@uniswap/v3-core/=lib/v3-core/\",\":@uniswap/v3-periphery/=lib/v3-periphery/\",\":base64-sol/=lib/pancake-v3-contracts/node_modules/base64-sol/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/erc4626-tests/\",\":eth-gas-reporter/=lib/pancake-v3-contracts/node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=lib/pancake-v3-contracts/node_modules/hardhat/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":pancake-smart-contracts/=lib/pancake-smart-contracts/\",\":pancake-swap-core/=lib/pancake-swap-core/contracts/\",\":pancake-v3-contracts/=lib/pancake-v3-contracts/\",\":solmate/=lib/solmate/src/\",\":v3-core/=lib/v3-core/\",\":v3-periphery/=lib/v3-periphery/contracts/\"]},\"sources\":{\"lib/forge-std/lib/ds-test/src/test.sol\":{\"keccak256\":\"0xb39cd1d5220cb474947b131e15a4538334b7e886af244b440ae5c9c6bba96a54\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://3101520221449ac0070bda3881311a71d9aa87e5210765e875246922cb5cb5f5\",\"dweb:/ipfs/Qmbg6kAHNoG7ox9N9Xqd9Ere2H2XixMFWFqvyPwFCzB3Gr\"]},\"lib/forge-std/src/Common.sol\":{\"keccak256\":\"0x1c92c530e5f0fcd895d48829ae786d63b87b02eaa203767813ffb39651d0b9b4\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://75e17c301cf9072de9031b82821bb655e0d718ae16dd4de42f5a1355390697fd\",\"dweb:/ipfs/Qma61YBx9XAmRoRyjLWzUz65rDmRv9ARt79c1QDrMVZeGN\"]},\"lib/forge-std/src/Components.sol\":{\"keccak256\":\"0xb2734f05b1a56bbdd8fd40c5c4b4f39e609501181583f4026fc4764416a0c350\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://70a495f75d69f2f07c483ef479e1f7491d099329d7c8124d48ef88d528b15079\",\"dweb:/ipfs/QmZiaWVGqE5PagnYiEPXzCxYiDbFcGYzZWtYkqEXf3j1ja\"]},\"lib/forge-std/src/Script.sol\":{\"keccak256\":\"0xeac959e0df1a828c33434c177f596fa616a95abc919cf6beac6d3e137e6f2177\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://160863313c265c243e634c167243d2d9f902748593aa6146b8e390cd4a135a75\",\"dweb:/ipfs/QmSSfWVUu8GMq2eBszXH7FxCec4e7qVrkWc4wbpKHMp2F1\"]},\"lib/forge-std/src/StdAssertions.sol\":{\"keccak256\":\"0xde2bdee8e0e530de3269da50ebba83f4f90dde817971488980b720281e3cde4d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://cb3f05bb06b654db43f4ce38e22aa7e2296ee00615df5329623c08c9ac030f8d\",\"dweb:/ipfs/QmdKwTpFsTiDFmc8zGwbPRu8mDs4oiKdZvzSj3WpiiGaez\"]},\"lib/forge-std/src/StdChains.sol\":{\"keccak256\":\"0x4b47eb30f37e79a5bb47ad36b8808b3cfee6c21c9a39d3bf9895d554fba5f969\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e5000580a2d5b0c7988356afcf5e9e0aadd6a34f12c92c84251195ffa10e3116\",\"dweb:/ipfs/QmXUCKju3KdnnkkYjPdwD2fsqRVrnh1Ag2NdTbpxxWudTK\"]},\"lib/forge-std/src/StdCheats.sol\":{\"keccak256\":\"0x0654e956830a422d35060a2e7b66d4f97951921a3dc119eb89bae7202e4fb078\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://eb22e4d811b49dd14f81fec6d4a1c37cbdd4e7c3ac9d2b5ccb966ab7a112eb9b\",\"dweb:/ipfs/QmXSxM6y6q5Gw6yR28skW3L22MFEazLu8enQG2DSzBoTNR\"]},\"lib/forge-std/src/StdError.sol\":{\"keccak256\":\"0xbf477b11a42d7611696956546bcfaa29317d1166bf65e402344599c05943fc77\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://bc2e117d1135e030862b96a6526a43feb38d396cc79857f1fb696d4eff0e5fd6\",\"dweb:/ipfs/QmdSuQ5RrQudTLsNmWXGEeVJX8gR5U9XPm6m4dwwuQnJrj\"]},\"lib/forge-std/src/StdJson.sol\":{\"keccak256\":\"0x2291ee8f379552b86f34d98acb248d50442c7d4ab94aed03f1c8ddb6aea6852d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1ca6ca6fe35692428b507008b24e4ec4ba0cabaf58110fd0b4456a42e0166bdc\",\"dweb:/ipfs/QmUcSeXfYMyusrWxEdPRMeWFYhf9qD6YJaZXCVo29F4eus\"]},\"lib/forge-std/src/StdMath.sol\":{\"keccak256\":\"0xd90ad4fd8aeaeb8929964e686e769fdedd5eded3fc3815df194a0ab9f91a3fb2\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7919b70f636c7b805223992f28ad1ad0145d6c1385b5931a3589aface5fe6c92\",\"dweb:/ipfs/QmY7FRaULwoGgFteF8GawjQJRfasNgpWnU2aiMsFrYpuTC\"]},\"lib/forge-std/src/StdStorage.sol\":{\"keccak256\":\"0xb0da85ce6999940eba6190a26c15b9bc7aede57123891287e1b30f80333a9cf5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d287fd41de40ef992588f7a9531e66d1e9f8e4f3f194b9e721ac576d4613964a\",\"dweb:/ipfs/QmbFYYjoc8WGLKVfDe4rscYPwdGq48incbwRQNoLtcMMjn\"]},\"lib/forge-std/src/StdUtils.sol\":{\"keccak256\":\"0x216818221765c43713791708d7dc83fcd5ada81766c9d4ce54551528c191a59f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3f03d0ef065ce600e5922f3e9c92f0f54ff7c12895a250fa97d83e9ee38e7e2b\",\"dweb:/ipfs/QmX59m9mNRNEhjhEZnxbDirniesi26pnDaNzF5hPB4A3E8\"]},\"lib/forge-std/src/Vm.sol\":{\"keccak256\":\"0xfd793ebfb854f707ccf9dfec320b3b75d0d73ba54af0dfae727862fe93bc1cfd\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9a0a39917aabf39d981b17d1a06c9b82377917c3a0eedce8e9dc00df5c096bf9\",\"dweb:/ipfs/Qme7GpiHd32FFKYNbY4vdhiiciWPV1z1Uwtj1KDQAusxki\"]},\"lib/forge-std/src/console.sol\":{\"keccak256\":\"0x91d5413c2434ca58fd278b6e1e79fd98d10c83931cc2596a6038eee4daeb34ba\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://91ccea707361e48b9b7a161fe81f496b9932bc471e9c4e4e1e9c283f2453cc70\",\"dweb:/ipfs/QmcB66sZhQ6Kz7MUHcLE78YXRUZxoZnnxZjN6yATsbB2ec\"]},\"lib/forge-std/src/console2.sol\":{\"keccak256\":\"0x225cc1ec33efd35c90e78aec0792ed9751cd6217e646271172421e96e2e2cc0f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6c6adbd216e40ca2387835b8618c82e7153cb826023d38943bbb0c2e992644aa\",\"dweb:/ipfs/QmZeejwEkm7iH9NHih7dPbuNqivuFn27EkgJesgByzS9wD\"]},\"lib/openzeppelin-contracts/contracts/access/Ownable.sol\":{\"keccak256\":\"0xa94b34880e3c1b0b931662cb1c09e5dfa6662f31cba80e07c5ee71cd135c9673\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://40fb1b5102468f783961d0af743f91b9980cf66b50d1d12009f6bb1869cea4d2\",\"dweb:/ipfs/QmYqEbJML4jB1GHbzD4cUZDtJg5wVwNm3vDJq1GbyDus8y\"]},\"lib/openzeppelin-contracts/contracts/interfaces/IERC4626.sol\":{\"keccak256\":\"0xd82776ed6975a5939668e068f995acb1394c2f60a12a9ef3f14cacb91b5a8fd4\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0f381a6a834cd8d5296b819365ffd39d192ab7ac3d458b894a612d1c3b92f03f\",\"dweb:/ipfs/QmTRQE9c57bHGtuubLp8fMAA5jfsb1BR5s7iPd9cWSPfKm\"]},\"lib/openzeppelin-contracts/contracts/proxy/utils/Initializable.sol\":{\"keccak256\":\"0x3798da9e212cd00a7cda94ddb5a9721171a718e89c500d8901f810e0e37fa74e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a93f9c584e4b29dce1c7520b63d19f34c684f5ea972b5d04323a132059851004\",\"dweb:/ipfs/QmajmiA7BsarS63FMoP5PcBS4mqVGoiJ7xZ3wJVonYNTHC\"]},\"lib/openzeppelin-contracts/contracts/security/ReentrancyGuard.sol\":{\"keccak256\":\"0x190dd6f8d592b7e4e930feb7f4313aeb8e1c4ad3154c27ce1cf6a512fc30d8cc\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4ce8dfb62d0c4fa260d6eec8f1cd47f5f2a044e11bde5b31d18072fa6e7d9010\",\"dweb:/ipfs/QmTyFztU3tLEcEDnqqiaW4UJetqsU77LXc6pjc9oTXCK5u\"]},\"lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol\":{\"keccak256\":\"0x4ffc0547c02ad22925310c585c0f166f8759e2648a09e9b489100c42f15dd98d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://15f52f51413a9de1ff191e2f6367c62178e1df7806d7880fe857a98b0b66253d\",\"dweb:/ipfs/QmaQG1fwfgUt5E9nu2cccFiV47B2V78MM1tCy1qB7n4MsH\"]},\"lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34\",\"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr\"]},\"lib/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol\":{\"keccak256\":\"0xab83c36e40ee8fd41471fe94edcad13adae83b7f5179d022780062414e8fbf55\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0ff872f2a6fb1431e727c09151ffbb30f3e45212d6ad73b64b27c6b64608a23b\",\"dweb:/ipfs/Qmd2Gzqb12qheWkL94RBK1HU9XBoKwECUbXwLpahR35u31\"]},\"lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol\":{\"keccak256\":\"0x8de418a5503946cabe331f35fe242d3201a73f67f77aaeb7110acb1f30423aca\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a376d3dda2cb70536c0a45c208b29b34ac560c4cb4f513a42079f96ba47d2dd\",\"dweb:/ipfs/QmZQg6gn1sUpM8wHzwNvSnihumUCAhxD119MpXeKp8B9s8\"]},\"lib/openzeppelin-contracts/contracts/token/ERC20/extensions/draft-IERC20Permit.sol\":{\"keccak256\":\"0xf41ca991f30855bf80ffd11e9347856a517b977f0a6c2d52e6421a99b7840329\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b2717fd2bdac99daa960a6de500754ea1b932093c946388c381da48658234b95\",\"dweb:/ipfs/QmP6QVMn6UeA3ByahyJbYQr5M6coHKBKsf3ySZSfbyA8R7\"]},\"lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol\":{\"keccak256\":\"0x9b72f93be69ca894d8492c244259615c4a742afc8d63720dbc8bb81087d9b238\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f5a7b96e511be78d5cdf635c784e6ab8cdd38625bb8cafb8a80914a1c89cf0f6\",\"dweb:/ipfs/QmVzTCwJxQAkjRQHboT5QrvsVJGWQHgfEjeTbvyxoKBrds\"]},\"lib/openzeppelin-contracts/contracts/utils/Address.sol\":{\"keccak256\":\"0xf96f969e24029d43d0df89e59d365f277021dac62b48e1c1e3ebe0acdd7f1ca1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ec772b45a624be516f1c81970caa8a2e144301e9d0921cbc1a2789fef39a1269\",\"dweb:/ipfs/QmNyjwxCrGhQMyzLD93oUobJXVe9ceJvRvfXwbEtuxPiEj\"]},\"lib/openzeppelin-contracts/contracts/utils/Context.sol\":{\"keccak256\":\"0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92\",\"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3\"]},\"lib/openzeppelin-contracts/contracts/utils/math/Math.sol\":{\"keccak256\":\"0xa1e8e83cd0087785df04ac79fb395d9f3684caeaf973d9e2c71caef723a3a5d6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://33bbf48cc069be677705037ba7520c22b1b622c23b33e1a71495f2d36549d40b\",\"dweb:/ipfs/Qmct36zWXv3j7LZB83uwbg7TXwnZSN1fqHNDZ93GG98bGz\"]},\"lib/openzeppelin-contracts/contracts/utils/math/SafeMath.sol\":{\"keccak256\":\"0x0f633a0223d9a1dcccfcf38a64c9de0874dfcbfac0c6941ccf074d63a2ce0e1e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://864a40efcffdf408044c332a5aa38ec5618ed7b4eecb8f65faf45671bd6cdc65\",\"dweb:/ipfs/QmQJquTMtc6fgm5JQzGdsGpA2fqBe3MHWEdt2qzaLySMdN\"]},\"scripts/mantle/CheckMantle.s.sol\":{\"keccak256\":\"0x89e9122d99f57790397fe192cfc57b218768201225faf055a489dcb1147c9eb2\",\"urls\":[\"bzz-raw://56f985463529c23505edd7ec5d2538469096002c051ea6e0f88780a9226b2e20\",\"dweb:/ipfs/QmX4Kgxn8b17mZM2zBAXxquCSCKaU8mcaijuZzfj6b8ez1\"]},\"src/libs/WhitelistFilter.sol\":{\"keccak256\":\"0x98193ed96a8136d29064d0a669172f14835ecd3ae33c8c177242ef2b5495bb97\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://50349a1c2a31386bf225ec9b702a17345d64ee9ba68e6d125e82aa06186924e8\",\"dweb:/ipfs/QmZmUZSVZXWKTSnPEjnCzhfhw8R9UF15rvJMzqBTAAfdSb\"]},\"src/strategies/common/interfaces/IStrategy.sol\":{\"keccak256\":\"0x9d79b1963a6b1dc82cf0a6745213e141b653fdfa5a1331988160f8bc4003b671\",\"urls\":[\"bzz-raw://6b110590ddbf0c8e1f8deab9e4e5f1473d93dce7b766a29acdc19a0d276c0c6a\",\"dweb:/ipfs/QmZePFbfZWuBBnDKLrP5F14UBf9FL7nztGAv3ivwu2jhTh\"]},\"src/vaults/RiveraAutoCompoundingVaultV2.sol\":{\"keccak256\":\"0x5a36179b3c8796cb506f455ebef8aa14ed186be1a1fde4d269d11a0523f2f264\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ba449001b1689f5733e6e2229ee2e25449a7743ebe42ea3b20020493b9569687\",\"dweb:/ipfs/QmT4YFz7APVZ4X8DJrhT9GzSdxa3qsZqdFGKp5dz3AEbWK\"]},\"src/vaults/RiveraAutoCompoundingVaultV2Whitelisted.sol\":{\"keccak256\":\"0xa869028e2f8c2fead8af0119bf601aa90d6a9fc8b4b17891b2e78138f42c9724\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://002fd9981d4b63d898a00ec92c1492bb93839e9288824f21e8630e10d4653f64\",\"dweb:/ipfs/QmYsfuUNKHxwvUZRrty2PiEDgYf7KjGaPJ5RJFCNk2hPV4\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.19+commit.7dd6d404"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "user",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "stake",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "vault",
+              "type": "address",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "VaultCreated",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "allVaults",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "vault",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "listAllVaults",
+          "outputs": [
+            {
+              "internalType": "address[]",
+              "name": "",
+              "type": "address[]"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "vaultType",
+          "outputs": [
+            {
+              "internalType": "enum VaultType",
+              "name": "",
+              "type": "uint8"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@chainlink/=lib/pancake-v3-contracts/node_modules/@chainlink/",
+        ":@ensdomains/=lib/pancake-v3-contracts/node_modules/@ensdomains/",
+        ":@eth-optimism/=lib/pancake-v3-contracts/node_modules/@eth-optimism/contracts/",
+        ":@openzeppelin/=lib/openzeppelin-contracts/contracts/",
+        ":@openzeppelin/contracts/=lib/openzeppelin-contracts//contracts/",
+        ":@pancakeswap-v2-core/=lib/pancake-swap-core/contracts/",
+        ":@pancakeswap-v2-exchange-protocol/=lib/pancake-smart-contracts/projects/exchange-protocol/contracts/",
+        ":@pancakeswap-v3-core/=lib/pancake-v3-contracts/projects/v3-core/contracts/",
+        ":@pancakeswap-v3-masterchef/=lib/pancake-v3-contracts/projects/masterchef-v3/contracts/",
+        ":@pancakeswap-v3-periphery/=lib/pancake-v3-contracts/projects/v3-periphery/contracts/",
+        ":@pancakeswap-v3-router/=lib/pancake-v3-contracts/projects/router/contracts/",
+        ":@pancakeswap/=lib/pancake-v3-contracts/projects/",
+        ":@rivera/=src/",
+        ":@uniswap/=lib/pancake-v3-contracts/node_modules/@uniswap/",
+        ":@uniswap/v3-core/=lib/v3-core/",
+        ":@uniswap/v3-periphery/=lib/v3-periphery/",
+        ":base64-sol/=lib/pancake-v3-contracts/node_modules/base64-sol/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":erc4626-tests/=lib/erc4626-tests/",
+        ":eth-gas-reporter/=lib/pancake-v3-contracts/node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=lib/pancake-v3-contracts/node_modules/hardhat/",
+        ":openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        ":pancake-smart-contracts/=lib/pancake-smart-contracts/",
+        ":pancake-swap-core/=lib/pancake-swap-core/contracts/",
+        ":pancake-v3-contracts/=lib/pancake-v3-contracts/",
+        ":solmate/=lib/solmate/src/",
+        ":v3-core/=lib/v3-core/",
+        ":v3-periphery/=lib/v3-periphery/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "scripts/mantle/CheckMantle.s.sol": "IRiveraVaultFactoryV2"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/forge-std/lib/ds-test/src/test.sol": {
+        "keccak256": "0xb39cd1d5220cb474947b131e15a4538334b7e886af244b440ae5c9c6bba96a54",
+        "urls": [
+          "bzz-raw://3101520221449ac0070bda3881311a71d9aa87e5210765e875246922cb5cb5f5",
+          "dweb:/ipfs/Qmbg6kAHNoG7ox9N9Xqd9Ere2H2XixMFWFqvyPwFCzB3Gr"
+        ],
+        "license": "GPL-3.0-or-later"
+      },
+      "lib/forge-std/src/Common.sol": {
+        "keccak256": "0x1c92c530e5f0fcd895d48829ae786d63b87b02eaa203767813ffb39651d0b9b4",
+        "urls": [
+          "bzz-raw://75e17c301cf9072de9031b82821bb655e0d718ae16dd4de42f5a1355390697fd",
+          "dweb:/ipfs/Qma61YBx9XAmRoRyjLWzUz65rDmRv9ARt79c1QDrMVZeGN"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/Components.sol": {
+        "keccak256": "0xb2734f05b1a56bbdd8fd40c5c4b4f39e609501181583f4026fc4764416a0c350",
+        "urls": [
+          "bzz-raw://70a495f75d69f2f07c483ef479e1f7491d099329d7c8124d48ef88d528b15079",
+          "dweb:/ipfs/QmZiaWVGqE5PagnYiEPXzCxYiDbFcGYzZWtYkqEXf3j1ja"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/Script.sol": {
+        "keccak256": "0xeac959e0df1a828c33434c177f596fa616a95abc919cf6beac6d3e137e6f2177",
+        "urls": [
+          "bzz-raw://160863313c265c243e634c167243d2d9f902748593aa6146b8e390cd4a135a75",
+          "dweb:/ipfs/QmSSfWVUu8GMq2eBszXH7FxCec4e7qVrkWc4wbpKHMp2F1"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/StdAssertions.sol": {
+        "keccak256": "0xde2bdee8e0e530de3269da50ebba83f4f90dde817971488980b720281e3cde4d",
+        "urls": [
+          "bzz-raw://cb3f05bb06b654db43f4ce38e22aa7e2296ee00615df5329623c08c9ac030f8d",
+          "dweb:/ipfs/QmdKwTpFsTiDFmc8zGwbPRu8mDs4oiKdZvzSj3WpiiGaez"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/StdChains.sol": {
+        "keccak256": "0x4b47eb30f37e79a5bb47ad36b8808b3cfee6c21c9a39d3bf9895d554fba5f969",
+        "urls": [
+          "bzz-raw://e5000580a2d5b0c7988356afcf5e9e0aadd6a34f12c92c84251195ffa10e3116",
+          "dweb:/ipfs/QmXUCKju3KdnnkkYjPdwD2fsqRVrnh1Ag2NdTbpxxWudTK"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/StdCheats.sol": {
+        "keccak256": "0x0654e956830a422d35060a2e7b66d4f97951921a3dc119eb89bae7202e4fb078",
+        "urls": [
+          "bzz-raw://eb22e4d811b49dd14f81fec6d4a1c37cbdd4e7c3ac9d2b5ccb966ab7a112eb9b",
+          "dweb:/ipfs/QmXSxM6y6q5Gw6yR28skW3L22MFEazLu8enQG2DSzBoTNR"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/StdError.sol": {
+        "keccak256": "0xbf477b11a42d7611696956546bcfaa29317d1166bf65e402344599c05943fc77",
+        "urls": [
+          "bzz-raw://bc2e117d1135e030862b96a6526a43feb38d396cc79857f1fb696d4eff0e5fd6",
+          "dweb:/ipfs/QmdSuQ5RrQudTLsNmWXGEeVJX8gR5U9XPm6m4dwwuQnJrj"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/StdJson.sol": {
+        "keccak256": "0x2291ee8f379552b86f34d98acb248d50442c7d4ab94aed03f1c8ddb6aea6852d",
+        "urls": [
+          "bzz-raw://1ca6ca6fe35692428b507008b24e4ec4ba0cabaf58110fd0b4456a42e0166bdc",
+          "dweb:/ipfs/QmUcSeXfYMyusrWxEdPRMeWFYhf9qD6YJaZXCVo29F4eus"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/StdMath.sol": {
+        "keccak256": "0xd90ad4fd8aeaeb8929964e686e769fdedd5eded3fc3815df194a0ab9f91a3fb2",
+        "urls": [
+          "bzz-raw://7919b70f636c7b805223992f28ad1ad0145d6c1385b5931a3589aface5fe6c92",
+          "dweb:/ipfs/QmY7FRaULwoGgFteF8GawjQJRfasNgpWnU2aiMsFrYpuTC"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/StdStorage.sol": {
+        "keccak256": "0xb0da85ce6999940eba6190a26c15b9bc7aede57123891287e1b30f80333a9cf5",
+        "urls": [
+          "bzz-raw://d287fd41de40ef992588f7a9531e66d1e9f8e4f3f194b9e721ac576d4613964a",
+          "dweb:/ipfs/QmbFYYjoc8WGLKVfDe4rscYPwdGq48incbwRQNoLtcMMjn"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/StdUtils.sol": {
+        "keccak256": "0x216818221765c43713791708d7dc83fcd5ada81766c9d4ce54551528c191a59f",
+        "urls": [
+          "bzz-raw://3f03d0ef065ce600e5922f3e9c92f0f54ff7c12895a250fa97d83e9ee38e7e2b",
+          "dweb:/ipfs/QmX59m9mNRNEhjhEZnxbDirniesi26pnDaNzF5hPB4A3E8"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/Vm.sol": {
+        "keccak256": "0xfd793ebfb854f707ccf9dfec320b3b75d0d73ba54af0dfae727862fe93bc1cfd",
+        "urls": [
+          "bzz-raw://9a0a39917aabf39d981b17d1a06c9b82377917c3a0eedce8e9dc00df5c096bf9",
+          "dweb:/ipfs/Qme7GpiHd32FFKYNbY4vdhiiciWPV1z1Uwtj1KDQAusxki"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/console.sol": {
+        "keccak256": "0x91d5413c2434ca58fd278b6e1e79fd98d10c83931cc2596a6038eee4daeb34ba",
+        "urls": [
+          "bzz-raw://91ccea707361e48b9b7a161fe81f496b9932bc471e9c4e4e1e9c283f2453cc70",
+          "dweb:/ipfs/QmcB66sZhQ6Kz7MUHcLE78YXRUZxoZnnxZjN6yATsbB2ec"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/console2.sol": {
+        "keccak256": "0x225cc1ec33efd35c90e78aec0792ed9751cd6217e646271172421e96e2e2cc0f",
+        "urls": [
+          "bzz-raw://6c6adbd216e40ca2387835b8618c82e7153cb826023d38943bbb0c2e992644aa",
+          "dweb:/ipfs/QmZeejwEkm7iH9NHih7dPbuNqivuFn27EkgJesgByzS9wD"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/access/Ownable.sol": {
+        "keccak256": "0xa94b34880e3c1b0b931662cb1c09e5dfa6662f31cba80e07c5ee71cd135c9673",
+        "urls": [
+          "bzz-raw://40fb1b5102468f783961d0af743f91b9980cf66b50d1d12009f6bb1869cea4d2",
+          "dweb:/ipfs/QmYqEbJML4jB1GHbzD4cUZDtJg5wVwNm3vDJq1GbyDus8y"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/interfaces/IERC4626.sol": {
+        "keccak256": "0xd82776ed6975a5939668e068f995acb1394c2f60a12a9ef3f14cacb91b5a8fd4",
+        "urls": [
+          "bzz-raw://0f381a6a834cd8d5296b819365ffd39d192ab7ac3d458b894a612d1c3b92f03f",
+          "dweb:/ipfs/QmTRQE9c57bHGtuubLp8fMAA5jfsb1BR5s7iPd9cWSPfKm"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/proxy/utils/Initializable.sol": {
+        "keccak256": "0x3798da9e212cd00a7cda94ddb5a9721171a718e89c500d8901f810e0e37fa74e",
+        "urls": [
+          "bzz-raw://a93f9c584e4b29dce1c7520b63d19f34c684f5ea972b5d04323a132059851004",
+          "dweb:/ipfs/QmajmiA7BsarS63FMoP5PcBS4mqVGoiJ7xZ3wJVonYNTHC"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/security/ReentrancyGuard.sol": {
+        "keccak256": "0x190dd6f8d592b7e4e930feb7f4313aeb8e1c4ad3154c27ce1cf6a512fc30d8cc",
+        "urls": [
+          "bzz-raw://4ce8dfb62d0c4fa260d6eec8f1cd47f5f2a044e11bde5b31d18072fa6e7d9010",
+          "dweb:/ipfs/QmTyFztU3tLEcEDnqqiaW4UJetqsU77LXc6pjc9oTXCK5u"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol": {
+        "keccak256": "0x4ffc0547c02ad22925310c585c0f166f8759e2648a09e9b489100c42f15dd98d",
+        "urls": [
+          "bzz-raw://15f52f51413a9de1ff191e2f6367c62178e1df7806d7880fe857a98b0b66253d",
+          "dweb:/ipfs/QmaQG1fwfgUt5E9nu2cccFiV47B2V78MM1tCy1qB7n4MsH"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol": {
+        "keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+        "urls": [
+          "bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+          "dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol": {
+        "keccak256": "0xab83c36e40ee8fd41471fe94edcad13adae83b7f5179d022780062414e8fbf55",
+        "urls": [
+          "bzz-raw://0ff872f2a6fb1431e727c09151ffbb30f3e45212d6ad73b64b27c6b64608a23b",
+          "dweb:/ipfs/Qmd2Gzqb12qheWkL94RBK1HU9XBoKwECUbXwLpahR35u31"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+        "keccak256": "0x8de418a5503946cabe331f35fe242d3201a73f67f77aaeb7110acb1f30423aca",
+        "urls": [
+          "bzz-raw://5a376d3dda2cb70536c0a45c208b29b34ac560c4cb4f513a42079f96ba47d2dd",
+          "dweb:/ipfs/QmZQg6gn1sUpM8wHzwNvSnihumUCAhxD119MpXeKp8B9s8"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/draft-IERC20Permit.sol": {
+        "keccak256": "0xf41ca991f30855bf80ffd11e9347856a517b977f0a6c2d52e6421a99b7840329",
+        "urls": [
+          "bzz-raw://b2717fd2bdac99daa960a6de500754ea1b932093c946388c381da48658234b95",
+          "dweb:/ipfs/QmP6QVMn6UeA3ByahyJbYQr5M6coHKBKsf3ySZSfbyA8R7"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol": {
+        "keccak256": "0x9b72f93be69ca894d8492c244259615c4a742afc8d63720dbc8bb81087d9b238",
+        "urls": [
+          "bzz-raw://f5a7b96e511be78d5cdf635c784e6ab8cdd38625bb8cafb8a80914a1c89cf0f6",
+          "dweb:/ipfs/QmVzTCwJxQAkjRQHboT5QrvsVJGWQHgfEjeTbvyxoKBrds"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/utils/Address.sol": {
+        "keccak256": "0xf96f969e24029d43d0df89e59d365f277021dac62b48e1c1e3ebe0acdd7f1ca1",
+        "urls": [
+          "bzz-raw://ec772b45a624be516f1c81970caa8a2e144301e9d0921cbc1a2789fef39a1269",
+          "dweb:/ipfs/QmNyjwxCrGhQMyzLD93oUobJXVe9ceJvRvfXwbEtuxPiEj"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/utils/Context.sol": {
+        "keccak256": "0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7",
+        "urls": [
+          "bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92",
+          "dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/utils/math/Math.sol": {
+        "keccak256": "0xa1e8e83cd0087785df04ac79fb395d9f3684caeaf973d9e2c71caef723a3a5d6",
+        "urls": [
+          "bzz-raw://33bbf48cc069be677705037ba7520c22b1b622c23b33e1a71495f2d36549d40b",
+          "dweb:/ipfs/Qmct36zWXv3j7LZB83uwbg7TXwnZSN1fqHNDZ93GG98bGz"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/utils/math/SafeMath.sol": {
+        "keccak256": "0x0f633a0223d9a1dcccfcf38a64c9de0874dfcbfac0c6941ccf074d63a2ce0e1e",
+        "urls": [
+          "bzz-raw://864a40efcffdf408044c332a5aa38ec5618ed7b4eecb8f65faf45671bd6cdc65",
+          "dweb:/ipfs/QmQJquTMtc6fgm5JQzGdsGpA2fqBe3MHWEdt2qzaLySMdN"
+        ],
+        "license": "MIT"
+      },
+      "scripts/mantle/CheckMantle.s.sol": {
+        "keccak256": "0x89e9122d99f57790397fe192cfc57b218768201225faf055a489dcb1147c9eb2",
+        "urls": [
+          "bzz-raw://56f985463529c23505edd7ec5d2538469096002c051ea6e0f88780a9226b2e20",
+          "dweb:/ipfs/QmX4Kgxn8b17mZM2zBAXxquCSCKaU8mcaijuZzfj6b8ez1"
+        ],
+        "license": null
+      },
+      "src/libs/WhitelistFilter.sol": {
+        "keccak256": "0x98193ed96a8136d29064d0a669172f14835ecd3ae33c8c177242ef2b5495bb97",
+        "urls": [
+          "bzz-raw://50349a1c2a31386bf225ec9b702a17345d64ee9ba68e6d125e82aa06186924e8",
+          "dweb:/ipfs/QmZmUZSVZXWKTSnPEjnCzhfhw8R9UF15rvJMzqBTAAfdSb"
+        ],
+        "license": "MIT"
+      },
+      "src/strategies/common/interfaces/IStrategy.sol": {
+        "keccak256": "0x9d79b1963a6b1dc82cf0a6745213e141b653fdfa5a1331988160f8bc4003b671",
+        "urls": [
+          "bzz-raw://6b110590ddbf0c8e1f8deab9e4e5f1473d93dce7b766a29acdc19a0d276c0c6a",
+          "dweb:/ipfs/QmZePFbfZWuBBnDKLrP5F14UBf9FL7nztGAv3ivwu2jhTh"
+        ],
+        "license": null
+      },
+      "src/vaults/RiveraAutoCompoundingVaultV2.sol": {
+        "keccak256": "0x5a36179b3c8796cb506f455ebef8aa14ed186be1a1fde4d269d11a0523f2f264",
+        "urls": [
+          "bzz-raw://ba449001b1689f5733e6e2229ee2e25449a7743ebe42ea3b20020493b9569687",
+          "dweb:/ipfs/QmT4YFz7APVZ4X8DJrhT9GzSdxa3qsZqdFGKp5dz3AEbWK"
+        ],
+        "license": "MIT"
+      },
+      "src/vaults/RiveraAutoCompoundingVaultV2Whitelisted.sol": {
+        "keccak256": "0xa869028e2f8c2fead8af0119bf601aa90d6a9fc8b4b17891b2e78138f42c9724",
+        "urls": [
+          "bzz-raw://002fd9981d4b63d898a00ec92c1492bb93839e9288824f21e8630e10d4653f64",
+          "dweb:/ipfs/QmYsfuUNKHxwvUZRrty2PiEDgYf7KjGaPJ5RJFCNk2hPV4"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "scripts/mantle/CheckMantle.s.sol",
+    "id": 28895,
+    "exportedSymbols": {
+      "CheckMantle": [
+        28894
+      ],
+      "CommonBase": [
+        1841
+      ],
+      "IERC20": [
+        26184
+      ],
+      "IRiveraVaultFactoryV2": [
+        28776
+      ],
+      "IStrategy": [
+        29169
+      ],
+      "RiveraAutoCompoundingVaultV2": [
+        29847
+      ],
+      "RiveraAutoCompoundingVaultV2Whitelisted": [
+        29888
+      ],
+      "Script": [
+        1890
+      ],
+      "ScriptBase": [
+        1878
+      ],
+      "StdChains": [
+        3027
+      ],
+      "StdCheatsSafe": [
+        4502
+      ],
+      "StdStorage": [
+        5866
+      ],
+      "StdUtils": [
+        7729
+      ],
+      "VaultType": [
+        28748
+      ],
+      "VmSafe": [
+        8561
+      ],
+      "WhitelistFilter": [
+        28991
+      ],
+      "console": [
+        16950
+      ],
+      "console2": [
+        25015
+      ],
+      "stdJson": [
+        5693
+      ],
+      "stdMath": [
+        5835
+      ],
+      "stdStorageSafe": [
+        6759
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "0:2445:29",
+    "nodes": [
+      {
+        "id": 28740,
+        "nodeType": "PragmaDirective",
+        "src": "0:23:29",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".4"
+        ]
+      },
+      {
+        "id": 28741,
+        "nodeType": "ImportDirective",
+        "src": "25:30:29",
+        "nodes": [],
+        "absolutePath": "lib/forge-std/src/Script.sol",
+        "file": "forge-std/Script.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 28895,
+        "sourceUnit": 1891,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 28742,
+        "nodeType": "ImportDirective",
+        "src": "56:32:29",
+        "nodes": [],
+        "absolutePath": "lib/forge-std/src/console2.sol",
+        "file": "forge-std/console2.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 28895,
+        "sourceUnit": 25016,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 28743,
+        "nodeType": "ImportDirective",
+        "src": "89:68:29",
+        "nodes": [],
+        "absolutePath": "src/vaults/RiveraAutoCompoundingVaultV2Whitelisted.sol",
+        "file": "@rivera/vaults/RiveraAutoCompoundingVaultV2Whitelisted.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 28895,
+        "sourceUnit": 29889,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 28744,
+        "nodeType": "ImportDirective",
+        "src": "158:60:29",
+        "nodes": [],
+        "absolutePath": "src/strategies/common/interfaces/IStrategy.sol",
+        "file": "@rivera/strategies/common/interfaces/IStrategy.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 28895,
+        "sourceUnit": 29170,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 28748,
+        "nodeType": "EnumDefinition",
+        "src": "220:76:29",
+        "nodes": [],
+        "canonicalName": "VaultType",
+        "members": [
+          {
+            "id": 28745,
+            "name": "PRIVATE",
+            "nameLocation": "245:7:29",
+            "nodeType": "EnumValue",
+            "src": "245:7:29"
+          },
+          {
+            "id": 28746,
+            "name": "PUBLIC",
+            "nameLocation": "263:6:29",
+            "nodeType": "EnumValue",
+            "src": "263:6:29"
+          },
+          {
+            "id": 28747,
+            "name": "WHITELISTED",
+            "nameLocation": "279:11:29",
+            "nodeType": "EnumValue",
+            "src": "279:11:29"
+          }
+        ],
+        "name": "VaultType",
+        "nameLocation": "225:9:29"
+      },
+      {
+        "id": 28776,
+        "nodeType": "ContractDefinition",
+        "src": "298:321:29",
+        "nodes": [
+          {
+            "id": 28756,
+            "nodeType": "EventDefinition",
+            "src": "337:79:29",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "897c133dfbfe1f6239e98b4ffd7e4f6c86a62350a131a7a37790419f58af02f9",
+            "name": "VaultCreated",
+            "nameLocation": "343:12:29",
+            "parameters": {
+              "id": 28755,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28750,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "user",
+                  "nameLocation": "372:4:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28756,
+                  "src": "356:20:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 28749,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "356:7:29",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28752,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "stake",
+                  "nameLocation": "394:5:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28756,
+                  "src": "378:21:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 28751,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "378:7:29",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28754,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "vault",
+                  "nameLocation": "409:5:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28756,
+                  "src": "401:13:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 28753,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "401:7:29",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "355:60:29"
+            }
+          },
+          {
+            "id": 28763,
+            "nodeType": "FunctionDefinition",
+            "src": "422:63:29",
+            "nodes": [],
+            "functionSelector": "9094a91e",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "allVaults",
+            "nameLocation": "431:9:29",
+            "parameters": {
+              "id": 28759,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28758,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28763,
+                  "src": "441:4:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 28757,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "441:4:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "440:6:29"
+            },
+            "returnParameters": {
+              "id": 28762,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28761,
+                  "mutability": "mutable",
+                  "name": "vault",
+                  "nameLocation": "478:5:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28763,
+                  "src": "470:13:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 28760,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "470:7:29",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "469:15:29"
+            },
+            "scope": 28776,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 28769,
+            "nodeType": "FunctionDefinition",
+            "src": "490:66:29",
+            "nodes": [],
+            "functionSelector": "66a9a1bb",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "listAllVaults",
+            "nameLocation": "499:13:29",
+            "parameters": {
+              "id": 28764,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "512:2:29"
+            },
+            "returnParameters": {
+              "id": 28768,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28767,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28769,
+                  "src": "538:16:29",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 28765,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "538:7:29",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 28766,
+                    "nodeType": "ArrayTypeName",
+                    "src": "538:9:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "537:18:29"
+            },
+            "scope": 28776,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 28775,
+            "nodeType": "FunctionDefinition",
+            "src": "561:55:29",
+            "nodes": [],
+            "functionSelector": "4ac032be",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "vaultType",
+            "nameLocation": "570:9:29",
+            "parameters": {
+              "id": 28770,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "579:2:29"
+            },
+            "returnParameters": {
+              "id": 28774,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28773,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28775,
+                  "src": "605:9:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_VaultType_$28748",
+                    "typeString": "enum VaultType"
+                  },
+                  "typeName": {
+                    "id": 28772,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 28771,
+                      "name": "VaultType",
+                      "nameLocations": [
+                        "605:9:29"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 28748,
+                      "src": "605:9:29"
+                    },
+                    "referencedDeclaration": 28748,
+                    "src": "605:9:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_VaultType_$28748",
+                      "typeString": "enum VaultType"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "604:11:29"
+            },
+            "scope": 28776,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IRiveraVaultFactoryV2",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          28776
+        ],
+        "name": "IRiveraVaultFactoryV2",
+        "nameLocation": "308:21:29",
+        "scope": 28895,
+        "usedErrors": []
+      },
+      {
+        "id": 28894,
+        "nodeType": "ContractDefinition",
+        "src": "622:1822:29",
+        "nodes": [
+          {
+            "id": 28781,
+            "nodeType": "VariableDeclaration",
+            "src": "662:58:29",
+            "nodes": [],
+            "constant": false,
+            "mutability": "mutable",
+            "name": "_chef",
+            "nameLocation": "670:5:29",
+            "scope": 28894,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 28779,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "662:7:29",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307839333136393338456161303945373143424231426637313332313241343262654342613239393846",
+              "id": 28780,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "678:42:29",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x9316938Eaa09E71CBB1Bf713212A42beCBa2998F"
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 28784,
+            "nodeType": "VariableDeclaration",
+            "src": "726:60:29",
+            "nodes": [],
+            "constant": false,
+            "mutability": "mutable",
+            "name": "_router",
+            "nameLocation": "734:7:29",
+            "scope": 28894,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 28782,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "726:7:29",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307845336136383331376132463163343145354232656642436532393531303838656642304366353234",
+              "id": 28783,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "744:42:29",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xE3a68317a2F1c41E5B2efBCe2951088efB0Cf524"
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 28787,
+            "nodeType": "VariableDeclaration",
+            "src": "792:80:29",
+            "nodes": [],
+            "constant": false,
+            "mutability": "mutable",
+            "name": "_NonfungiblePositionManager",
+            "nameLocation": "800:27:29",
+            "scope": 28894,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 28785,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "792:7:29",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307839343730356461353134363646334262314538633135393144373143303963393736306635463539",
+              "id": 28786,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "830:42:29",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x94705da51466F3Bb1E8c1591D71C09c9760f5F59"
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 28790,
+            "nodeType": "VariableDeclaration",
+            "src": "878:63:29",
+            "nodes": [],
+            "constant": false,
+            "mutability": "mutable",
+            "name": "vaultFactory",
+            "nameLocation": "886:12:29",
+            "scope": 28894,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 28788,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "878:7:29",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307866314263334436393730353546616332383839353546323031353762423563646344333638393237",
+              "id": 28789,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "899:42:29",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xf1Bc3D697055Fac288955F20157bB5cdcD368927"
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 28893,
+            "nodeType": "FunctionDefinition",
+            "src": "949:1491:29",
+            "nodes": [],
+            "body": {
+              "id": 28892,
+              "nodeType": "Block",
+              "src": "971:1469:29",
+              "nodes": [],
+              "statements": [
+                {
+                  "assignments": [
+                    28797
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 28797,
+                      "mutability": "mutable",
+                      "name": "allVaults",
+                      "nameLocation": "1000:9:29",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 28892,
+                      "src": "982:27:29",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                        "typeString": "address[]"
+                      },
+                      "typeName": {
+                        "baseType": {
+                          "id": 28795,
+                          "name": "address",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "982:7:29",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "id": 28796,
+                        "nodeType": "ArrayTypeName",
+                        "src": "982:10:29",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                          "typeString": "address[]"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 28803,
+                  "initialValue": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "arguments": [
+                          {
+                            "id": 28799,
+                            "name": "vaultFactory",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 28790,
+                            "src": "1032:12:29",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 28798,
+                          "name": "IRiveraVaultFactoryV2",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 28776,
+                          "src": "1010:21:29",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_contract$_IRiveraVaultFactoryV2_$28776_$",
+                            "typeString": "type(contract IRiveraVaultFactoryV2)"
+                          }
+                        },
+                        "id": 28800,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1010:35:29",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IRiveraVaultFactoryV2_$28776",
+                          "typeString": "contract IRiveraVaultFactoryV2"
+                        }
+                      },
+                      "id": 28801,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "1046:13:29",
+                      "memberName": "listAllVaults",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 28769,
+                      "src": "1010:49:29",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$__$returns$_t_array$_t_address_$dyn_memory_ptr_$",
+                        "typeString": "function () view external returns (address[] memory)"
+                      }
+                    },
+                    "id": 28802,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1010:51:29",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                      "typeString": "address[] memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "982:79:29"
+                },
+                {
+                  "assignments": [
+                    28806
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 28806,
+                      "mutability": "mutable",
+                      "name": "vaultType",
+                      "nameLocation": "1082:9:29",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 28892,
+                      "src": "1072:19:29",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_VaultType_$28748",
+                        "typeString": "enum VaultType"
+                      },
+                      "typeName": {
+                        "id": 28805,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 28804,
+                          "name": "VaultType",
+                          "nameLocations": [
+                            "1072:9:29"
+                          ],
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 28748,
+                          "src": "1072:9:29"
+                        },
+                        "referencedDeclaration": 28748,
+                        "src": "1072:9:29",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_VaultType_$28748",
+                          "typeString": "enum VaultType"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 28812,
+                  "initialValue": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "arguments": [
+                          {
+                            "id": 28808,
+                            "name": "vaultFactory",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 28790,
+                            "src": "1114:12:29",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 28807,
+                          "name": "IRiveraVaultFactoryV2",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 28776,
+                          "src": "1092:21:29",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_contract$_IRiveraVaultFactoryV2_$28776_$",
+                            "typeString": "type(contract IRiveraVaultFactoryV2)"
+                          }
+                        },
+                        "id": 28809,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1092:35:29",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IRiveraVaultFactoryV2_$28776",
+                          "typeString": "contract IRiveraVaultFactoryV2"
+                        }
+                      },
+                      "id": 28810,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "1128:9:29",
+                      "memberName": "vaultType",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 28775,
+                      "src": "1092:45:29",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$__$returns$_t_enum$_VaultType_$28748_$",
+                        "typeString": "function () view external returns (enum VaultType)"
+                      }
+                    },
+                    "id": 28811,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1092:47:29",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_VaultType_$28748",
+                      "typeString": "enum VaultType"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1072:67:29"
+                },
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_enum$_VaultType_$28748",
+                      "typeString": "enum VaultType"
+                    },
+                    "id": 28816,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 28813,
+                      "name": "vaultType",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 28806,
+                      "src": "1152:9:29",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_VaultType_$28748",
+                        "typeString": "enum VaultType"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "expression": {
+                        "id": 28814,
+                        "name": "VaultType",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 28748,
+                        "src": "1163:9:29",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_VaultType_$28748_$",
+                          "typeString": "type(enum VaultType)"
+                        }
+                      },
+                      "id": 28815,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberLocation": "1173:7:29",
+                      "memberName": "PRIVATE",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 28745,
+                      "src": "1163:17:29",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_VaultType_$28748",
+                        "typeString": "enum VaultType"
+                      }
+                    },
+                    "src": "1152:28:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": {
+                    "condition": {
+                      "commonType": {
+                        "typeIdentifier": "t_enum$_VaultType_$28748",
+                        "typeString": "enum VaultType"
+                      },
+                      "id": 28828,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "id": 28825,
+                        "name": "vaultType",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 28806,
+                        "src": "1248:9:29",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_VaultType_$28748",
+                          "typeString": "enum VaultType"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "==",
+                      "rightExpression": {
+                        "expression": {
+                          "id": 28826,
+                          "name": "VaultType",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 28748,
+                          "src": "1259:9:29",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_enum$_VaultType_$28748_$",
+                            "typeString": "type(enum VaultType)"
+                          }
+                        },
+                        "id": 28827,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "memberLocation": "1269:6:29",
+                        "memberName": "PUBLIC",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 28746,
+                        "src": "1259:16:29",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_VaultType_$28748",
+                          "typeString": "enum VaultType"
+                        }
+                      },
+                      "src": "1248:27:29",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "falseBody": {
+                      "condition": {
+                        "commonType": {
+                          "typeIdentifier": "t_enum$_VaultType_$28748",
+                          "typeString": "enum VaultType"
+                        },
+                        "id": 28840,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "id": 28837,
+                          "name": "vaultType",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 28806,
+                          "src": "1342:9:29",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_VaultType_$28748",
+                            "typeString": "enum VaultType"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "expression": {
+                            "id": 28838,
+                            "name": "VaultType",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 28748,
+                            "src": "1353:9:29",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_enum$_VaultType_$28748_$",
+                              "typeString": "type(enum VaultType)"
+                            }
+                          },
+                          "id": 28839,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "memberLocation": "1363:11:29",
+                          "memberName": "WHITELISTED",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 28747,
+                          "src": "1353:21:29",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_VaultType_$28748",
+                            "typeString": "enum VaultType"
+                          }
+                        },
+                        "src": "1342:32:29",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      "id": 28849,
+                      "nodeType": "IfStatement",
+                      "src": "1339:99:29",
+                      "trueBody": {
+                        "id": 28848,
+                        "nodeType": "Block",
+                        "src": "1375:63:29",
+                        "statements": [
+                          {
+                            "expression": {
+                              "arguments": [
+                                {
+                                  "hexValue": "5661756c7454797065",
+                                  "id": 28844,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "kind": "string",
+                                  "lValueRequested": false,
+                                  "nodeType": "Literal",
+                                  "src": "1401:11:29",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_stringliteral_a7373e45375100aaf2a4d1441a0e37670d6594f0ecd064d6993b467f3954dab2",
+                                    "typeString": "literal_string \"VaultType\""
+                                  },
+                                  "value": "VaultType"
+                                },
+                                {
+                                  "hexValue": "57484954454c4953544544",
+                                  "id": 28845,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "kind": "string",
+                                  "lValueRequested": false,
+                                  "nodeType": "Literal",
+                                  "src": "1413:13:29",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_stringliteral_e799c73ff785ac053943f5d98452f7fa0bcf54da67826fc217d6094dec75c5ee",
+                                    "typeString": "literal_string \"WHITELISTED\""
+                                  },
+                                  "value": "WHITELISTED"
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_stringliteral_a7373e45375100aaf2a4d1441a0e37670d6594f0ecd064d6993b467f3954dab2",
+                                    "typeString": "literal_string \"VaultType\""
+                                  },
+                                  {
+                                    "typeIdentifier": "t_stringliteral_e799c73ff785ac053943f5d98452f7fa0bcf54da67826fc217d6094dec75c5ee",
+                                    "typeString": "literal_string \"WHITELISTED\""
+                                  }
+                                ],
+                                "expression": {
+                                  "id": 28841,
+                                  "name": "console",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 16950,
+                                  "src": "1389:7:29",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_type$_t_contract$_console_$16950_$",
+                                    "typeString": "type(library console)"
+                                  }
+                                },
+                                "id": 28843,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberLocation": "1397:3:29",
+                                "memberName": "log",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 9611,
+                                "src": "1389:11:29",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_function_internal_view$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$__$",
+                                  "typeString": "function (string memory,string memory) view"
+                                }
+                              },
+                              "id": 28846,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "functionCall",
+                              "lValueRequested": false,
+                              "nameLocations": [],
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "1389:38:29",
+                              "tryCall": false,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_tuple$__$",
+                                "typeString": "tuple()"
+                              }
+                            },
+                            "id": 28847,
+                            "nodeType": "ExpressionStatement",
+                            "src": "1389:38:29"
+                          }
+                        ]
+                      }
+                    },
+                    "id": 28850,
+                    "nodeType": "IfStatement",
+                    "src": "1245:193:29",
+                    "trueBody": {
+                      "id": 28836,
+                      "nodeType": "Block",
+                      "src": "1276:58:29",
+                      "statements": [
+                        {
+                          "expression": {
+                            "arguments": [
+                              {
+                                "hexValue": "5661756c7454797065",
+                                "id": 28832,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "kind": "string",
+                                "lValueRequested": false,
+                                "nodeType": "Literal",
+                                "src": "1302:11:29",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_stringliteral_a7373e45375100aaf2a4d1441a0e37670d6594f0ecd064d6993b467f3954dab2",
+                                  "typeString": "literal_string \"VaultType\""
+                                },
+                                "value": "VaultType"
+                              },
+                              {
+                                "hexValue": "5055424c4943",
+                                "id": 28833,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "kind": "string",
+                                "lValueRequested": false,
+                                "nodeType": "Literal",
+                                "src": "1314:8:29",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_stringliteral_0dcb90aa16cbc9d9801c9664728a10e67b804066460e005e084b6f5a25f123e5",
+                                  "typeString": "literal_string \"PUBLIC\""
+                                },
+                                "value": "PUBLIC"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_stringliteral_a7373e45375100aaf2a4d1441a0e37670d6594f0ecd064d6993b467f3954dab2",
+                                  "typeString": "literal_string \"VaultType\""
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_0dcb90aa16cbc9d9801c9664728a10e67b804066460e005e084b6f5a25f123e5",
+                                  "typeString": "literal_string \"PUBLIC\""
+                                }
+                              ],
+                              "expression": {
+                                "id": 28829,
+                                "name": "console",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 16950,
+                                "src": "1290:7:29",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_contract$_console_$16950_$",
+                                  "typeString": "type(library console)"
+                                }
+                              },
+                              "id": 28831,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberLocation": "1298:3:29",
+                              "memberName": "log",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": 9611,
+                              "src": "1290:11:29",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_internal_view$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$__$",
+                                "typeString": "function (string memory,string memory) view"
+                              }
+                            },
+                            "id": 28834,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "nameLocations": [],
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "1290:33:29",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_tuple$__$",
+                              "typeString": "tuple()"
+                            }
+                          },
+                          "id": 28835,
+                          "nodeType": "ExpressionStatement",
+                          "src": "1290:33:29"
+                        }
+                      ]
+                    }
+                  },
+                  "id": 28851,
+                  "nodeType": "IfStatement",
+                  "src": "1149:289:29",
+                  "trueBody": {
+                    "id": 28824,
+                    "nodeType": "Block",
+                    "src": "1181:59:29",
+                    "statements": [
+                      {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "hexValue": "5661756c7454797065",
+                              "id": 28820,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "string",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1207:11:29",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_stringliteral_a7373e45375100aaf2a4d1441a0e37670d6594f0ecd064d6993b467f3954dab2",
+                                "typeString": "literal_string \"VaultType\""
+                              },
+                              "value": "VaultType"
+                            },
+                            {
+                              "hexValue": "50524956415445",
+                              "id": 28821,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "string",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1219:9:29",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_stringliteral_f00e4b518efc87d303e5c61b61e77bf6be54166541794bb4ef7d5eb34b79c605",
+                                "typeString": "literal_string \"PRIVATE\""
+                              },
+                              "value": "PRIVATE"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_stringliteral_a7373e45375100aaf2a4d1441a0e37670d6594f0ecd064d6993b467f3954dab2",
+                                "typeString": "literal_string \"VaultType\""
+                              },
+                              {
+                                "typeIdentifier": "t_stringliteral_f00e4b518efc87d303e5c61b61e77bf6be54166541794bb4ef7d5eb34b79c605",
+                                "typeString": "literal_string \"PRIVATE\""
+                              }
+                            ],
+                            "expression": {
+                              "id": 28817,
+                              "name": "console",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 16950,
+                              "src": "1195:7:29",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_contract$_console_$16950_$",
+                                "typeString": "type(library console)"
+                              }
+                            },
+                            "id": 28819,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberLocation": "1203:3:29",
+                            "memberName": "log",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 9611,
+                            "src": "1195:11:29",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_view$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$__$",
+                              "typeString": "function (string memory,string memory) view"
+                            }
+                          },
+                          "id": 28822,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1195:34:29",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 28823,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1195:34:29"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "body": {
+                    "id": 28890,
+                    "nodeType": "Block",
+                    "src": "1484:950:29",
+                    "statements": [
+                      {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "hexValue": "5661756c74",
+                              "id": 28866,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "string",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1510:7:29",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_stringliteral_8d03f8e727eaf836840d08da04cd9ecc9773328dd38f4a6c7b84a9ec2b88b7c7",
+                                "typeString": "literal_string \"Vault\""
+                              },
+                              "value": "Vault"
+                            },
+                            {
+                              "baseExpression": {
+                                "id": 28867,
+                                "name": "allVaults",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 28797,
+                                "src": "1518:9:29",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                                  "typeString": "address[] memory"
+                                }
+                              },
+                              "id": 28869,
+                              "indexExpression": {
+                                "id": 28868,
+                                "name": "i",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 28853,
+                                "src": "1528:1:29",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "1518:12:29",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_stringliteral_8d03f8e727eaf836840d08da04cd9ecc9773328dd38f4a6c7b84a9ec2b88b7c7",
+                                "typeString": "literal_string \"Vault\""
+                              },
+                              {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            ],
+                            "expression": {
+                              "id": 28863,
+                              "name": "console",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 16950,
+                              "src": "1498:7:29",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_contract$_console_$16950_$",
+                                "typeString": "type(library console)"
+                              }
+                            },
+                            "id": 28865,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberLocation": "1506:3:29",
+                            "memberName": "log",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 9645,
+                            "src": "1498:11:29",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_view$_t_string_memory_ptr_$_t_address_$returns$__$",
+                              "typeString": "function (string memory,address) view"
+                            }
+                          },
+                          "id": 28870,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1498:33:29",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 28871,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1498:33:29"
+                      },
+                      {
+                        "assignments": [
+                          28874
+                        ],
+                        "declarations": [
+                          {
+                            "constant": false,
+                            "id": 28874,
+                            "mutability": "mutable",
+                            "name": "vault",
+                            "nameLocation": "1585:5:29",
+                            "nodeType": "VariableDeclaration",
+                            "scope": 28890,
+                            "src": "1545:45:29",
+                            "stateVariable": false,
+                            "storageLocation": "default",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_RiveraAutoCompoundingVaultV2Whitelisted_$29888",
+                              "typeString": "contract RiveraAutoCompoundingVaultV2Whitelisted"
+                            },
+                            "typeName": {
+                              "id": 28873,
+                              "nodeType": "UserDefinedTypeName",
+                              "pathNode": {
+                                "id": 28872,
+                                "name": "RiveraAutoCompoundingVaultV2Whitelisted",
+                                "nameLocations": [
+                                  "1545:39:29"
+                                ],
+                                "nodeType": "IdentifierPath",
+                                "referencedDeclaration": 29888,
+                                "src": "1545:39:29"
+                              },
+                              "referencedDeclaration": 29888,
+                              "src": "1545:39:29",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_RiveraAutoCompoundingVaultV2Whitelisted_$29888",
+                                "typeString": "contract RiveraAutoCompoundingVaultV2Whitelisted"
+                              }
+                            },
+                            "visibility": "internal"
+                          }
+                        ],
+                        "id": 28880,
+                        "initialValue": {
+                          "arguments": [
+                            {
+                              "baseExpression": {
+                                "id": 28876,
+                                "name": "allVaults",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 28797,
+                                "src": "1631:9:29",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                                  "typeString": "address[] memory"
+                                }
+                              },
+                              "id": 28878,
+                              "indexExpression": {
+                                "id": 28877,
+                                "name": "i",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 28853,
+                                "src": "1641:1:29",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "1631:12:29",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            ],
+                            "id": 28875,
+                            "name": "RiveraAutoCompoundingVaultV2Whitelisted",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 29888,
+                            "src": "1591:39:29",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_contract$_RiveraAutoCompoundingVaultV2Whitelisted_$29888_$",
+                              "typeString": "type(contract RiveraAutoCompoundingVaultV2Whitelisted)"
+                            }
+                          },
+                          "id": 28879,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1591:53:29",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_RiveraAutoCompoundingVaultV2Whitelisted_$29888",
+                            "typeString": "contract RiveraAutoCompoundingVaultV2Whitelisted"
+                          }
+                        },
+                        "nodeType": "VariableDeclarationStatement",
+                        "src": "1545:99:29"
+                      },
+                      {
+                        "assignments": [
+                          28883
+                        ],
+                        "declarations": [
+                          {
+                            "constant": false,
+                            "id": 28883,
+                            "mutability": "mutable",
+                            "name": "strategy",
+                            "nameLocation": "1668:8:29",
+                            "nodeType": "VariableDeclaration",
+                            "scope": 28890,
+                            "src": "1658:18:29",
+                            "stateVariable": false,
+                            "storageLocation": "default",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_IStrategy_$29169",
+                              "typeString": "contract IStrategy"
+                            },
+                            "typeName": {
+                              "id": 28882,
+                              "nodeType": "UserDefinedTypeName",
+                              "pathNode": {
+                                "id": 28881,
+                                "name": "IStrategy",
+                                "nameLocations": [
+                                  "1658:9:29"
+                                ],
+                                "nodeType": "IdentifierPath",
+                                "referencedDeclaration": 29169,
+                                "src": "1658:9:29"
+                              },
+                              "referencedDeclaration": 29169,
+                              "src": "1658:9:29",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_IStrategy_$29169",
+                                "typeString": "contract IStrategy"
+                              }
+                            },
+                            "visibility": "internal"
+                          }
+                        ],
+                        "id": 28889,
+                        "initialValue": {
+                          "arguments": [
+                            {
+                              "arguments": [],
+                              "expression": {
+                                "argumentTypes": [],
+                                "expression": {
+                                  "id": 28885,
+                                  "name": "vault",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 28874,
+                                  "src": "1687:5:29",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_contract$_RiveraAutoCompoundingVaultV2Whitelisted_$29888",
+                                    "typeString": "contract RiveraAutoCompoundingVaultV2Whitelisted"
+                                  }
+                                },
+                                "id": 28886,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberLocation": "1693:8:29",
+                                "memberName": "strategy",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 29208,
+                                "src": "1687:14:29",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_function_external_view$__$returns$_t_contract$_IStrategy_$29169_$",
+                                  "typeString": "function () view external returns (contract IStrategy)"
+                                }
+                              },
+                              "id": 28887,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "functionCall",
+                              "lValueRequested": false,
+                              "nameLocations": [],
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "1687:16:29",
+                              "tryCall": false,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_IStrategy_$29169",
+                                "typeString": "contract IStrategy"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_contract$_IStrategy_$29169",
+                                "typeString": "contract IStrategy"
+                              }
+                            ],
+                            "id": 28884,
+                            "name": "IStrategy",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 29169,
+                            "src": "1677:9:29",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_contract$_IStrategy_$29169_$",
+                              "typeString": "type(contract IStrategy)"
+                            }
+                          },
+                          "id": 28888,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1677:27:29",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_IStrategy_$29169",
+                            "typeString": "contract IStrategy"
+                          }
+                        },
+                        "nodeType": "VariableDeclarationStatement",
+                        "src": "1658:46:29"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 28859,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 28856,
+                      "name": "i",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 28853,
+                      "src": "1461:1:29",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "expression": {
+                        "id": 28857,
+                        "name": "allVaults",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 28797,
+                        "src": "1463:9:29",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                          "typeString": "address[] memory"
+                        }
+                      },
+                      "id": 28858,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "1473:6:29",
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "src": "1463:16:29",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1461:18:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 28891,
+                  "initializationExpression": {
+                    "assignments": [
+                      28853
+                    ],
+                    "declarations": [
+                      {
+                        "constant": false,
+                        "id": 28853,
+                        "mutability": "mutable",
+                        "name": "i",
+                        "nameLocation": "1457:1:29",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 28891,
+                        "src": "1452:6:29",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "typeName": {
+                          "id": 28852,
+                          "name": "uint",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "1452:4:29",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "visibility": "internal"
+                      }
+                    ],
+                    "id": 28855,
+                    "initialValue": {
+                      "hexValue": "30",
+                      "id": 28854,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1459:1:29",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "nodeType": "VariableDeclarationStatement",
+                    "src": "1452:8:29"
+                  },
+                  "loopExpression": {
+                    "expression": {
+                      "id": 28861,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "++",
+                      "prefix": false,
+                      "src": "1480:3:29",
+                      "subExpression": {
+                        "id": 28860,
+                        "name": "i",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 28853,
+                        "src": "1480:1:29",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 28862,
+                    "nodeType": "ExpressionStatement",
+                    "src": "1480:3:29"
+                  },
+                  "nodeType": "ForStatement",
+                  "src": "1448:986:29"
+                }
+              ]
+            },
+            "functionSelector": "c0406226",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "run",
+            "nameLocation": "958:3:29",
+            "parameters": {
+              "id": 28791,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "961:2:29"
+            },
+            "returnParameters": {
+              "id": 28792,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "971:0:29"
+            },
+            "scope": 28894,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 28777,
+              "name": "Script",
+              "nameLocations": [
+                "646:6:29"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 1890,
+              "src": "646:6:29"
+            },
+            "id": 28778,
+            "nodeType": "InheritanceSpecifier",
+            "src": "646:6:29"
+          }
+        ],
+        "canonicalName": "CheckMantle",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          28894,
+          1890,
+          1878,
+          1841,
+          7729,
+          4502,
+          3027
+        ],
+        "name": "CheckMantle",
+        "nameLocation": "631:11:29",
+        "scope": 28895,
+        "usedErrors": []
+      }
+    ]
+  },
+  "id": 29
+}
